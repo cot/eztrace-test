@@ -1,0 +1,6 @@
+NM="/usr/bin/nm -B"
+AWK="gawk"
+OPARI_SCRIPT="/home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-frontend/../build-frontend/pomp2-parse-init-regions.awk"
+VERSION="1.0.2"
+EGREP="/bin/grep -E"
+CFLAGS="-I/home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-frontend/../include"

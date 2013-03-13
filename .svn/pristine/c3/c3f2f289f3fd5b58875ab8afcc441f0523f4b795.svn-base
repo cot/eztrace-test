@@ -1,0 +1,38 @@
+Dyninst 7.0.1
+PIN v2.11
+
+Devel08 (Intel(R) Xeon(R) CPU           X5570  @ 2.93GHz)
+=========================================================
+Test with dummy instrumentation
+Instr        no     PIN        DynInst    EZTrace
+static   0.006199   0.022507   0.028198   0.012277
+dynamic  0.006798   0.023189      -       0.011253
+
+Test with FxT instrumentation
+Instr        no     PIN        DynInst    EZTrace
+static   0.006199   0.106648   0.124855   0.035167
+dynamic  0.006798   0.120469      -       0.027284
+
+Test on MD (inconsistent)
+no	0.367597
+PIN	1.36079
+DynInst	0.530015
+EZTrace	0.640010
+
+Fourmi001 (Intel(R) Xeon(R) CPU X5550  @ 2.93GHz) Linux 2.6.27.39-0.3
+=====================================================================
+Test with dummy instrumentation
+Instr        no     PIN        DynInst    EZTrace
+static   0.004207   0.020924   0.028648   0.012303
+dynamic  0.004777   0.023565      -       0.011514
+
+Test with FxT instrumentation
+Instr        no     PIN        DynInst    EZTrace
+static   0.004207   1.286958   1.285110   0.227849
+dynamic  0.004777   1.294397      -       0.226875
+
+Test on MD (inconsistent)
+no	0.265122
+PIN	3.07412
+DynInst	0.549772
+EZTrace	1.11351

@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GTG
+Description: GTG - Generic Trace Generator
+Version: 0.2-dev
+Libs: -L${libdir} -lgtg
+Cflags: -I${includedir}

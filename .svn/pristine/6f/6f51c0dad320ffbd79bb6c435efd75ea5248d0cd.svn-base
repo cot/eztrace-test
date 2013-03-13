@@ -1,0 +1,55 @@
+/* -*- c-file-style: "GNU" -*- */
+/*
+ * Copyright © CNRS, INRIA, Université Bordeaux 1
+ * See COPYING in top-level directory.
+ */
+
+#ifndef __PTHREAD_EV_CODES_H__
+#define __PTHREAD_EV_CODES_H__
+
+#include "ev_codes.h"
+
+
+#define PTHREAD_EVENTS_ID 0x02
+#define PTHREAD_PREFIX    (PTHREAD_EVENTS_ID << NB_BITS_EVENTS)
+
+/* semaphores */
+#define FUT_SEM_POST            (PTHREAD_PREFIX | 0x0010)
+#define FUT_SEM_START_WAIT      (PTHREAD_PREFIX | 0x0011)
+#define FUT_SEM_STOP_WAIT       (PTHREAD_PREFIX | 0x0012)
+
+/* spinlocks */
+#define FUT_SPIN_LOCK_START     (PTHREAD_PREFIX | 0x0020 )
+#define FUT_SPIN_LOCK_STOP      (PTHREAD_PREFIX | 0x0021 )
+
+#define FUT_SPIN_UNLOCK        (PTHREAD_PREFIX | 0x0022 )
+#define FUT_SPIN_TRYLOCK        (PTHREAD_PREFIX | 0x0023 )
+
+/* mutexes */
+#define FUT_MUTEX_TRYLOCK_SUCCESS (PTHREAD_PREFIX | 0x0030)
+#define FUT_MUTEX_TRYLOCK_FAIL    (PTHREAD_PREFIX | 0x0031)
+
+#define FUT_MUTEX_LOCK_START    (PTHREAD_PREFIX | 0x0033)
+#define FUT_MUTEX_LOCK_STOP     (PTHREAD_PREFIX | 0x0034)
+#define FUT_MUTEX_UNLOCK        (PTHREAD_PREFIX | 0x0035)
+
+/* conditions */
+#define FUT_COND_SIGNAL         (PTHREAD_PREFIX | 0x0040)
+#define FUT_COND_BROADCAST      (PTHREAD_PREFIX | 0x0041)
+#define FUT_COND_START_WAIT     (PTHREAD_PREFIX | 0x0042)
+#define FUT_COND_STOP_WAIT      (PTHREAD_PREFIX | 0x0043)
+
+/* rwlocks */
+#define FUT_RWLOCK_RDLOCK_START (PTHREAD_PREFIX | 0x0050)
+#define FUT_RWLOCK_RDLOCK_STOP  (PTHREAD_PREFIX | 0x0051)
+
+#define FUT_RWLOCK_WRLOCK_START (PTHREAD_PREFIX | 0x0052)
+#define FUT_RWLOCK_WRLOCK_STOP  (PTHREAD_PREFIX | 0x0053)
+
+#define FUT_RWLOCK_UNLOCK       (PTHREAD_PREFIX | 0x0054)
+
+/* barriers */
+#define FUT_BARRIER_START (PTHREAD_PREFIX | 0x0060)
+#define FUT_BARRIER_STOP  (PTHREAD_PREFIX | 0x0061)
+
+#endif	/* __PTHREAD_EV_CODES_H__ */

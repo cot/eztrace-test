@@ -1,0 +1,16 @@
+
+With libinstrument-real (1 event)
+
+		simple_dynamic	simple_static
+dyninst		?		0.047054
+pin		0.053162	0.049323
+pptrace		0.042727	0.043607
+
+
+With libinstrument-dummy
+
+		simple_dynamic	simple_static
+dyninst		?		0.010853
+pin		0.017902	0.018723
+dynamorio	0.154782	-
+pptrace		0.006558	0.007933

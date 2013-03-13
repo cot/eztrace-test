@@ -1,0 +1,10 @@
+--- linux-2.6.12-rc2-orig/include/linux/page-flags.h	2005-04-04 18:39:00.000000000 +0200
++++ linux-2.6.12-rc2-fkt/include/linux/page-flags.h	2005-05-21 01:11:42.999023601 +0200
+@@ -76,6 +76,7 @@
+ #define PG_reclaim		18	/* To be reclaimed asap */
+ #define PG_nosave_free		19	/* Free, should not be written */
+ #define PG_uncached		20	/* Page has been mapped as uncached */
++#define PG_FKT			23	/* FKT page */
+ 
+ /*
+  * Global page accounting.  One instance per CPU.  Only unsigned longs are

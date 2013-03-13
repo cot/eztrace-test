@@ -1,0 +1,44 @@
+--- linux-2.6.12-rc2-orig/fs/select.c	2005-04-04 18:37:51.000000000 +0200
++++ linux-2.6.12-rc2-fkt/fs/select.c	2005-05-21 01:10:54.690426519 +0200
+@@ -23,6 +23,8 @@
+ #include <linux/file.h>
+ #include <linux/fs.h>
+ 
++#include <linux/fkt.h> /* st */
++
+ #include <asm/uaccess.h>
+ 
+ #define ROUND_UP(x,y) (((x)+(y)-1)/(y))
+@@ -298,6 +300,8 @@ sys_select(int n, fd_set __user *inp, fd
+ 	long timeout;
+ 	int ret, size, max_fdset;
+ 
++	FKT_PROBE1(FKT_FILES_KEYMASK,FKT_SELECT_ENTRY_CODE,n); /* st */
++
+ 	timeout = MAX_SCHEDULE_TIMEOUT;
+ 	if (tvp) {
+ 		time_t sec, usec;
+@@ -383,6 +387,7 @@ sys_select(int n, fd_set __user *inp, fd
+ out:
+ 	select_bits_free(bits, size);
+ out_nofds:
++	FKT_PROBE1(FKT_FILES_KEYMASK,FKT_SELECT_EXIT_CODE,ret); /* st */
+ 	return ret;
+ }
+ 
+@@ -467,6 +472,8 @@ asmlinkage long sys_poll(struct pollfd _
+ 	if (nfds > current->files->max_fdset && nfds > OPEN_MAX)
+ 		return -EINVAL;
+ 
++	FKT_PROBE2(FKT_FILES_KEYMASK,FKT_POLL_ENTRY_CODE,nfds,timeout);
++
+ 	if (timeout) {
+ 		/* Careful about overflow in the intermediate values */
+ 		if ((unsigned long) timeout < MAX_SCHEDULE_TIMEOUT / HZ)
+@@ -530,5 +537,6 @@ out_fds:
+ 		walk = pp;
+ 	}
+ 	poll_freewait(&table);
++	FKT_PROBE1(FKT_FILES_KEYMASK,FKT_POLL_EXIT_CODE,err);
+ 	return err;
+ }

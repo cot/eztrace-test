@@ -1,0 +1,4 @@
+uname -a
+        Linux fourmi002 2.6.27.39-0.3-perfctr #1 SMP 2009-11-23 12:57:38 +0100 x86_64 x86_64 x86_64 GNU/Linux
+/proc/cpuinfo -- model name
+         Intel(R) Xeon(R) CPU           X5550  @ 2.67GHz

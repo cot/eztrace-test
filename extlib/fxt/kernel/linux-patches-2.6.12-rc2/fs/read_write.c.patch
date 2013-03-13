@@ -1,0 +1,77 @@
+--- linux-2.6.12-rc2-orig/fs/read_write.c	2005-04-04 18:38:55.000000000 +0200
++++ linux-2.6.12-rc2-fkt/fs/read_write.c	2005-05-21 01:11:38.133769164 +0200
+@@ -1,3 +1,5 @@
++/*****	15-Oct-00	rdr		add fkt probes *****/
++
+ /*
+  *  linux/fs/read_write.c
+  *
+@@ -18,6 +20,9 @@
+ #include <asm/uaccess.h>
+ #include <asm/unistd.h>
+ 
++/* rdr */
++#include <linux/fkt.h>												   /* rdr */
++
+ struct file_operations generic_ro_fops = {
+ 	.llseek		= generic_file_llseek,
+ 	.read		= generic_file_read,
+@@ -130,6 +135,9 @@ asmlinkage off_t sys_lseek(unsigned int 
+ 	struct file * file;
+ 	int fput_needed;
+ 
++	/* rdr */
++	FKT_PROBE3(FKT_FILES_KEYMASK,FKT_LSEEK_ENTRY_CODE,fd,offset,origin);/*rdr */
++
+ 	retval = -EBADF;
+ 	file = fget_light(fd, &fput_needed);
+ 	if (!file)
+@@ -144,6 +152,10 @@ asmlinkage off_t sys_lseek(unsigned int 
+ 	}
+ 	fput_light(file, fput_needed);
+ bad:
++
++	/* rdr */
++	FKT_PROBE1(FKT_FILES_KEYMASK, FKT_LSEEK_EXIT_CODE, retval);		   /* rdr */
++
+ 	return retval;
+ }
+ 
+@@ -315,6 +327,9 @@ asmlinkage ssize_t sys_read(unsigned int
+ 	ssize_t ret = -EBADF;
+ 	int fput_needed;
+ 
++	/* rdr achadda */
++	FKT_PROBE3(FKT_FILES_KEYMASK,FKT_READ_ENTRY_CODE,fd,buf,count);	   /* rdr */
++
+ 	file = fget_light(fd, &fput_needed);
+ 	if (file) {
+ 		loff_t pos = file_pos_read(file);
+@@ -323,6 +338,9 @@ asmlinkage ssize_t sys_read(unsigned int
+ 		fput_light(file, fput_needed);
+ 	}
+ 
++	/* rdr achadda */
++	FKT_PROBE1(FKT_FILES_KEYMASK, FKT_READ_EXIT_CODE, ret);			   /* rdr */
++
+ 	return ret;
+ }
+ EXPORT_SYMBOL_GPL(sys_read);
+@@ -333,6 +351,8 @@ asmlinkage ssize_t sys_write(unsigned in
+ 	ssize_t ret = -EBADF;
+ 	int fput_needed;
+ 
++	/* rdr achadda */
++	FKT_PROBE3(FKT_FILES_KEYMASK,FKT_WRITE_ENTRY_CODE,fd,buf,count);   /* rdr */
+ 	file = fget_light(fd, &fput_needed);
+ 	if (file) {
+ 		loff_t pos = file_pos_read(file);
+@@ -341,6 +361,8 @@ asmlinkage ssize_t sys_write(unsigned in
+ 		fput_light(file, fput_needed);
+ 	}
+ 
++	/* rdr vs */
++	FKT_PROBE1(FKT_FILES_KEYMASK, FKT_WRITE_EXIT_CODE, ret);		   /* rdr */
+ 	return ret;
+ }
+ 

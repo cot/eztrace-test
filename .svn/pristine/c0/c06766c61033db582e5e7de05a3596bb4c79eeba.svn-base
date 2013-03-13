@@ -1,0 +1,800 @@
+uname -a
+        Linux fourmi001 2.6.27.39-0.3-perfctr #1 SMP 2009-11-23 12:57:38 +0100 x86_64 x86_64 x86_64 GNU/Linux
+/proc/cpuinfo -- model name
+         Intel(R) Xeon(R) CPU           X5550  @ 2.67GHz
+
+
+
+
+================================================================================
+Running md_open_mp without instrumentation
+================================================================================
+
+19 July      2012   0:35:16.838 AM      
+ 
+MD_OPEN_MP
+  FORTRAN77/OpenMP version
+ 
+  A molecular dynamics program.
+ 
+  NP, the number of particles in the simulation is      100
+  STEP_NUM, the number of time steps, is      400
+  DT, the size of each time step, is   0.100000E-03
+ 
+  The number of processors =        8
+  The number of threads    =        8
+ 
+  Initializing positions, velocities, and accelerations.
+ 
+  Computing initial forces and energies.
+ 
+  At each step, we report the potential and kinetic energies.
+  The sum of these energies should be a constant.
+  As an accuracy check, we also print the relative error
+  in the total energy.
+ 
+      Step      Potential       Kinetic        (P+K-E0)/E0
+                Energy P        Energy K       Relative Energy Error
+ 
+         0     4937.10         0.00000         0.00000    
+        40     4937.10        0.407768E-03    0.138956E-10
+        80     4937.09        0.169528E-02    0.136329E-10
+       120     4937.09        0.386330E-02    0.129029E-10
+       160     4937.09        0.691206E-02    0.114666E-10
+       200     4937.08        0.108419E-01    0.908574E-11
+       240     4937.08        0.156532E-01    0.552244E-11
+       280     4937.07        0.213464E-01    0.540491E-12
+       320     4937.07        0.279223E-01   -0.609628E-11
+       360     4937.06        0.353815E-01   -0.146504E-10
+       400     4937.05        0.437248E-01   -0.254344E-10
+ 
+  Elapsed time for main computation:
+    0.265122     seconds
+ 
+MD_OPEN_MP
+  Normal end of execution.
+ 
+19 July      2012   0:35:17.112 AM      
+ opening binary /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/md/md_open_mp 
+Threre are 13 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+	function record_event0 not found in module libinstrument.so
+	function record_event0 not found in module ld-linux-x86-64.so.2
+	function record_event0 not found in module libc.so.6
+	function record_event0 not found in module libm.so.6
+	function record_event0 not found in module libpthread.so.0
+	function record_event0 not found in module librt.so.1
+	function record_event0 not found in module libgcc_s.so.1
+	function record_event0 not found in module libgfortran.so.3
+	function record_event0 not found in module libgomp.so.1
+	function record_event0 not found in module libquadmath.so.0
+Cannot find record_event0 function
+Threre are 13 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+	function record_event0 not found in module libinstrument.so
+	function record_event0 not found in module ld-linux-x86-64.so.2
+	function record_event0 not found in module libc.so.6
+	function record_event0 not found in module libm.so.6
+	function record_event0 not found in module libpthread.so.0
+	function record_event0 not found in module librt.so.1
+	function record_event0 not found in module libgcc_s.so.1
+	function record_event0 not found in module libgfortran.so.3
+	function record_event0 not found in module libgomp.so.1
+	function record_event0 not found in module libquadmath.so.0
+Cannot find record_event0 function
+Threre are 13 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+	function record_event0 not found in module libinstrument.so
+	function record_event0 not found in module ld-linux-x86-64.so.2
+	function record_event0 not found in module libc.so.6
+	function record_event0 not found in module libm.so.6
+	function record_event0 not found in module libpthread.so.0
+	function record_event0 not found in module librt.so.1
+	function record_event0 not found in module libgcc_s.so.1
+	function record_event0 not found in module libgfortran.so.3
+	function record_event0 not found in module libgomp.so.1
+	function record_event0 not found in module libquadmath.so.0
+Cannot find record_event0 function
+Threre are 13 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+	function record_event0 not found in module libinstrument.so
+	function record_event0 not found in module ld-linux-x86-64.so.2
+	function record_event0 not found in module libc.so.6
+	function record_event0 not found in module libm.so.6
+	function record_event0 not found in module libpthread.so.0
+	function record_event0 not found in module librt.so.1
+	function record_event0 not found in module libgcc_s.so.1
+	function record_event0 not found in module libgfortran.so.3
+	function record_event0 not found in module libgomp.so.1
+	function record_event0 not found in module libquadmath.so.0
+Cannot find record_event0 function
+Threre are 13 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+	function record_event0 not found in module libinstrument.so
+	function record_event0 not found in module ld-linux-x86-64.so.2
+	function record_event0 not found in module libc.so.6
+	function record_event0 not found in module libm.so.6
+	function record_event0 not found in module libpthread.so.0
+	function record_event0 not found in module librt.so.1
+	function record_event0 not found in module libgcc_s.so.1
+	function record_event0 not found in module libgfortran.so.3
+	function record_event0 not found in module libgomp.so.1
+	function record_event0 not found in module libquadmath.so.0
+Cannot find record_event0 function
+-5 functions instrumented
+================================================================================
+Running DynInst on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/md/md_open_mp for real-life instrumentation
+================================================================================
+
+19 July      2012   0:35:17.730 AM      
+ 
+MD_OPEN_MP
+  FORTRAN77/OpenMP version
+ 
+  A molecular dynamics program.
+ 
+  NP, the number of particles in the simulation is      100
+  STEP_NUM, the number of time steps, is      400
+  DT, the size of each time step, is   0.100000E-03
+ 
+  The number of processors =        8
+  The number of threads    =        8
+ 
+  Initializing positions, velocities, and accelerations.
+ 
+  Computing initial forces and energies.
+ 
+  At each step, we report the potential and kinetic energies.
+  The sum of these energies should be a constant.
+  As an accuracy check, we also print the relative error
+  in the total energy.
+ 
+      Step      Potential       Kinetic        (P+K-E0)/E0
+                Energy P        Energy K       Relative Energy Error
+ 
+         0     4937.10         0.00000         0.00000    
+        40     4937.10        0.407768E-03    0.138956E-10
+        80     4937.09        0.169528E-02    0.136331E-10
+       120     4937.09        0.386330E-02    0.129031E-10
+       160     4937.09        0.691206E-02    0.114667E-10
+       200     4937.08        0.108419E-01    0.908556E-11
+       240     4937.08        0.156532E-01    0.552244E-11
+       280     4937.07        0.213464E-01    0.540491E-12
+       320     4937.07        0.279223E-01   -0.609609E-11
+       360     4937.06        0.353815E-01   -0.146506E-10
+       400     4937.05        0.437248E-01   -0.254344E-10
+ 
+  Elapsed time for main computation:
+    0.549772     seconds
+ 
+MD_OPEN_MP
+  Normal end of execution.
+ 
+19 July      2012   0:35:18.289 AM      
+================================================================================
+Running EZTrace on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/md/md_open_mp for real-life instrumentation
+================================================================================
+
+Starting EZTrace... done
+Stopping EZTrace... saving trace  /tmp/martin-g_eztrace_log_rank_1
+19 July      2012   0:35:18.483 AM      
+ 
+MD_OPEN_MP
+  FORTRAN77/OpenMP version
+ 
+  A molecular dynamics program.
+ 
+  NP, the number of particles in the simulation is      100
+  STEP_NUM, the number of time steps, is      400
+  DT, the size of each time step, is   0.100000E-03
+ 
+  The number of processors =        8
+  The number of threads    =        8
+ 
+  Initializing positions, velocities, and accelerations.
+ 
+  Computing initial forces and energies.
+ 
+  At each step, we report the potential and kinetic energies.
+  The sum of these energies should be a constant.
+  As an accuracy check, we also print the relative error
+  in the total energy.
+ 
+      Step      Potential       Kinetic        (P+K-E0)/E0
+                Energy P        Energy K       Relative Energy Error
+ 
+         0     4937.10         0.00000         0.00000    
+        40     4937.10        0.407768E-03    0.138953E-10
+        80     4937.09        0.169528E-02    0.136328E-10
+       120     4937.09        0.386330E-02    0.129025E-10
+       160     4937.09        0.691206E-02    0.114664E-10
+       200     4937.08        0.108419E-01    0.908538E-11
+       240     4937.08        0.156532E-01    0.552226E-11
+       280     4937.07        0.213464E-01    0.540307E-12
+       320     4937.07        0.279223E-01   -0.609628E-11
+       360     4937.06        0.353815E-01   -0.146507E-10
+       400     4937.05        0.437248E-01   -0.254348E-10
+ 
+  Elapsed time for main computation:
+     1.11351     seconds
+ 
+MD_OPEN_MP
+  Normal end of execution.
+ 
+19 July      2012   0:35:19.613 AM      
+================================================================================
+Running PIN on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/md/md_open_mp for real-life instrumentation
+================================================================================
+
+Starting FxT instrumentation...
+Init Done
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+19 July      2012   0:35:20.722 AM      
+ 
+MD_OPEN_MP
+  FORTRAN77/OpenMP version
+ 
+  A molecular dynamics program.
+ 
+  NP, the number of particles in the simulation is      100
+  STEP_NUM, the number of time steps, is      400
+  DT, the size of each time step, is   0.100000E-03
+ 
+  The number of processors =        8
+  The number of threads    =        8
+ 
+  Initializing positions, velocities, and accelerations.
+ 
+  Computing initial forces and energies.
+ 
+  At each step, we report the potential and kinetic energies.
+  The sum of these energies should be a constant.
+  As an accuracy check, we also print the relative error
+  in the total energy.
+ 
+      Step      Potential       Kinetic        (P+K-E0)/E0
+                Energy P        Energy K       Relative Energy Error
+ 
+         0     4937.10         0.00000         0.00000    
+        40     4937.10        0.407768E-03    0.138956E-10
+        80     4937.09        0.169528E-02    0.136333E-10
+       120     4937.09        0.386330E-02    0.129031E-10
+       160     4937.09        0.691206E-02    0.114669E-10
+       200     4937.08        0.108419E-01    0.908593E-11
+       240     4937.08        0.156532E-01    0.552281E-11
+       280     4937.07        0.213464E-01    0.540676E-12
+       320     4937.07        0.279223E-01   -0.609591E-11
+       360     4937.06        0.353815E-01   -0.146504E-10
+       400     4937.05        0.437248E-01   -0.254342E-10
+ 
+  Elapsed time for main computation:
+     3.07412     seconds
+ 
+MD_OPEN_MP
+  Normal end of execution.
+ 
+19 July      2012   0:35:24.190 AM      
+Stopping FxT instrumentation...
+Stopping FxT instrumentation... saving trace  /var/tmp/martin-g_trace
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/md/md_open_mp, Image id = 1
+callback inserted for function compute_
+callback inserted for function dist_
+callback inserted for function initialize_
+callback inserted for function timestamp_
+callback inserted for function update_
+Loading /lib64/ld-linux-x86-64.so.2, Image id = 2
+Loading /opt/cluster/compiler/gcc/latest/lib64/libgfortran.so.3, Image id = 3
+Loading /lib64/libm.so.6, Image id = 4
+Loading /opt/cluster/compiler/gcc/latest/lib64/libgomp.so.1, Image id = 5
+Loading /opt/cluster/compiler/gcc/latest/lib64/libgcc_s.so.1, Image id = 6
+Loading /opt/cluster/compiler/gcc/latest/lib64/libquadmath.so.0, Image id = 7
+Loading /lib64/libpthread.so.0, Image id = 8
+Loading /lib64/libc.so.6, Image id = 9
+Loading /lib64/librt.so.1, Image id = 10
+================================================================================
+Running simple_static without instrumentation
+================================================================================
+
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+100	0.010000
+1000	0.009000
+10000	0.005800
+100000	0.004240
+1000000	0.003883
+10000000	0.004207
+================================================================================
+Running simple_dynamic without instrumentation
+================================================================================
+
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+100	0.010000
+1000	0.010000
+10000	0.006800
+100000	0.004780
+1000000	0.004779
+10000000	0.004777
+================================================================================
+Running PIN on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static for simple instrumentation
+================================================================================
+
+Starting instrument-dummy...
+Starting instrument-dummy...
+Starting instrument-dummy...
+Starting instrument-dummy...
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+100	24.790000
+1000	0.021000
+10000	0.020200
+100000	0.020120
+1000000	0.020176
+10000000	0.020924
+Stopping instrument-dummy...
+	22222200 events
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static, Image id = 1
+callback inserted for function foo
+Loading /lib64/ld-linux-x86-64.so.2, Image id = 2
+Loading /lib64/libc.so.6, Image id = 3
+================================================================================
+Running PIN on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static for real instrumentation
+================================================================================
+
+Starting FxT instrumentation...
+Init Done
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+100	26.500000
+1000	1.411000
+10000	1.281000
+100000	1.288990
+1000000	1.287311
+10000000	1.286958
+Stopping FxT instrumentation...
+Stopping FxT instrumentation... saving trace  /var/tmp/martin-g_trace
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static, Image id = 1
+callback inserted for function foo
+Loading /lib64/ld-linux-x86-64.so.2, Image id = 2
+Loading /lib64/libc.so.6, Image id = 3
+================================================================================
+Running PIN on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic for simple instrumentation
+================================================================================
+
+Starting instrument-dummy...
+Starting instrument-dummy...
+Starting instrument-dummy...
+Starting instrument-dummy...
+Starting instrument-dummy...
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+100	38.220000
+1000	0.025000
+10000	0.023600
+100000	0.023530
+1000000	0.023582
+10000000	0.023565
+Stopping instrument-dummy...
+	22222200 events
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic, Image id = 1
+Loading /lib64/ld-linux-x86-64.so.2, Image id = 2
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/libsimple.so, Image id = 3
+callback inserted for function foo
+Loading /lib64/libc.so.6, Image id = 4
+================================================================================
+Running PIN on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic for real instrumentation
+================================================================================
+
+Starting FxT instrumentation...
+Init Done
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+Starting FxT instrumentation...
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+100	35.660000
+1000	1.304000
+10000	1.291500
+100000	1.287830
+1000000	1.293879
+10000000	1.294397
+Stopping FxT instrumentation...
+Stopping FxT instrumentation... saving trace  /var/tmp/martin-g_trace
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic, Image id = 1
+Loading /lib64/ld-linux-x86-64.so.2, Image id = 2
+Loading /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/libsimple.so, Image id = 3
+callback inserted for function foo
+Loading /lib64/libc.so.6, Image id = 4
+ opening binary /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static 
+Threre are 6 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+Found ! 
+PLOP
+Found foo! 
+1 functions instrumented
+================================================================================
+Running DynInst on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static for simple instrumentation
+================================================================================
+
+Starting instrument-dummy...
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+Stopping instrument-dummy...
+	22222200 events
+100	0.040000
+1000	0.032000
+10000	0.031900
+100000	0.031020
+1000000	0.031250
+10000000	0.028648
+ opening binary /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static 
+Threre are 6 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+Found ! 
+PLOP
+Found foo! 
+1 functions instrumented
+================================================================================
+Running DynInst on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static for real instrumentation
+================================================================================
+
+Starting FxT instrumentation...
+Init Done
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+Stopping FxT instrumentation...
+Stopping FxT instrumentation... saving trace  /var/tmp/martin-g_trace
+100	1.320000
+1000	1.299000
+10000	1.299700
+100000	1.290630
+1000000	1.284926
+10000000	1.285110
+warning: cannot find function foo in executable
+ opening binary /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic 
+Threre are 4 modules
+	function record_event0 not found in module DEFAULT_MODULE
+	function record_event0 not found in module start.S
+	function record_event0 not found in module elf-init.c
+Found ! 
+PLOP
+	function foo not found in module DEFAULT_MODULE
+	function foo not found in module start.S
+	function foo not found in module elf-init.c
+	function foo not found in module libinstrument.so
+0 functions instrumented
+make[4]: *** [instrument-simple] Error 1
+make[3]: *** [run] Error 2
+================================================================================
+Running EZTrace on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static for simple instrumentation
+================================================================================
+
+Starting instrument-dummy...
+libfoo = 0x4000000c
+Starting EZTrace... done
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+Stopping EZTrace... saving trace  /tmp/martin-g_eztrace_log_rank_1
+Stopping instrument-dummy...
+	22222200 events
+100	0.030000
+1000	0.023000
+10000	0.012300
+100000	0.012390
+1000000	0.012306
+10000000	0.012303
+================================================================================
+Running EZTrace on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_static for real instrumentation
+================================================================================
+
+Starting FxT instrumentation...
+Init Done
+libfoo = 0x4000000c
+Starting EZTrace... done
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+Stopping EZTrace... saving trace  /tmp/martin-g_eztrace_log_rank_1
+Stopping FxT instrumentation...
+Stopping FxT instrumentation... saving trace  /var/tmp/martin-g_trace
+100	1.320000
+1000	1.306000
+10000	1.287500
+100000	1.285900
+1000000	1.283585
+10000000	0.227849
+================================================================================
+Running EZTrace on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic for simple instrumentation
+================================================================================
+
+Starting instrument-dummy...
+libfoo = 0x2aaaab0d153c
+Starting EZTrace... done
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+Stopping EZTrace... saving trace  /tmp/martin-g_eztrace_log_rank_1
+Stopping instrument-dummy...
+	22222200 events
+100	0.030000
+1000	0.019000
+10000	0.012500
+100000	0.012440
+1000000	0.012394
+10000000	0.011514
+================================================================================
+Running EZTrace on /home/martin-g/perf/eztrace-pedron-orig/test/pptrace/comparison/programs/simple/simple_dynamic for real instrumentation
+================================================================================
+
+Starting FxT instrumentation...
+Init Done
+libfoo = 0x2aaaab0d153c
+Starting EZTrace... done
+START 100 iter!
+STOP !
+res = 4200
+START 1000 iter!
+STOP !
+res = 46200
+START 10000 iter!
+STOP !
+res = 466200
+START 100000 iter!
+STOP !
+res = 4666200
+START 1000000 iter!
+STOP !
+res = 46666200
+START 10000000 iter!
+STOP !
+res = 466666200
+Stopping EZTrace... saving trace  /tmp/martin-g_eztrace_log_rank_1
+Stopping FxT instrumentation...
+Stopping FxT instrumentation... saving trace  /var/tmp/martin-g_trace
+100	1.340000
+1000	1.289000
+10000	1.296100
+100000	1.292250
+1000000	1.284866
+10000000	0.226875

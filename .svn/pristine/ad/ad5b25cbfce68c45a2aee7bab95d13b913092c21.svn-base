@@ -1,0 +1,28 @@
+The EZTrace team is pleased to announce the release 0.8.
+
+EZTrace is a tool that aims at generating automatically execution
+traces from parallel applications. Without any modification in the
+application, eztrace can provide precise information on the program
+behavior (MPI communications, OpenMP parallel regions, etc.) These
+informations are gathered in Paje or OTF trace files that can be
+visualized with tools such as ViTE.
+
+EZTrace 0.8 is avalaible under the GPL-2 licence and it can be
+downloaded from the eztrace website: http://eztrace.gforge.inria.fr/
+
+The following is an abbreviated list of changes in 0.8:
+
+* EZTrace now relies on Opari2. Thus, OpenMP 3.0 programs can be
+  analyzed
+* EZTrace provides two trace flush policies: the trace is written
+  to disk only at the end of the program (thus, some events may be
+  lost, but there is now overhead) or when the event buffer is full
+  (thus, no event lost, but there's an overhead when the trace is
+   being written to disk)
+* EZTrace now implements a trace synchronisation mechanism
+* EZTrace can now instrument functions located inside the application
+  or in a statically-linked library(it does not require to be
+  dynamically linked anymore)
+
+--
+The EZTrace team

@@ -1,0 +1,31 @@
+--- linux-2.6.12-rc2-orig/kernel/softirq.c	2005-04-04 18:38:05.000000000 +0200
++++ linux-2.6.12-rc2-fkt/kernel/softirq.c	2005-05-21 01:11:09.221199790 +0200
+@@ -17,6 +17,8 @@
+ #include <linux/kthread.h>
+ #include <linux/rcupdate.h>
+ 
++#include <linux/fkt.h>	/* st */
++
+ #include <asm/irq.h>
+ /*
+    - No shared variables, all the data are CPU local.
+@@ -264,7 +266,9 @@ static void tasklet_action(struct softir
+ 			if (!atomic_read(&t->count)) {
+ 				if (!test_and_clear_bit(TASKLET_STATE_SCHED, &t->state))
+ 					BUG();
++				FKT_PROBE2(FKT_SYSTEM_KEYMASK, FKT_TASKLET_ENTRY_CODE,t->func,t->data); /* st */
+ 				t->func(t->data);
++				FKT_PROBE2(FKT_SYSTEM_KEYMASK, FKT_TASKLET_EXIT_CODE,t->func,t->data); /* st */
+ 				tasklet_unlock(t);
+ 				continue;
+ 			}
+@@ -297,7 +301,9 @@ static void tasklet_hi_action(struct sof
+ 			if (!atomic_read(&t->count)) {
+ 				if (!test_and_clear_bit(TASKLET_STATE_SCHED, &t->state))
+ 					BUG();
++				FKT_PROBE2(FKT_SYSTEM_KEYMASK, FKT_TASKLET_HI_ENTRY_CODE,t->func,t->data); /* st */
+ 				t->func(t->data);
++				FKT_PROBE2(FKT_SYSTEM_KEYMASK, FKT_TASKLET_HI_EXIT_CODE,t->func,t->data); /* st */
+ 				tasklet_unlock(t);
+ 				continue;
+ 			}

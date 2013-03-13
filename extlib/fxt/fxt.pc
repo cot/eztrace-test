@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: FxT
+Description: FxT - Fast User/Kernel Tracing
+Version: 0.2.11
+Cflags: -I${includedir}
+Libs: -L${libdir} -lfxt
+Libs.private: -lbfd  -lrt -lz -liberty 

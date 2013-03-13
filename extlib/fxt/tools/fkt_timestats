@@ -1,0 +1,14 @@
+#!/bin/bash
+EPS=${1/.timedat/.eps}
+[ -n "$1" -a -n "$2" -a "$2" != "$1" ] && EPS="$2"
+if [ "$EPS" = "$1" ]
+then
+	echo "Usage: $0 file.timedat [output.eps]"
+	exit 1
+fi
+(cat << EOF
+set terminal postscript eps enhanced color solid
+set xlabel "Mcy"
+plot "$1" using (\$2/1000000):(-\$3/1000000) title "Mcy" with lines
+EOF
+) | gnuplot > $EPS

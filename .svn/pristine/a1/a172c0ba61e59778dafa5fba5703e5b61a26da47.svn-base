@@ -1,0 +1,29 @@
+CC=gcc -m64
+
+PPTRACE_DIR=../../../../src/pptrace
+
+BINS=libalacon.so libmatrix.so prog dynprog mprog libpreload.so libpptrace.so
+
+all:	$(BINS)
+
+# optimization 1 to avoid the gap between dynamic and static performances
+%.so: %.c
+	$(CC) -O1 -shared -I$(PPTRACE_DIR) -fPIC -o $@ $< -ldl
+
+mprog: prog.c libmatrix.c
+	$(CC) -O1 -o $@ $^
+
+# Static program for the dummy is however compiled with optimization 0 to avoid function shrinking
+prog: prog.c libalacon.c
+	$(CC) -O0 -o $@ $^
+
+dynprog:	prog.c	libalacon.so
+	$(CC) -O1 -L. -o $@ $< -lalacon
+
+pptrace:	pptrace.c
+
+clean:
+	rm -f $(BINS)
+	find . -name '*.o' -delete
+	find . -name '*~' -delete
+

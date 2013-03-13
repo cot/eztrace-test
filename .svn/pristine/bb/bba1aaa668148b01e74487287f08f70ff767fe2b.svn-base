@@ -1,0 +1,32 @@
+#include "eztrace.h"
+@HEADER_USER@
+#include "@HEADER_FILE@"
+
+@RECORD_CALLBACKS@
+
+@RECORD_FUNCTIONS@
+
+START_INTERCEPT
+  @RECORD_INTERCEPTS@
+END_INTERCEPT
+
+static void __@MODULE@_init (void) __attribute__ ((constructor));
+/* Initialize the current library */
+static void
+__@MODULE@_init (void)
+{
+  DYNAMIC_INTERCEPT_ALL();
+
+  /* start event recording */
+#ifdef EZTRACE_AUTOSTART
+  eztrace_start ();
+#endif
+}
+
+static void __@MODULE@_conclude (void) __attribute__ ((destructor));
+static void
+__@MODULE@_conclude (void)
+{
+  /* stop event recording */
+  eztrace_stop ();
+}

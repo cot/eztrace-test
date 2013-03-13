@@ -1,0 +1,59 @@
+--- linux-2.6.12-rc2-orig/kernel/timer.c	2005-04-04 18:39:17.000000000 +0200
++++ linux-2.6.12-rc2-fkt/kernel/timer.c	2005-05-21 01:11:46.837435395 +0200
+@@ -1,3 +1,4 @@
++/***** 16-Oct-00	rdr vs added fkt probes *****/
+ /*
+  *  linux/kernel/timer.c
+  *
+@@ -46,6 +47,9 @@ static void time_interpolator_update(lon
+ #define time_interpolator_update(x)
+ #endif
+ 
++/* rdr vs */
++#include <linux/fkt.h>
++
+ /*
+  * per-CPU timer vector definitions:
+  */
+@@ -1167,11 +1171,18 @@ asmlinkage long sys_nanosleep(struct tim
+ 	unsigned long expire;
+ 	long ret;
+ 
++	FKT_PROBE0(FKT_DRIVER_KEYMASK, FKT_NANOSLEEP_ENTRY_CODE);      /* rdr */
+ 	if (copy_from_user(&t, rqtp, sizeof(t)))
+-		return -EFAULT;
++		{/* rdr */
++		ret = -EFAULT;
++		goto out;
++		}
+ 
+ 	if ((t.tv_nsec >= 1000000000L) || (t.tv_nsec < 0) || (t.tv_sec < 0))
+-		return -EINVAL;
++		{/* rdr */
++		ret = -EINVAL;
++		goto out;
++		}
+ 
+ 	expire = timespec_to_jiffies(&t) + (t.tv_sec || t.tv_nsec);
+ 	current->state = TASK_INTERRUPTIBLE;
+@@ -1182,7 +1193,10 @@ asmlinkage long sys_nanosleep(struct tim
+ 		struct restart_block *restart;
+ 		jiffies_to_timespec(expire, &t);
+ 		if (rmtp && copy_to_user(rmtp, &t, sizeof(t)))
+-			return -EFAULT;
++			{/* rdr */
++			ret = -EFAULT;
++			goto out;
++			}
+ 
+ 		restart = &current_thread_info()->restart_block;
+ 		restart->fn = nanosleep_restart;
+@@ -1190,6 +1204,8 @@ asmlinkage long sys_nanosleep(struct tim
+ 		restart->arg1 = (unsigned long) rmtp;
+ 		ret = -ERESTART_RESTARTBLOCK;
+ 	}
++out:
++	FKT_PROBE1(FKT_DRIVER_KEYMASK, FKT_NANOSLEEP_EXIT_CODE,ret);      /* rdr */
+ 	return ret;
+ }
+ 

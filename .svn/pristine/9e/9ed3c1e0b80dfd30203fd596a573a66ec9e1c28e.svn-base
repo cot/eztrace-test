@@ -1,0 +1,28 @@
+--- linux-2.6.12-rc2-orig/fs/ioctl.c	2005-04-04 18:38:04.000000000 +0200
++++ linux-2.6.12-rc2-fkt/fs/ioctl.c	2005-05-21 01:11:05.869713380 +0200
+@@ -13,6 +13,8 @@
+ #include <linux/security.h>
+ #include <linux/module.h>
+ 
++#include <linux/fkt.h> /* st */
++
+ #include <asm/uaccess.h>
+ #include <asm/ioctls.h>
+ 
+@@ -88,6 +90,8 @@ int vfs_ioctl(struct file *filp, unsigne
+ {
+ 	unsigned int flag;
+ 	int on, error = 0;
++	FKT_PROBE3(FKT_FILES_KEYMASK,FKT_IOCTL_ENTRY_CODE,fd,cmd,arg); /* st */
++
+ 
+ 	switch (cmd) {
+ 		case FIOCLEX:
+@@ -153,6 +157,7 @@ int vfs_ioctl(struct file *filp, unsigne
+ 				error = do_ioctl(filp, cmd, arg);
+ 			break;
+ 	}
++	FKT_PROBE1(FKT_FILES_KEYMASK,FKT_IOCTL_EXIT_CODE,error); /* st */
+ 	return error;
+ }
+ 

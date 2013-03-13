@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: EZTrace
+Description: EZTrace - easy to use trace generator
+Version: 0.8.1
+Libs: -L${libdir} -leztrace
+Cflags: -I${includedir}

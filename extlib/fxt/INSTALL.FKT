@@ -1,0 +1,188 @@
+Note: if you don't need the kernel part but only the userland part (for the PM2
+project for instance), skip to section VI.
+
+Steps taken to add the fkt facility to the Linux 2.4.21 Kernel	29-Jul-03
+-------------------------------------------------------------------------
+
+The directory where this file can be found will be called fkt/ below
+
+I. Get a linux kernel
+---------------------
+
+  The vanilla 2.6.11 should be perfect.
+	
+  A patched 2.6.11 should be ok, at least for the fkt part. Probes patches may
+not apply smoothly, they'll need to be fixed by hand.
+
+  The fkt part should work on other recent 2.6 kernels, but probe patches
+are not always correct.
+
+  Support for 2.4 is not much tested any more.
+
+  The linux source directory will be called LINUX below
+
+II. Install the fkt base
+------------------------
+
+  cd to kernel/
+
+  First modify Makefile.config to tell where LINUX resides, and the patch
+version to try.
+
+	make install-fkt
+
+  will copy the fkt files, ie
+
+arch/i386/kernel/fkt_header.S
+include/linux/fkt.h
+kernel/fkt.c
+kernel/fkt-mod.c
+
+no problem here, they are version independant.
+
+	make install-sys
+
+  will patch the kernel to add links to fkt.
+
+  If the kernel is not of vanilla flavor, parts of the patch may be merged by
+hand without too much work, here is a resume (this part can be completely
+skipped if the patch applied just fine)
+
+arch/i386/config.in arch/i386/Kconfig
+arch/i386/defconfig
+arch/i386/kernel/Makefile
+kernel/Makefile
+	just added the compilation of fkt, it can be easily done by hand if it
+	didn't merge.
+
+include/linux/pagemap.h
+mm/filemap.c
+fs/read_write.c
+	added helper functions, easy to apply by hand, but also tinkered in
+	sendfile functions to have fkt's called (not needed in 2.6 kernels)
+	Also removed the useless copy of fkt pages.
+
+include/linux/mm.h include/linux/page-flags.h
+mm/page_alloc.c
+	defined a new flag for FKT pages to see its usage counter vary even if
+	they are Reserved.
+
+include/linux/fs.h include/linux/buffer_head.h
+fs/buffer.c
+	added helper functions, easy to apply by hand. It also adds some probes,
+	but they are only useful for debugging fkt flushing.
+
+kernel/sched.c
+fs/exec.c
+include/linux/sched.h kernel/pid.c
+	added probe for the analysis tool to follow fork()s, exec()s,
+	switch_to()s and wait4()s
+
+arch/i386/kernel/entry.S
+	added probes to every system call, and a few system calls to be able
+	to add probes to user programs.
+	As long as user programs probes are not needed, the last hunk failing
+	is no hurt. But previous hunks should be handled carefully if they
+	didn't merge.
+
+include/asm-i386/unistd.h
+	just system calls adding, same remark as above.
+
+include/asm-i386/hw_irq.h
+	added probes to every irq. To be handled carefully if it didn't merge.
+
+include/linux/interrupt.h
+	added a softirq for fkt, really easy to merge.
+
+kernel/timer.c
+	added probes to nanosleep, can be skipped if it didn't merge.
+
+
+III Apply probes patches
+------------------------
+
+  There are already some probes patches for getting started quickly with
+networking for instance. You may skip this completely if you only want to trace
+your own modules.
+
+  Only 2.4.21 patches are available, but they might apply to other kernels as
+well (set KERN_VERSION to 2.4.21 in Makefile.conf before launching these
+commands)
+
+	make install-fs
+
+  will add probes to file system operations: lseek, read, write, ext2_getblk,
+ll_rw_blk
+
+	make install-net
+
+  will add probes to the whole tcp/ip stack. Different layers can then be
+selected or not according to the recording keymask (see README).
+
+	make install-netdriver-3c59x or acenic or tulip
+
+  will add probes to the relevant network device driver.
+
+	make install-scsigen
+
+  will add probes to the generic scsi driver and scsi cd driver.
+
+
+IV Compile the kernel
+---------------------
+
+  cd to LINUX
+
+  Run "make config" or "make oldconfig" and say yes (or module) to CONFIG_FKT.
+You may want to say yes to CONFIG_FKT_TIME_ONLY to reduce the recording size,
+but you won't have the parameters recorded.
+
+  Run "make dep" (2.4 only), "make clean" and "make bzImage" to build the
+new kernel.
+
+  install arch/i386/boot/bzImage and System.map as appropriate for booting it,
+run "make modules_install" as needed.
+
+
+V At the User Level
+-------------------
+
+  create /dev/fkt:
+
+	mknod /dev/fkt b 60 0
+
+  add
+
+	alias block-major-60 fkt-mod
+
+  to /etc/modules.conf to have the module auto-loaded. 
+  You may also want to do
+
+	chgrp somegroup /dev/fkt
+  	chmod 440 /dev/fkt
+
+  to restrict fkt usage to a particular group
+
+VI User-Level tools
+-------------------
+
+  Install the following packages:
+  
+- the package containing libbfd ; it is probably called binutils-dev or
+binutils-devel.
+- gawk
+- the package containing libX11 ; it is probably called xlibs-dev or
+xlibs-devel.
+- texlive-latex-base
+- texlive-latex-extra
+- tetex-frogg
+- gs
+
+  If you are fetching FxT from cvs, please also install automake 1.8, autoconf
+and libtool and first run autoreconf -f -i
+
+  Run ./configure && make && make install ; this will build and install the
+needed tools.
+  
+-- 
+vim: textwidth=80

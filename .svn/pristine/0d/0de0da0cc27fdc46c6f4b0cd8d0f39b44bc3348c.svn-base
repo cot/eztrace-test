@@ -1,0 +1,16 @@
+all:	instruments progs
+
+progs:
+	make -C tests
+
+instruments:
+	make -C instrumentation
+
+clean:
+	make -C tests clean
+	make -C instrumentation clean
+
+distclean:	clean
+	rm -f config.log config.status configure
+	rm -f tests/Makefile instrumentation/Makefile dyninst.conf Makefile
+	rm -fr autom4te.cache

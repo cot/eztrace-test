@@ -1,0 +1,68 @@
+Version 0.8
+-----------
+* EZTrace now relies on Opari2. Thus, OpenMP 3.0 programs can be analyzed
+* EZTrace provides two trace flush policies: the trace is written to disk only at the end of the program (thus, some events may be lost, but there is now overhead) or when the event buffer is full (thus, no event lost, but there's an overhead when the trace is being written to disk)
+* EZTrace now implements a trace synchronisation mechanism
+* EZTrace can now instrument functions located inside the application or in a statically-linked library(it does not require to be dynamically linked anymore)
+
+Version 0.7
+-----------
+* EZTrace can now use PAPI (Performance Application Programming Interface) for extracting hardware counters
+* Update the OpenMP module. It can now use Opari for instrumenting OpenMP program and extract precise informations
+* Fix the generation of OTF traces
+* Improve statistics on MPI messages
+
+Version 0.6
+-----------
+* Add a module for standard IO primitives (read, write, select, ...)
+* Add a module for tracking memory consumption (malloc, free, ...)
+* Add a source-to-source compiler (eztrace_create) for converting simple scripts
+  into eztrace plugins
+* FxT and GTG (with OTF support) are now included in eztrace. Thus, you
+  don't need to download/install them separately.
+
+Version 0.5
+-----------
+* EZTrace now relies on modules (plugins).
+* EZTrace now supports user-defined plugins.
+* EZTrace now works on Mac OS X. However, since mac os pthread interface
+  is limited compared to the linux one, the pthread module is not
+  available on macos.
+* The Coreblas module has been removed. It is now part of the Plasma
+  project.
+* eztrace_stats is now available. Instead of merging traces, it computes
+  statistics on the traces (number of events, average size of MPI
+  messages, etc.)
+* Fix various bugs in PThread and MPI modules.
+
+Version 0.4
+-----------
+* EZTrace now uses GTG for converting traces. You can now generate OTF
+  traces
+
+
+Version 0.3
+-----------
+* Add full support for MPI communication operations (for both C and
+	Fortran bindings)
+* Add support for OpenMP scheduling strategies (static, dynamic, guided
+  and runtime)
+* Fix various bugs in PThread, OpenMP and MPI modules
+
+Version 0.2
+-----------
+* Add support for Fortran MPI programs
+* Add support for MPI collective communications
+* Add support for non-blocking MPI communications
+
+Version 0.1.1
+-----------
+* Fix a bug regarding pthread_cond_signal and pthread_cond_broadcast
+
+Version 0.1
+-----------
+* This first release supports:
+	* Threads state (blocked/working)
+	* OpenMP parallel sections for C or Fortran programs (merely tested)
+	* sem_post/sem_wait are shown as Events and Links in the Paje trace
+        * Basic MPI support

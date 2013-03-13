@@ -1,0 +1,7 @@
+PIN_KIT=@pin_path@
+PIN_ROOT=@pin_path@/source
+PIN_HOME=@pin_path@/source/tools
+#PIN_INC=-I../tests -I@pin_path@/source/include -I@pin_path@/source/include/gen -I@pin_path@/extras/xed2-intel64/include -I@pin_path@/extras/components/include
+#PIN_FLAGS=-DTARGET_IA32E -DHOST_IA32E -DTARGET_LINUX -Wl,--hash-style=sysv -shared -Wl,-Bsymbolic -Wl,--version-script=@pin_path@/source/include/pintool.ver
+# -L../Lib/ -L../ExtLib/ -L../../../extras/xed2-intel64/lib -L../../../intel64/lib -L../../../intel64/lib-ext  -o obj-intel64/opcodemix.so obj-intel64/opcodemix.o -L../Lib/ -L../ExtLib/ -L../../../extras/xed2-intel64/lib -L../../../intel64/lib -L../../../intel64/lib-ext -lpin  -lxed -ldwarf -lelf -ldl  
+#PIN_LIBS=-L$PIN_PATH/Lib/ -L$PIN_PATH/ExtLib/ -L$PIN_PATH/intel64/lib -L../../../intel64/lib-ext  -o obj-intel64/opcodemix.so obj-intel64/opcodemix.o -L../Lib/ -L../ExtLib/ -L../../../extras/xed2-intel64/lib -L../../../intel64/lib -L../../../intel64/lib-ext -lpin  -lxed -ldwarf -lelf -ldl  
