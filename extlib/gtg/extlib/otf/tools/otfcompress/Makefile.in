@@ -282,7 +282,7 @@ INCLUDES = \
 	-I$(top_builddir)/otflib -I$(top_srcdir)/otflib \
 	$(ZLIB_INCLUDE_LINE)
 
-otfcompress_LDADD = $(top_builddir)/otflib/libotf.la
+otfcompress_LDADD = $(top_builddir)/otflib/libotf.la /usr/lib/libiberty.a
 otfcompress_DEPENDENCIES = $(otfcompress_LDADD)
 otfcompress_SOURCES = \
 	sys_time.h \

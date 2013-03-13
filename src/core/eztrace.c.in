@@ -90,11 +90,32 @@ int main(int argc, char **argv) {
 	  strcat(ld_library_path, ":@prefix@/lib");
   }
   // other env variables
+  char ezt_all[SIZE_STRING] = "";
+  char ezt_all_path[SIZE_STRING] = "";
+
+  tmp = NULL;
+  tmp = getenv("EZTRACE_UNUSED");
+  char ezt_unused[SIZE_STRING] = "";
+  if(tmp != NULL) {
+          strcat(ezt_unused, tmp);
+          strcat(ezt_all, tmp);
+  }
+
+  tmp = NULL;
+  tmp = getenv("EZTRACE_UNUSED_PATH");
+  char ezt_unused_path[SIZE_STRING] = "";
+  if(tmp != NULL) {
+          strcat(ezt_unused_path, tmp);
+          strcat(ezt_all_path, tmp);
+          strcat(ezt_all_path, ":");
+  }
+
   tmp = NULL;
   tmp = getenv("EZTRACE_TRACE");
   char ezt_trace[SIZE_STRING] = "";
   if(tmp != NULL) {
 	  strcat(ezt_trace, tmp);
+	  strcat(ezt_all, tmp);
   }
 
   tmp = NULL;
@@ -102,39 +123,16 @@ int main(int argc, char **argv) {
   char ezt_library_path[SIZE_STRING] = "";
   if(tmp != NULL) {
 	  strcat(ezt_library_path, tmp);
+	  strcat(ezt_all_path, tmp);
   }
   if (test==0) {
 	  strcat(ezt_library_path, ":@prefix@/lib");
   }
 
-  tmp = NULL;
-  tmp = getenv("EZTRACE_UNUSED");
-  char ezt_unused[SIZE_STRING] = "";
-  if(tmp != NULL) {
-	  strcat(ezt_unused, tmp);
-  }
-
-  tmp = NULL;
-  tmp = getenv("EZTRACE_UNUSED_PATH");
-  char ezt_unused_path[SIZE_STRING] = "";
-  if(tmp != NULL) {
-	  strcat(ezt_unused_path, tmp);
-  }
-  if (test==0) {
-     strcat(ezt_unused_path, ":");
-     }
-
-  char ezt_all[SIZE_STRING * 2] = "";
-  strcat(ezt_all, ezt_trace);
-  strcat(ezt_all, ezt_unused);
   if(ezt_all != NULL) setenv("EZTRACE_ALL",ezt_all,1);
   tmp = getenv("EZTRACE_ALL");
   printf(" EZTRACE_ALL = %s \n",tmp);
 
-  char ezt_all_path[SIZE_STRING * 2] = "";
-  strcat(ezt_all_path, ezt_library_path);
-  strcat(ezt_all_path, ":");
-  strcat(ezt_all_path, ezt_unused_path);
   if(ezt_all_path != NULL) setenv("EZTRACE_ALL_PATH",ezt_all_path,1);
   tmp = getenv("EZTRACE_ALL_PATH");
   printf(" EZTRACE_ALL_PATH = %s \n",tmp);
@@ -164,7 +162,7 @@ int main(int argc, char **argv) {
 	  }
   }
 
-  // modules in ezt_trace
+  // modules in ezt_trace and ezt_unused
   int nb_modules = 0;
   if (strcmp(ezt_all, "")) {
 	  char *module = NULL;
@@ -176,6 +174,7 @@ int main(int argc, char **argv) {
 		  module = strtok(NULL, " ");
 	  }
   }
+  printf("nb_modules = %i \n",nb_modules);
 
   char *modules[nb_modules];
   if(nb_modules != 0) {
@@ -202,23 +201,21 @@ int main(int argc, char **argv) {
   // dirs in ezt_library_path and ezt_unused_path
   int nb_dirs = 0;
   char *dir = NULL;
+  strcat(tmp, "@prefix@/lib");
   if (strcmp(ezt_all_path, "")) {
 	  dir = strtok(ezt_all_path, ":");
 	  while(dir != NULL) {
 		  if (strcmp(dir, "")) {
-			  if(!strcmp(dir,"@prefix@/lib" ))  nb_dirs++;
+			  if(!strcmp(dir, tmp ))  nb_dirs++;
 		  }
 		  dir = strtok(NULL, ":");
 	  }
   }
-
   printf("nb_dirs = %i \n",nb_dirs);
 
   char *dirs[nb_dirs];
   if(nb_dirs != 0) {
-	  // we have to get EZTRACE_LIBRARY_PATH again because we strtok-ed it
 	  tmp = NULL;
-	  // on remplit d'abord avec les modules d'EZTRACE_LIBRARY_PATH
 	  tmp = getenv("EZTRACE_ALL_PATH");
 	  strcpy(ezt_all_path, "");
 	  if(tmp != NULL) {
@@ -271,7 +268,7 @@ int main(int argc, char **argv) {
       }
     }
   }else {
-	  printf("on est clairement dans ce cas ...");
+	  printf("on est clairement dans ce cas ...\n");
     for(i=0; i<nb_dirs; i++) {
       char *pathname = dirs[i];
       struct dirent *dirent;

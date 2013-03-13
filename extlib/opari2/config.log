@@ -44,7 +44,7 @@ PATH: /home/rue
 ## Core tests. ##
 ## ----------- ##
 
-configure:1789: WARNING: distribution does not match a single, unmodified revision, but 1327M (opari2) and 1327 (common).
+configure:1789: WARNING: distribution does not match a single, unmodified revision, but Unversioned directory (opari2) and Unversioned directory (common).
 configure:1898: checking for a BSD-compatible install
 configure:1966: result: /usr/bin/install -c
 configure:1977: checking whether build environment is sane
@@ -109,7 +109,7 @@ config.status:782: creating test/c_test.sh
 config.status:782: creating test/f90_test.sh
 config.status:782: creating test/f77_test.sh
 config.status:782: creating build-frontend/pomp2-parse-init-regions.awk
-configure:4389: === configuring in build-frontend (/home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-frontend)
+configure:4389: === configuring in build-frontend (/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend)
 configure:4452: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'FC=gfortran' '--with-mpi=/usr/lib/openmpi' 'F77=gfortran' 'CC=gcc' 'CXX=g++' '--without-otf' 'ac_scorep_platform=linux' --cache-file=/dev/null --srcdir=.
 
 ## ---------------- ##
@@ -138,15 +138,15 @@ am_cv_prog_tar_pax=gnutar
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-config/missing --run aclocal-1.11'
+ACLOCAL='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run aclocal-1.11'
 AMTAR='$${TAR-tar}'
 AM_BACKSLASH='\'
 AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
 AM_DEFAULT_VERBOSITY='0'
 AM_V='$(V)'
-AUTOCONF='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-config/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-config/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-config/missing --run automake-1.11'
+AUTOCONF='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run automake-1.11'
 AWK='gawk'
 CROSS_BUILD_FALSE=''
 CROSS_BUILD_TRUE='#'
@@ -171,7 +171,7 @@ LIBRARY_CURRENT='1'
 LIBRARY_REVISION='0'
 LIBS=''
 LTLIBOBJS=''
-MAKEINFO='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-config/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run makeinfo'
 MKDIR_P='/bin/mkdir -p'
 PACKAGE='opari2'
 PACKAGE_BUGFIX='2'
@@ -221,7 +221,7 @@ host_vendor='unknown'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-config/install-sh'
+install_sh='${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

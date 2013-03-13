@@ -1,7 +1,0 @@
-include fkt_print.h into the trace.
-fork: copy command line !!
-set thread name: copy all parameters.
-merge fxt_print/fkt_print
-Use vmsplice()
-
-Problème: lwps supplémentaires

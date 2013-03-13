@@ -17,7 +17,7 @@ old_library='libeztrace-convert-mpi.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/gtg/src/libgtg.la -lz /home/rue/Bureau/EZTRACE/eztrace/unused/extlib/fxt/tools/libfxt.la -lbfd -lrt -lpthread -lm -ldl'
+dependency_libs=' /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/src/libgtg.la -lz /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/fxt/tools/libfxt.la -lbfd -lrt -lpthread -lm -ldl'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -39,4 +39,4 @@ dlpreopen=''
 
 # Directory that this library needs to be installed in:
 libdir='/usr/local/lib'
-relink_command="(cd /home/rue/Bureau/EZTRACE/eztrace/unused/src/modules/mpi; /bin/bash /home/rue/Bureau/EZTRACE/eztrace/unused/libtool  --tag CC --mode=relink gcc -I./../../core/ -I../../../src/core -I../../../src/pptrace -W -Wall -Wextra -DUSE_MPI -g -O2 -DHAVE_LINUX -DTID_RECORDING_ENABLED --no-undefined ../../../extlib/gtg/src/libgtg.la ../../../extlib/fxt/tools/libfxt.la -o libeztrace-convert-mpi.la -rpath /usr/local/lib libeztrace_convert_mpi_la-eztrace_convert_mpi.lo libeztrace_convert_mpi_la-eztrace_convert_mpi_p2p.lo libeztrace_convert_mpi_la-eztrace_convert_mpi_coll.lo libeztrace_convert_mpi_la-eztrace_convert_mpi_pers.lo libeztrace_convert_mpi_la-eztrace_stats_mpi.lo -lpthread -lm -ldl @inst_prefix_dir@)"
+relink_command="(cd /home/rue/Bureau/EZTRACE/eztrace/unused-git/src/modules/mpi; /bin/bash /home/rue/Bureau/EZTRACE/eztrace/unused-git/libtool  --tag CC --mode=relink gcc -I./../../core/ -I../../../src/core -I../../../src/pptrace -W -Wall -Wextra -DUSE_MPI -g -O2 -DHAVE_LINUX -DTID_RECORDING_ENABLED --no-undefined ../../../extlib/gtg/src/libgtg.la ../../../extlib/fxt/tools/libfxt.la -o libeztrace-convert-mpi.la -rpath /usr/local/lib libeztrace_convert_mpi_la-eztrace_convert_mpi.lo libeztrace_convert_mpi_la-eztrace_convert_mpi_p2p.lo libeztrace_convert_mpi_la-eztrace_convert_mpi_coll.lo libeztrace_convert_mpi_la-eztrace_convert_mpi_pers.lo libeztrace_convert_mpi_la-eztrace_stats_mpi.lo -lpthread -lm -ldl @inst_prefix_dir@)"

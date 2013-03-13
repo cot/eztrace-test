@@ -66,10 +66,10 @@
 #define PACKAGE_VERSION "1.0.2"
 
 /* Revision of common repository */
-#define SCOREP_COMMON_REVISION "1327"
+#define SCOREP_COMMON_REVISION "Unversioned directory"
 
 /* Revision of ${PACKAGE_NAME} */
-#define SCOREP_COMPONENT_REVISION "1327M"
+#define SCOREP_COMPONENT_REVISION "Unversioned directory"
 
 /* Defined if we are working from a make dist generated tarball. */
 #define SCOREP_IN_PRODUCTION /**/

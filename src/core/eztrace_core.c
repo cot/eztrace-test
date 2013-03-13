@@ -240,7 +240,7 @@ eztrace_start ()
     EZT_PRINTF(0, "EZTrace Debug mode enabled (trace level: %d)\n", eztrace_debug_mode);
   }
 
-  EZT_PRINTF (0, "Starting EZTrace... ");
+  EZT_PRINTF (0, "Starting EZTrace...\n ");
   eztrace_set_filename ("eztrace_log_rank_1");
   threadid = CUR_TID;
 

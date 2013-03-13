@@ -9,8 +9,8 @@ OPENMP_F_FLAG=-fopenmp
 ######################################################
 #  OPARI & DUMMY LIBRARY                             #
 ######################################################
-POMP_INC=-I/home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-frontend/../doc/example_user_instrumentation/../../include
-POMPLIBDIR=/home/rue/Bureau/EZTRACE/eztrace/unused/extlib/opari2/build-frontend/../doc/example_user_instrumentation/../../build-frontend/.libs/ 
+POMP_INC=-I/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../doc/example_user_instrumentation/../../include
+POMPLIBDIR=/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../doc/example_user_instrumentation/../../build-frontend/.libs/ 
 POMPLIB=-L${POMPLIBDIR} -lpomp 
 
 BINDIR=/usr/local/bin

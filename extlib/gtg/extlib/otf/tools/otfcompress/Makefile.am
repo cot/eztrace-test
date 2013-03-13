@@ -10,7 +10,7 @@ install-exec-hook:
 	$(LN_S) otfcompress$(EXEEXT) otfdecompress$(EXEEXT))
 endif
 
-otfcompress_LDADD = $(top_builddir)/otflib/libotf.la
+otfcompress_LDADD = $(top_builddir)/otflib/libotf.la /usr/lib/libiberty.a
 otfcompress_DEPENDENCIES = $(otfcompress_LDADD)
 otfcompress_SOURCES = \
 	sys_time.h \

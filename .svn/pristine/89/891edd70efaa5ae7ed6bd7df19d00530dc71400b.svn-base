@@ -1,2 +1,0 @@
-DYNINST_LIB=@dyninst_lib@
-DYNINST_INC=@dyninst_inc@

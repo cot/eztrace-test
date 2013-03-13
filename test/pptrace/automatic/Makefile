@@ -1,6 +1,6 @@
 BITS=64
-CORE_DIRECTORY=/home/rue/Bureau/EZTRACE/eztrace/unused/src/core
-PPTRACE_DIRECTORY=/home/rue/Bureau/EZTRACE/eztrace/unused/src/pptrace
+CORE_DIRECTORY=/home/rue/Bureau/EZTRACE/eztrace/unused-git/src/core
+PPTRACE_DIRECTORY=/home/rue/Bureau/EZTRACE/eztrace/unused-git/src/pptrace
 TESTS=errors binary tracing opcodes wait_open hijack
 DEBUG_LEVEL=0
 
