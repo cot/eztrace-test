@@ -99,6 +99,7 @@ int main(int argc, char **argv) {
   if(tmp != NULL) {
           strcat(ezt_unused, tmp);
           strcat(ezt_all, tmp);
+          strcat(ezt_all, " ");
   }
 
   tmp = NULL;
