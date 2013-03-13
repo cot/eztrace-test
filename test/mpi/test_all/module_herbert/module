@@ -1,0 +1,6 @@
+BEGIN_MODULE
+NAME herbert
+DESC "module for herbert"
+ID 42
+int herbertvonkrugell(int toto) 
+END_MODULE

@@ -1,0 +1,6 @@
+BEGIN_MODULE
+NAME alltoall
+DESC "module for the alltoall mpi library"
+ID 42
+int MPI_Alltoall(void *sendbuf, int sendcount, void* sendtype, void* recvbuf, int recvcount, void* recvtype, void* comm)
+END_MODULE
