@@ -65,11 +65,16 @@ int MPI_Allgather(CONST void *sendbuf, int sendcount, MPI_Datatype sendtype,
 		  void *recvbuf, int recvcount, MPI_Datatype recvtype,
 		  MPI_Comm comm)
 {
+  int ret;
   FUNCTION_ENTRY;
-
-  MPI_Allgather_prolog(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
-  int ret = MPI_Allgather_core(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
-  MPI_Allgather_epilog(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
+  if(_UNUSED_MPI)
+	  ret = MPI_Allgather_core(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
+  else
+  {
+	  MPI_Allgather_prolog(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
+	  ret = MPI_Allgather_core(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
+	  MPI_Allgather_epilog(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);
+  }
   return ret;
 }
 

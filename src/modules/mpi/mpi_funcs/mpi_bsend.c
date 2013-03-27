@@ -53,15 +53,21 @@ static void MPI_Bsend_epilog (CONST void* buf __attribute__((unused)),
 
 int MPI_Bsend (CONST void* buf, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-  MPI_Bsend_prolog(buf, count, datatype, dest, tag, comm);
-  int ret = MPI_Bsend_core(buf, count, datatype, dest, tag, comm);
-  MPI_Bsend_epilog(buf, count, datatype, dest, tag, comm);
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI>1)
+		ret = MPI_Bsend_core(buf, count, datatype, dest, tag, comm);
+	else
+	{
+		MPI_Bsend_prolog(buf, count, datatype, dest, tag, comm);
+		ret = MPI_Bsend_core(buf, count, datatype, dest, tag, comm);
+		MPI_Bsend_epilog(buf, count, datatype, dest, tag, comm);
+	} 
+	return ret;
 }
 
 void mpif_bsend_(void *buf, int *count, MPI_Fint *d, int *dest,
-		 int *tag, MPI_Fint *c, int *error)
+		int *tag, MPI_Fint *c, int *error)
 {
   MPI_Comm c_comm = MPI_Comm_f2c(*c);
   MPI_Datatype c_type = MPI_Type_f2c(*d);

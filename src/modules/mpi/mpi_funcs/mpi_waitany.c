@@ -60,12 +60,17 @@ static void MPI_Waitany_epilog (int count,
 
 int MPI_Waitany (int count, MPI_Request *reqs, int *index, MPI_Status *status)
 {
-  FUNCTION_ENTRY;
-  MPI_Waitany_prolog(count, reqs, index, status, sizeof(MPI_Request));
-  int ret = MPI_Waitany_core(count, reqs, index, status);
-  MPI_Waitany_epilog(count, reqs, index, status, sizeof(MPI_Request));
-
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Waitany_core(count, reqs, index, status);
+	else
+	{
+		MPI_Waitany_prolog(count, reqs, index, status, sizeof(MPI_Request));
+		ret = MPI_Waitany_core(count, reqs, index, status);
+		MPI_Waitany_epilog(count, reqs, index, status, sizeof(MPI_Request));
+	}
+	return ret;
 }
 
 

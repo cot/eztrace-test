@@ -79,12 +79,16 @@ int MPI_Alltoallv (CONST void *sendbuf, CONST int *sendcnts, CONST int *sdispls,
 		   void *recvbuf, CONST int *recvcnts, CONST int *rdispls, MPI_Datatype recvtype,
 		   MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-
-  MPI_Alltoallv_prolog (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
-  int ret = MPI_Alltoallv_core (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
-  MPI_Alltoallv_epilog (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
-
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Alltoallv_core (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
+	else
+	{
+		MPI_Alltoallv_prolog (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
+		ret = MPI_Alltoallv_core (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
+		MPI_Alltoallv_epilog (sendbuf, sendcnts, sdispls, sendtype, recvbuf, recvcnts, rdispls, recvtype, comm);
+	}
   return ret;
 }
 

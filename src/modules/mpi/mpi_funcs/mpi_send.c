@@ -53,11 +53,17 @@ static void MPI_Send_epilog(CONST void *buf __attribute__((unused)),
 /* C function */
 int MPI_Send(CONST void *buf, int count, MPI_Datatype datatype,int dest, int tag, MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-  MPI_Send_prolog(buf, count, datatype, dest, tag, comm);
-  int ret = MPI_Send_core(buf, count, datatype, dest, tag, comm);
-  MPI_Send_epilog(buf, count, datatype, dest, tag, comm);
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI>1)
+		ret = MPI_Send_core(buf, count, datatype, dest, tag, comm);
+	else
+	{
+		MPI_Send_prolog(buf, count, datatype, dest, tag, comm);
+		int ret = MPI_Send_core(buf, count, datatype, dest, tag, comm);
+		MPI_Send_epilog(buf, count, datatype, dest, tag, comm);
+	}
+	return ret;
 }
 
 /* fortran function */

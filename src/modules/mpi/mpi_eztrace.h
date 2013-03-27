@@ -48,7 +48,8 @@
  * to an integer
  */
 //#define EZTRACE_REQ(r) MPI_Request_c2f(*(r))
-
+int _UNUSED_MPI ;
+#define MAX_LEVEL_MPI 2
 
 /* pointers to actual MPI functions (C version)  */
 extern int ( *libMPI_Init) (int *, char ***);

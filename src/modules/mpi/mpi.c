@@ -32,7 +32,6 @@
  */
 char *proc_id;
 
-
 /* pointers to actual MPI functions (C version)  */
 int ( *libMPI_Init) (int *, char ***);
 int ( *libMPI_Init_thread) (int *, char ***, int, int*);
@@ -665,6 +664,15 @@ void libinit(void) __attribute__ ((constructor));
 void libinit(void)
 {
 
+  char *tmp;
+  tmp = getenv("UNUSED_MPI");
+  if(tmp != NULL) {
+	  _UNUSED_MPI = MAX_LEVEL_MPI>atoi(tmp)?atoi(tmp):MAX_LEVEL_MPI;
+//	  if(_UNUSED_MPI == 1) printf("collective communications will be filtered\n");
+//	  if(_UNUSED_MPI == 2) printf("just synchronisation com' will be intercepted");
+  }
+  else _UNUSED_MPI = 0;
+
    DYNAMIC_INTERCEPT_ALL();
 
 #ifdef EZTRACE_AUTOSTART
@@ -675,6 +683,7 @@ void libinit(void)
    */
   eztrace_register_init_routine(&__mpi_init_generic);
 #endif
+
 }
 
 void libfinalize(void) __attribute__ ((destructor));

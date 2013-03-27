@@ -46,6 +46,8 @@ int main(int argc, char **argv) {
   int i, j, k;
   int test=0;
 
+  printf("_UNUSED_MPI = %i\n",_UNUSED_MPI);
+
   // options
   int nb_opts=0;
   for (i=1; i<argc; i++) {
@@ -93,6 +95,7 @@ int main(int argc, char **argv) {
   char ezt_all[SIZE_STRING] = "";
   char ezt_all_path[SIZE_STRING] = "";
 
+	// filtered prototypes
   tmp = NULL;
   tmp = getenv("EZTRACE_UNUSED");
   char ezt_unused[SIZE_STRING] = "";
@@ -111,12 +114,17 @@ int main(int argc, char **argv) {
           strcat(ezt_all_path, ":");
   }
 
+	// specific filtered module
   tmp = NULL;
   tmp = getenv("EZTRACE_TRACE");
   char ezt_trace[SIZE_STRING] = "";
   if(tmp != NULL) {
 	  strcat(ezt_trace, tmp);
 	  strcat(ezt_all, tmp);
+  }
+  else {
+	  strcat(ezt_trace, "memory stdio mpi omp pthread");
+	  strcat(ezt_all, "memory stdio mpi omp pthread");
   }
 
   tmp = NULL;
@@ -128,16 +136,16 @@ int main(int argc, char **argv) {
   }
   if (test==0) {
 	  strcat(ezt_library_path, ":/usr/local/lib");
+	  strcat(ezt_all_path, ":/usr/local/lib");
   }
 
   if(ezt_all != NULL) setenv("EZTRACE_ALL",ezt_all,1);
-  tmp = getenv("EZTRACE_ALL");
-  printf(" EZTRACE_ALL = %s \n",tmp);
+  printf(" EZTRACE_ALL = %s \n",ezt_all);
 
   if(ezt_all_path != NULL) setenv("EZTRACE_ALL_PATH",ezt_all_path,1);
-  tmp = getenv("EZTRACE_ALL_PATH");
-  printf(" EZTRACE_ALL_PATH = %s \n",tmp);
- 
+  printf(" EZTRACE_ALL_PATH = %s \n",ezt_all_path);
+
+
   // prog_name
   char *prog_name = argv[nb_opts+1];
   if (prog_name == NULL) {
@@ -202,12 +210,13 @@ int main(int argc, char **argv) {
   // dirs in ezt_library_path and ezt_unused_path
   int nb_dirs = 0;
   char *dir = NULL;
-  strcat(tmp, "/usr/local/lib");
+
+  // strcat(tmp, "/usr/local/lib");
   if (strcmp(ezt_all_path, "")) {
 	  dir = strtok(ezt_all_path, ":");
 	  while(dir != NULL) {
 		  if (strcmp(dir, "")) {
-			  if(!strcmp(dir, tmp ))  nb_dirs++;
+			  nb_dirs++; //if(!strcmp(dir, tmp ))  nb_dirs++;
 		  }
 		  dir = strtok(NULL, ":");
 	  }

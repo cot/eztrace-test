@@ -75,11 +75,16 @@ int MPI_Alltoall (CONST void *sendbuf, int sendcount, MPI_Datatype sendtype,
                   void *recvbuf, int recvcnt, MPI_Datatype recvtype,
 		  MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-  MPI_Alltoall_prolog (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
-  int ret = MPI_Alltoall_core (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
-  MPI_Alltoall_epilog (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
-
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Alltoall_core (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
+	else
+	{
+		MPI_Alltoall_prolog (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
+		int ret = MPI_Alltoall_core (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
+		MPI_Alltoall_epilog (sendbuf, sendcount, sendtype, recvbuf, recvcnt, recvtype, comm);
+	}
   return ret;
 }
 

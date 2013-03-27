@@ -42,8 +42,8 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h mpi_ev_codes.h \
- ../../core/ev_codes.h ../../core/eztrace_list.h \
- ../../core/eztrace_convert.h \
+ ../../core/ev_codes.h mpi_eztrace.h /usr/lib/openmpi/include/mpi.h \
+ ../../core/eztrace_list.h ../../core/eztrace_convert.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/float.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/fcntl.h \
@@ -195,6 +195,10 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
 mpi_ev_codes.h:
 
 ../../core/ev_codes.h:
+
+mpi_eztrace.h:
+
+/usr/lib/openmpi/include/mpi.h:
 
 ../../core/eztrace_list.h:
 

@@ -10,6 +10,7 @@
 #include <assert.h>
 #include <limits.h>
 #include "mpi_ev_codes.h"
+#include "mpi_eztrace.h"
 #include "eztrace_list.h"
 #include "eztrace_convert.h"
 #include "eztrace_convert_mpi.h"
@@ -285,38 +286,44 @@ void handle_mpi_spawned()
 void
 handle_mpi_start_send ()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI<2)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int len = GET_PARAM(CUR_EV, 1);
-  int dest = GET_PARAM(CUR_EV, 2);
-  uint32_t tag = GET_PARAM(CUR_EV, 3);
-  app_ptr comm = (app_ptr)GET_PARAM(CUR_EV, 4);
+		int len = GET_PARAM(CUR_EV, 1);
+		int dest = GET_PARAM(CUR_EV, 2);
+		uint32_t tag = GET_PARAM(CUR_EV, 3);
+		app_ptr comm = (app_ptr)GET_PARAM(CUR_EV, 4);
 
-  struct mpi_p2p_msg_t* msg = __mpi_send_generic( thread_id, CUR_RANK, dest, len, tag, NULL, comm);
+		struct mpi_p2p_msg_t* msg = __mpi_send_generic( thread_id, CUR_RANK, dest, len, tag, NULL, comm);
 
-  if(!msg->times[start_swait])
-    msg->times[start_swait] = CUR_TIME(CUR_INDEX);
+		if(!msg->times[start_swait])
+			msg->times[start_swait] = CUR_TIME(CUR_INDEX);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Send");
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Send");
+	}
 }
 
 
 void
 handle_mpi_stop_send ()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI<2)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int dest = GET_PARAM(CUR_EV, 1);
-  int tag = GET_PARAM(CUR_EV, 2);
-  app_ptr comm = (app_ptr)GET_PARAM(CUR_EV, 3);
-  int actual_dest = ezt_get_global_rank(CUR_INDEX, comm, dest);
-  assert(actual_dest!= -1);
+		int dest = GET_PARAM(CUR_EV, 1);
+		int tag = GET_PARAM(CUR_EV, 2);
+		app_ptr comm = (app_ptr)GET_PARAM(CUR_EV, 3);
+		int actual_dest = ezt_get_global_rank(CUR_INDEX, comm, dest);
+		assert(actual_dest!= -1);
 
-  __stop_send_message(CUR_TIME(CUR_INDEX), CUR_RANK, actual_dest, -1, tag, thread_id, NULL);
+		__stop_send_message(CUR_TIME(CUR_INDEX), CUR_RANK, actual_dest, -1, tag, thread_id, NULL);
 
-  MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
+		MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
+	}
 }
 
 void
@@ -587,73 +594,79 @@ void handle_mpi_start_wait()
 
 void handle_mpi_start_waitany()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
-  INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+		INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
 
-  MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
+		MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
 
-  int nb_reqs = GET_PARAM(CUR_EV, 1);
-  int i;
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Waitany");
+		int nb_reqs = GET_PARAM(CUR_EV, 1);
+		int i;
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Waitany");
 
-  for(i=0; i<nb_reqs; i++) {
-    wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
-    app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
-    if(mpi_req == p_info->__MPI_REQUEST_NULL)
-      continue;
+		for(i=0; i<nb_reqs; i++) {
+			wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
+			app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
+			if(mpi_req == p_info->__MPI_REQUEST_NULL)
+				continue;
 
-    struct mpi_request * req = __mpi_find_mpi_req(CUR_RANK, mpi_req, mpi_req_none);
-    assert(req);
-    struct mpi_p2p_msg_t* msg = __mpi_find_p2p_message_by_mpi_req(CUR_RANK, req);
-    assert(msg);
+			struct mpi_request * req = __mpi_find_mpi_req(CUR_RANK, mpi_req, mpi_req_none);
+			assert(req);
+			struct mpi_p2p_msg_t* msg = __mpi_find_p2p_message_by_mpi_req(CUR_RANK, req);
+			assert(msg);
 
-    if(req->req_type == mpi_req_recv) {
-      /*  this is a receive request */
-      msg->times[start_rwait] = CUR_TIME(CUR_INDEX);
-    } else {
-      /*  this is a send request */
-      msg->times[start_swait] = CUR_TIME(CUR_INDEX);
-    }
-  }
+			if(req->req_type == mpi_req_recv) {
+				/*  this is a receive request */
+				msg->times[start_rwait] = CUR_TIME(CUR_INDEX);
+			} else {
+				/*  this is a send request */
+				msg->times[start_swait] = CUR_TIME(CUR_INDEX);
+			}
+		}
+	}
 }
 
 void handle_mpi_start_waitall()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
-  INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+		INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
 
-  int nb_reqs = GET_PARAM(CUR_EV, 1);
-  int i;
-  double cur_time = CURRENT;
+		int nb_reqs = GET_PARAM(CUR_EV, 1);
+		int i;
+		double cur_time = CURRENT;
 
-  for(i=0; i<nb_reqs; i++) {
-    wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
-    app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
-    if(mpi_req == p_info->__MPI_REQUEST_NULL)
-      continue;
+		for(i=0; i<nb_reqs; i++) {
+			wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
+			app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
+			if(mpi_req == p_info->__MPI_REQUEST_NULL)
+				continue;
 
-    MPI_CHANGE() popState(cur_time, "ST_Thread", thread_id);
+			MPI_CHANGE() popState(cur_time, "ST_Thread", thread_id);
 
-    struct mpi_request * req = __mpi_find_mpi_req(CUR_RANK, mpi_req, mpi_req_none);
-    if(!req) {
-      /* this means the request was already freed, let's skip this one */
-      continue;
-    }
-    struct mpi_p2p_msg_t* msg = __mpi_find_p2p_message_by_mpi_req(CUR_RANK, req);
-    assert(msg);
+			struct mpi_request * req = __mpi_find_mpi_req(CUR_RANK, mpi_req, mpi_req_none);
+			if(!req) {
+				/* this means the request was already freed, let's skip this one */
+				continue;
+			}
+			struct mpi_p2p_msg_t* msg = __mpi_find_p2p_message_by_mpi_req(CUR_RANK, req);
+			assert(msg);
 
-    if(req->req_type == mpi_req_recv) {
-      /*  this is a receive request */
-      msg->times[start_rwait] = CUR_TIME(CUR_INDEX);
-    } else {
-      /*  this is a send request */
-      msg->times[start_swait] = CUR_TIME(CUR_INDEX);
-    }
-  }
+			if(req->req_type == mpi_req_recv) {
+				/*  this is a receive request */
+				msg->times[start_rwait] = CUR_TIME(CUR_INDEX);
+			} else {
+				/*  this is a send request */
+				msg->times[start_swait] = CUR_TIME(CUR_INDEX);
+			}
+		}
 
-  MPI_CHANGE() pushState(cur_time, "ST_Thread", thread_id, "STV_MPI_Waitall");
+		MPI_CHANGE() pushState(cur_time, "ST_Thread", thread_id, "STV_MPI_Waitall");
+	}
 }
 
 static int __handle_mpi_test_success(app_ptr req)
@@ -751,42 +764,45 @@ void handle_mpi_stop_wait()
 
 void handle_mpi_stop_waitany()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
-  INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+		INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
 
-  int nb_reqs = GET_PARAM(CUR_EV, 1);
-  int index = GET_PARAM(CUR_EV, 2);
+		int nb_reqs = GET_PARAM(CUR_EV, 1);
+		int index = GET_PARAM(CUR_EV, 2);
 
-  /* process each request*/
-  int i;
-  for(i=0; i<nb_reqs ; i++) {
-    wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
-    app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
+		/* process each request*/
+		int i;
+		for(i=0; i<nb_reqs ; i++) {
+			wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
+			app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
 
-    if(index == i) {
-      /* the successful request */
-      if(__handle_mpi_test_success(mpi_req))
-	return;
-    } else {
-      if(mpi_req == p_info->__MPI_REQUEST_NULL)
-	continue;
-      /* the other requests */
-      struct mpi_request * req = __mpi_find_mpi_req(CUR_RANK, mpi_req, mpi_req_none);
-      assert(req);
-      struct mpi_p2p_msg_t* msg = __mpi_find_p2p_message_by_mpi_req(CUR_RANK, req);
-      assert(msg);
+			if(index == i) {
+				/* the successful request */
+				if(__handle_mpi_test_success(mpi_req))
+					return;
+			} else {
+				if(mpi_req == p_info->__MPI_REQUEST_NULL)
+					continue;
+				/* the other requests */
+				struct mpi_request * req = __mpi_find_mpi_req(CUR_RANK, mpi_req, mpi_req_none);
+				assert(req);
+				struct mpi_p2p_msg_t* msg = __mpi_find_p2p_message_by_mpi_req(CUR_RANK, req);
+				assert(msg);
 
-      if(req->req_type == mpi_req_recv) {
-	/*  this is a receive request */
-	msg->times[start_rwait] = 0;
-      } else {
-	/*  this is a send request */
-	msg->times[start_swait] = CUR_TIME(CUR_INDEX);
-      }
-    }
-  }
-  MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
+				if(req->req_type == mpi_req_recv) {
+					/*  this is a receive request */
+					msg->times[start_rwait] = 0;
+				} else {
+					/*  this is a send request */
+					msg->times[start_swait] = CUR_TIME(CUR_INDEX);
+				}
+			}
+		}
+		MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
+	}
 }
 
 struct mpi_stop_waitall_replay{
@@ -797,53 +813,56 @@ struct mpi_stop_waitall_replay{
 
 void handle_mpi_stop_waitall( struct mpi_stop_waitall_replay *r)
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
-  INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+		INIT_MPI_PROCESS_INFO(GET_PROCESS_INFO(CUR_INDEX), p_info);
 
-  int nb_reqs;
-  if(r)
-    nb_reqs = r->nb_reqs;
-  else
-    nb_reqs = GET_PARAM(CUR_EV, 1);
+		int nb_reqs;
+		if(r)
+			nb_reqs = r->nb_reqs;
+		else
+			nb_reqs = GET_PARAM(CUR_EV, 1);
 
-  /* process each request*/
-  int i = 0;
-  if(r)
-    i = r->i;
-  for(; i<nb_reqs ; i++) {
+		/* process each request*/
+		int i = 0;
+		if(r)
+			i = r->i;
+		for(; i<nb_reqs ; i++) {
 
-    if(!(r && r->i == i)){
-      /* unless this is the replay first look, fetch next event */
-      wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
-    }
+			if(!(r && r->i == i)){
+				/* unless this is the replay first look, fetch next event */
+				wait_for_an_event(CUR_TRACE->id, FUT_MPI_Info);
+			}
 
-    app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
+			app_ptr mpi_req = (app_ptr) GET_PARAM(CUR_EV, 1);
 
-    if(r && (r->i == i))
-      assert(mpi_req == r->mpi_req);
+			if(r && (r->i == i))
+				assert(mpi_req == r->mpi_req);
 
-    if(mpi_req == p_info->__MPI_REQUEST_NULL)
-      continue;
+			if(mpi_req == p_info->__MPI_REQUEST_NULL)
+				continue;
 
-    if(! __handle_mpi_test_success(mpi_req)){
-      /* The matching isend has not occured yet. We need to wait until it happens */
+			if(! __handle_mpi_test_success(mpi_req)){
+				/* The matching isend has not occured yet. We need to wait until it happens */
 
-      struct mpi_stop_waitall_replay* replay = malloc(sizeof(struct mpi_stop_waitall_replay));
-      replay->nb_reqs = nb_reqs;
-      replay->i = i;
-      replay->mpi_req = mpi_req;
+				struct mpi_stop_waitall_replay* replay = malloc(sizeof(struct mpi_stop_waitall_replay));
+				replay->nb_reqs = nb_reqs;
+				replay->i = i;
+				replay->mpi_req = mpi_req;
 
-      ask_for_replay(CUR_INDEX, (void (*)(void *)) handle_mpi_stop_waitall, replay);
+				ask_for_replay(CUR_INDEX, (void (*)(void *)) handle_mpi_stop_waitall, replay);
 
-      goto out;
-    }
-  }
-  MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
- out:
-  if( r )
-    free(r);
-  return;
+				goto out;
+			}
+		}
+		MPI_CHANGE() popState(CURRENT, "ST_Thread", thread_id);
+out:
+		if( r )
+			free(r);
+		return;
+	}
 }
 
 void handle_mpi_test_success()
@@ -966,30 +985,33 @@ static void __mpi_barrier_stop_generic(struct mpi_coll_msg_t* msg, int my_rank)
 
 void handle_mpi_start_BCast()
 {
-  /* some collective communications won't work with communicators != COMM_WORLD
-   * (rank in the wrong communicator used)
-   */
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		/* some collective communications won't work with communicators != COMM_WORLD
+		 * (rank in the wrong communicator used)
+		 */
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_BCast");
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
-  //int comm = GET_PARAM(CUR_EV, 1);
-  int len = GET_PARAM(CUR_EV, 4);
-  int __attribute__((unused)) root = GET_PARAM(CUR_EV, 5);
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_BCast");
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
+		//int comm = GET_PARAM(CUR_EV, 1);
+		int len = GET_PARAM(CUR_EV, 4);
+		int __attribute__((unused)) root = GET_PARAM(CUR_EV, 5);
 
 #if 0
-  /* todo: implement this with hierarchical arrays */
-  if (my_rank != root){
-    __register_comm_info(root, my_rank, len);
-  }
+		/* todo: implement this with hierarchical arrays */
+		if (my_rank != root){
+			__register_comm_info(root, my_rank, len);
+		}
 #endif
 
-  struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_bcast,
-					    comm_size, my_rank,
-					    len, thread_id);
-  __mpi_barrier_start_generic(msg, my_rank);
+		struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_bcast,
+				comm_size, my_rank,
+				len, thread_id);
+		__mpi_barrier_start_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_start_Gather()
@@ -1056,31 +1078,36 @@ void handle_mpi_start_Scatterv()
 
 void handle_mpi_start_Allgather()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Allgather");
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
-  //int comm = GET_PARAM(CUR_EV, 1);
-  int len = GET_PARAM(CUR_EV, 4);
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Allgather");
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
+		//int comm = GET_PARAM(CUR_EV, 1);
+		int len = GET_PARAM(CUR_EV, 4);
 
 #if 0
-  int i;
+		int i;
 
-  /* todo: implement this with hierarchical arrays */
-  for(i=0; i<comm_size; i++){
-    if(i != my_rank){
-      __register_comm_info(my_rank, i, len);
-    }
-  }
+		/* todo: implement this with hierarchical arrays */
+		for(i=0; i<comm_size; i++){
+			if(i != my_rank){
+				__register_comm_info(my_rank, i, len);
+			}
+		}
 #endif
 
-  struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_allgather,
-					    comm_size, my_rank,
-					    len, thread_id);
+		struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_allgather,
+				comm_size, my_rank,
+				len, thread_id);
 
-  __mpi_barrier_start_generic(msg, my_rank);
+		__mpi_barrier_start_generic(msg, my_rank);
+
+	}
+
 }
 
 void handle_mpi_start_Allgatherv()
@@ -1090,18 +1117,21 @@ void handle_mpi_start_Allgatherv()
 
 void handle_mpi_start_Alltoall()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Alltoall");
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
-  //int comm = GET_PARAM(CUR_EV, 1);
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Alltoall");
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
+		//int comm = GET_PARAM(CUR_EV, 1);
 
-  struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_alltoall,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
-  __mpi_barrier_start_generic(msg, my_rank);
+		struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_alltoall,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
+		__mpi_barrier_start_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_start_Alltoallv()
@@ -1111,47 +1141,56 @@ void handle_mpi_start_Alltoallv()
 
 void handle_mpi_start_Reduce()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Reduce");
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Reduce");
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
-  __mpi_barrier_start_generic(msg, my_rank);
+		struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
+		__mpi_barrier_start_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_start_Allreduce()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Allreduce");
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_Allreduce");
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_allreduce,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
-  __mpi_barrier_start_generic(msg, my_rank);
+		struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_allreduce,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
+		__mpi_barrier_start_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_start_Reduce_scatter()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_reduce_scatter");
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		MPI_CHANGE() pushState(CURRENT, "ST_Thread", thread_id, "STV_MPI_reduce_scatter");
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce_scatter,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
-  __mpi_barrier_start_generic(msg, my_rank);
+		struct mpi_coll_msg_t* msg = __enter_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce_scatter,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
+		__mpi_barrier_start_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_start_Scan()
@@ -1188,22 +1227,25 @@ void handle_mpi_start_barrier()
 
 void handle_mpi_stop_BCast()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
-  int len = GET_PARAM(CUR_EV, 4);
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
+		int len = GET_PARAM(CUR_EV, 4);
 
 #if 1
-  struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_bcast,
-					    comm_size, my_rank,
-					    len, thread_id);
+		struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_bcast,
+				comm_size, my_rank,
+				len, thread_id);
 #else
-  struct mpi_coll_msg_t* msg = __mpi_find_coll_message(mpi_coll_bcast, comm_size, my_rank, len, stop_coll);
+		struct mpi_coll_msg_t* msg = __mpi_find_coll_message(mpi_coll_bcast, comm_size, my_rank, len, stop_coll);
 #endif
 
-  __mpi_barrier_stop_generic(msg, my_rank);
+		__mpi_barrier_stop_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_stop_Gather()
@@ -1251,18 +1293,21 @@ void handle_mpi_stop_Scatterv()
 
 void handle_mpi_stop_Allgather()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
-  int len = GET_PARAM(CUR_EV, 4);
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
+		int len = GET_PARAM(CUR_EV, 4);
 
-  struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_allgather,
-					    comm_size, my_rank,
-					    len, thread_id);
+		struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_allgather,
+				comm_size, my_rank,
+				len, thread_id);
 
-  __mpi_barrier_stop_generic(msg, my_rank);
+		__mpi_barrier_stop_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_stop_Allgatherv()
@@ -1272,17 +1317,20 @@ void handle_mpi_stop_Allgatherv()
 
 void handle_mpi_stop_Alltoall()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_alltoall,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
+		struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_alltoall,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
 
-  __mpi_barrier_stop_generic(msg, my_rank);
+		__mpi_barrier_stop_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_stop_Alltoallv()
@@ -1292,47 +1340,56 @@ void handle_mpi_stop_Alltoallv()
 
 void handle_mpi_stop_Reduce()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
+		struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
 
-  __mpi_barrier_stop_generic(msg, my_rank);
+		__mpi_barrier_stop_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_stop_Allreduce()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_allreduce,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
+		struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_allreduce,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
 
-  __mpi_barrier_stop_generic(msg, my_rank);
+		__mpi_barrier_stop_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_stop_Reduce_scatter()
 {
-  FUNC_NAME;
-  DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
+	if(_UNUSED_MPI==0)
+	{
+		FUNC_NAME;
+		DECLARE_THREAD_ID_STR(thread_id, CUR_INDEX, CUR_THREAD_ID);
 
-  int my_rank = GET_PARAM(CUR_EV, 3);
-  int comm_size = GET_PARAM(CUR_EV, 2);
+		int my_rank = GET_PARAM(CUR_EV, 3);
+		int comm_size = GET_PARAM(CUR_EV, 2);
 
-  struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce_scatter,
-					    comm_size, my_rank,
-					    0, thread_id); /* todo: add the len */
+		struct mpi_coll_msg_t* msg = __leave_coll(CUR_TIME(CUR_INDEX), mpi_coll_reduce_scatter,
+				comm_size, my_rank,
+				0, thread_id); /* todo: add the len */
 
-  __mpi_barrier_stop_generic(msg, my_rank);
+		__mpi_barrier_stop_generic(msg, my_rank);
+	}
 }
 
 void handle_mpi_stop_Scan()
@@ -1945,6 +2002,12 @@ struct eztrace_convert_module mpi_module;
 void libinit(void) __attribute__ ((constructor));
 void libinit(void)
 {
+  char *tmp;
+  tmp = getenv("UNUSED_MPI");
+  if(tmp != NULL) _UNUSED_MPI = MAX_LEVEL_MPI>atoi(tmp)?atoi(tmp):MAX_LEVEL_MPI;
+  else _UNUSED_MPI = 0;
+
+  printf("_UNUSED_MPI in convert = %i\n",_UNUSED_MPI);
   mpi_module.api_version = EZTRACE_API_VERSION;
   mpi_module.init = eztrace_convert_mpi_init;
   mpi_module.handle = handle_mpi_events;

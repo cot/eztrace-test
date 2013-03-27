@@ -68,16 +68,21 @@ static void MPI_Reduce_scatter_epilog (CONST void *sendbuf __attribute__((unused
 int MPI_Reduce_scatter (CONST void *sendbuf, void *recvbuf, CONST int *recvcnts,
 			MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-
-  MPI_Reduce_scatter_prolog (sendbuf, recvbuf, recvcnts, datatype, op, comm);
-  int ret = MPI_Reduce_scatter_core (sendbuf, recvbuf, recvcnts, datatype, op, comm);
-  MPI_Reduce_scatter_epilog (sendbuf, recvbuf, recvcnts, datatype, op, comm);
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Reduce_scatter_core (sendbuf, recvbuf, recvcnts, datatype, op, comm);
+	else
+	{
+		MPI_Reduce_scatter_prolog (sendbuf, recvbuf, recvcnts, datatype, op, comm);
+		ret = MPI_Reduce_scatter_core (sendbuf, recvbuf, recvcnts, datatype, op, comm);
+		MPI_Reduce_scatter_epilog (sendbuf, recvbuf, recvcnts, datatype, op, comm);
+	}
+	return ret;
 }
 
 void mpif_reduce_scatter_(void *sbuf, void *rbuf, int *rcount,
-			  MPI_Fint *d, MPI_Fint *op,
+		MPI_Fint *d, MPI_Fint *op,
 			  MPI_Fint *c, int *error)
 {
   MPI_Datatype c_type = MPI_Type_f2c(*d);

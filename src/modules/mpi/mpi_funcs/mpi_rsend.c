@@ -51,11 +51,17 @@ static void MPI_Rsend_epilog (CONST void* buf __attribute__((unused)),
 
 int MPI_Rsend (CONST void* buf, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-  MPI_Rsend_prolog(buf, count, datatype, dest, tag, comm);
-  int ret = MPI_Rsend_core(buf, count, datatype, dest, tag, comm);
-  MPI_Rsend_epilog(buf, count, datatype, dest, tag, comm);
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI>1)
+		ret = MPI_Rsend_core(buf, count, datatype, dest, tag, comm);
+	else
+	{
+		MPI_Rsend_prolog(buf, count, datatype, dest, tag, comm);
+		ret = MPI_Rsend_core(buf, count, datatype, dest, tag, comm);
+		MPI_Rsend_epilog(buf, count, datatype, dest, tag, comm);
+	}
+	return ret;
 }
 
 

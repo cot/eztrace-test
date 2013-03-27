@@ -59,18 +59,24 @@ static void MPI_Bcast_epilog(void *buffer __attribute__((unused)),
 
 int MPI_Bcast(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-  MPI_Bcast_prolog(buffer, count, datatype, root, comm);
-  int ret = MPI_Bcast_core(buffer, count, datatype, root, comm);
-  MPI_Bcast_epilog(buffer, count, datatype, root, comm);
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Bcast_core(buffer, count, datatype, root, comm);
+	else
+	{
+		MPI_Bcast_prolog(buffer, count, datatype, root, comm);
+		ret = MPI_Bcast_core(buffer, count, datatype, root, comm);
+		MPI_Bcast_epilog(buffer, count, datatype, root, comm);
+	}
+	return ret;
 }
 
 void mpif_bcast_(void *buf, int *count, MPI_Fint *d,
-		 int *root, MPI_Fint *c, int *error)
+		int *root, MPI_Fint *c, int *error)
 {
-  MPI_Datatype c_type = MPI_Type_f2c(*d);
-  MPI_Comm c_comm = MPI_Comm_f2c(*c);
+	MPI_Datatype c_type = MPI_Type_f2c(*d);
+	MPI_Comm c_comm = MPI_Comm_f2c(*c);
   MPI_Bcast_prolog(buf, *count, c_type, *root, c_comm);
   *error = MPI_Bcast_core(buf, *count, c_type, *root, c_comm);
   MPI_Bcast_epilog(buf, *count, c_type, *root, c_comm);

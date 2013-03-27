@@ -68,11 +68,16 @@ static void MPI_Allreduce_epilog (CONST void *sendbuf __attribute__((unused)),
 int MPI_Allreduce (CONST void *sendbuf, void *recvbuf, int count,
                    MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 {
-  FUNCTION_ENTRY;
-
-  MPI_Allreduce_prolog (sendbuf, recvbuf, count, datatype, op, comm);
-  int ret = MPI_Allreduce_core (sendbuf, recvbuf, count, datatype, op, comm);
-  MPI_Allreduce_epilog (sendbuf, recvbuf, count, datatype, op, comm);
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Allreduce_core (sendbuf, recvbuf, count, datatype, op, comm);
+	else
+	{
+		MPI_Allreduce_prolog (sendbuf, recvbuf, count, datatype, op, comm);
+		ret = MPI_Allreduce_core (sendbuf, recvbuf, count, datatype, op, comm);
+		MPI_Allreduce_epilog (sendbuf, recvbuf, count, datatype, op, comm);
+	}
   return ret;
 }
 

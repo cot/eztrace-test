@@ -64,18 +64,24 @@ static void MPI_Waitall_epilog(int count,
 
 int MPI_Waitall(int count, MPI_Request *req, MPI_Status *s)
 {
-  FUNCTION_ENTRY;
-  MPI_Waitall_prolog(count, req, s, sizeof(MPI_Request));
-  int ret = MPI_Waitall_core(count, req, s);
-  MPI_Waitall_epilog(count, req, s, sizeof(MPI_Request));
-  return ret;
+	int ret;
+	FUNCTION_ENTRY;
+	if(_UNUSED_MPI)
+		ret = MPI_Waitall_core(count, req, s);
+	else
+	{
+		MPI_Waitall_prolog(count, req, s, sizeof(MPI_Request));
+		ret = MPI_Waitall_core(count, req, s);
+		MPI_Waitall_epilog(count, req, s, sizeof(MPI_Request));
+	}
+	return ret;
 }
 
 
 void mpif_waitall_(int *c, MPI_Fint *r, MPI_Status *s, int *error)
 {
-  int i;
-  MPI_Waitall_prolog(*c, r, s, sizeof(MPI_Fint));
+	int i;
+	MPI_Waitall_prolog(*c, r, s, sizeof(MPI_Fint));
 
   /* allocate a MPI_Request array and convert all the fortran requests
    * into C requests
