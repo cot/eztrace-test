@@ -46,8 +46,6 @@ int main(int argc, char **argv) {
   int i, j, k;
   int test=0;
 
-  printf("_UNUSED_MPI = %i\n",_UNUSED_MPI);
-
   // options
   int nb_opts=0;
   for (i=1; i<argc; i++) {

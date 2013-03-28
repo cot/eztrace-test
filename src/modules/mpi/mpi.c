@@ -668,8 +668,8 @@ void libinit(void)
   tmp = getenv("UNUSED_MPI");
   if(tmp != NULL) {
 	  _UNUSED_MPI = MAX_LEVEL_MPI>atoi(tmp)?atoi(tmp):MAX_LEVEL_MPI;
-//	  if(_UNUSED_MPI == 1) printf("collective communications will be filtered\n");
-//	  if(_UNUSED_MPI == 2) printf("just synchronisation com' will be intercepted");
+	  if(_UNUSED_MPI == 1) printf("collective communications will be filtered\n");
+	  if(_UNUSED_MPI > 2) printf("just synchronisation com' will be intercepted");
   }
   else _UNUSED_MPI = 0;
 

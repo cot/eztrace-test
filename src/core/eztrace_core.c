@@ -241,11 +241,6 @@ eztrace_start ()
   }
 
   EZT_PRINTF (0, "Starting EZTrace...\n ");
-  tmp = getenv("UNUSED_MPI");
-  if(tmp != NULL) {
-	  if(_UNUSED_MPI == 1) printf("collective communications will be filtered\n");
-	  if(_UNUSED_MPI == 2) printf("just synchronisation com' will be intercepted");
-  }
   eztrace_set_filename ("eztrace_log_rank_1");
   threadid = CUR_TID;
 
