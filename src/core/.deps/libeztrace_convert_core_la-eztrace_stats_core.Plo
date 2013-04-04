@@ -13,7 +13,6 @@ libeztrace_convert_core_la-eztrace_stats_core.lo: eztrace_stats_core.c \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \
@@ -23,7 +22,6 @@ libeztrace_convert_core_la-eztrace_stats_core.lo: eztrace_stats_core.c \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/sigset.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
@@ -33,12 +31,9 @@ libeztrace_convert_core_la-eztrace_stats_core.lo: eztrace_stats_core.c \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/float.h /usr/include/string.h \
  /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/bits/string.h \
  /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h eztrace_convert_types.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
@@ -52,7 +47,6 @@ libeztrace_convert_core_la-eztrace_stats_core.lo: eztrace_stats_core.c \
  /usr/include/asm-generic/socket.h \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/socket2.h \
  /usr/include/x86_64-linux-gnu/bits/in.h ../../extlib/fxt/tools/fut.h \
  ../../extlib/fxt/tools/fxt.h eztrace_hook.h eztrace.h config.h \
  /usr/include/dlfcn.h /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
@@ -97,8 +91,6 @@ libeztrace_convert_core_la-eztrace_stats_core.lo: eztrace_stats_core.c \
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
 /usr/include/time.h:
@@ -120,8 +112,6 @@ libeztrace_convert_core_la-eztrace_stats_core.lo: eztrace_stats_core.c \
 /usr/include/x86_64-linux-gnu/bits/sigset.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
@@ -155,21 +145,15 @@ eztrace_convert.h:
 
 /usr/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/string3.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
-
 /usr/include/fcntl.h:
 
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdint.h:
 
@@ -206,8 +190,6 @@ eztrace_convert_types.h:
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
 
 /usr/include/asm-generic/sockios.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket2.h:
 
 /usr/include/x86_64-linux-gnu/bits/in.h:
 

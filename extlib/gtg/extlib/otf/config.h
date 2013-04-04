@@ -103,7 +103,7 @@
 #define PACKAGE_NAME "OTF"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "OTF 1.8.1sturgeon"
+#define PACKAGE_STRING "OTF "
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "OTF"
@@ -112,7 +112,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.8.1sturgeon"
+#define PACKAGE_VERSION ""
 
 /* The size of `long', as computed by sizeof. */
 #define SIZEOF_LONG 8
@@ -121,7 +121,7 @@
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "1.8.1sturgeon"
+#define VERSION ""
 
 /* Define to 1 to make fseeko visible on some hosts (e.g. glibc 2.2). */
 /* #undef _LARGEFILE_SOURCE */

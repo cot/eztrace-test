@@ -15,7 +15,7 @@
 opari_dir=`pwd`
 test_dir="../test/tmp"
 mkdir -p ${test_dir}
-test_data_dir=/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/test/data
+test_data_dir=/home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/test/data
 sed=/bin/sed
 awk=gawk
 

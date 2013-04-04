@@ -16,10 +16,10 @@
 #include <string.h>
 #include <errno.h>
 
-#define TOP_BUILDDIR "/home/rue/Bureau/EZTRACE/eztrace/unused-git/"
-#define EZTRACE "/home/rue/Bureau/EZTRACE/eztrace/unused-git/src/core/eztrace"
-#define EZTRACE_CONVERT "/home/rue/Bureau/EZTRACE/eztrace/unused-git/src/core/eztrace_convert"
-#define FXT_PRINT "/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/fxt/tools/fxt_print"
+#define TOP_BUILDDIR "/home/rue/EZTRACE/eztrace/unused-git/"
+#define EZTRACE "/home/rue/EZTRACE/eztrace/unused-git/src/core/eztrace"
+#define EZTRACE_CONVERT "/home/rue/EZTRACE/eztrace/unused-git/src/core/eztrace_convert"
+#define FXT_PRINT "/home/rue/EZTRACE/eztrace/unused-git/extlib/fxt/tools/fxt_print"
 
 char pwd[512];
 char user[32];

@@ -129,19 +129,19 @@ END{
   # define function POMP2_Get_required_pomp2_library_version_current()
   print "int POMP2_Get_required_pomp2_library_version_current()"
   print "{"
-  print "    return 1;"
+  print "    return ;"
   print "}\n"  
 
   # define function POMP2_Get_required_pomp2_library_version_revision()
   print "int POMP2_Get_required_pomp2_library_version_revision()"
   print "{"
-  print "    return 0;"
+  print "    return ;"
   print "}\n"
 
   # define function POMP2_Get_required_pomp2_library_version_age()
   print "int POMP2_Get_required_pomp2_library_version_age()"
   print "{"
-  print "    return 2;"
+  print "    return ;"
   print "}\n"
   
   print "#ifdef __cplusplus"

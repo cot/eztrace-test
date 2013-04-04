@@ -27,8 +27,7 @@ opari2-ompragma_c.o: ../src/opari/ompragma_c.cc ../src/config.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stddef.h \
- /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/bits/wchar2.h \
- /usr/include/c++/4.7/bits/allocator.h \
+ /usr/include/xlocale.h /usr/include/c++/4.7/bits/allocator.h \
  /usr/include/c++/4.7/x86_64-linux-gnu/bits/c++allocator.h \
  /usr/include/c++/4.7/ext/new_allocator.h /usr/include/c++/4.7/new \
  /usr/include/c++/4.7/exception \
@@ -54,7 +53,6 @@ opari2-ompragma_c.o: ../src/opari/ompragma_c.cc ../src/config.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/c++/4.7/x86_64-linux-gnu/bits/atomic_word.h \
@@ -157,8 +155,6 @@ opari2-ompragma_c.o: ../src/opari/ompragma_c.cc ../src/config.h \
 
 /usr/include/xlocale.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
-
 /usr/include/c++/4.7/bits/allocator.h:
 
 /usr/include/c++/4.7/x86_64-linux-gnu/bits/c++allocator.h:
@@ -224,8 +220,6 @@ opari2-ompragma_c.o: ../src/opari/ompragma_c.cc ../src/config.h \
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 

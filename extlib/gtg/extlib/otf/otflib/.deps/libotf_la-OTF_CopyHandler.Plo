@@ -18,10 +18,8 @@ libotf_la-OTF_CopyHandler.lo: OTF_CopyHandler.c ../config.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/sigset.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -39,11 +37,9 @@ libotf_la-OTF_CopyHandler.lo: OTF_CopyHandler.c ../config.h \
  OTF_MasterControl.h /usr/include/stdio.h /usr/include/libio.h \
  /usr/include/_G_config.h /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/string.h \
- /usr/include/x86_64-linux-gnu/bits/string2.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h OTF_File.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h OTF_File.h \
  OTF_FileManager.h OTF_Filenames.h OTF_WBuffer.h OTF_RBuffer.h \
  OTF_WStream.h
 
@@ -99,15 +95,11 @@ OTF_Platform_unix.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/4.7/include-fixed/limits.h:
 
@@ -169,15 +161,11 @@ OTF_MasterControl.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
 /usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/string2.h:
-
-/usr/include/x86_64-linux-gnu/bits/string3.h:
 
 OTF_File.h:
 

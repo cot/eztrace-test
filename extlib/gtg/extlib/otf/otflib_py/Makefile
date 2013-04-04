@@ -157,13 +157,13 @@ HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run automake-1.11
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -200,7 +200,7 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/missing --run makeinfo
 MANIFEST_TOOL = :
 MATHLIB = -lm
 MKDIR_P = /bin/mkdir -p
@@ -215,16 +215,16 @@ NMEDIT =
 OBJDUMP = objdump
 OBJEXT = o
 OPENMP_CXXFLAGS = -fopenmp
-OTF_VERSION_LIBRARY = 2:1:1
+OTF_VERSION_LIBRARY = 
 OTOOL = 
 OTOOL64 = 
 PACKAGE = OTF
 PACKAGE_BUGREPORT = andreas.knuepfer@tu-dresden.de
 PACKAGE_NAME = OTF
-PACKAGE_STRING = OTF 1.8.1sturgeon
+PACKAGE_STRING = OTF 
 PACKAGE_TARNAME = OTF
 PACKAGE_URL = 
-PACKAGE_VERSION = 1.8.1sturgeon
+PACKAGE_VERSION = 
 PATH_SEPARATOR = :
 PYTHON = 
 PYTHON_EXEC_PREFIX = 
@@ -239,7 +239,7 @@ STRIP = strip
 SWIG = 
 SWIG_PYTHON_CFLAGS = 
 SWIG_PYTHON_OPTS = -python
-VERSION = 1.8.1sturgeon
+VERSION = 
 VTF3_INCLUDE_DIR = 
 VTF3_INCLUDE_LINE = 
 VTF3_LIB_DIR = 
@@ -248,10 +248,10 @@ ZLIB_INCLUDE_DIR =
 ZLIB_INCLUDE_LINE = 
 ZLIB_LIB_DIR = 
 ZLIB_LIB_LINE = -lz
-abs_builddir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/otflib_py
-abs_srcdir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/otflib_py
-abs_top_builddir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf
-abs_top_srcdir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf
+abs_builddir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/otflib_py
+abs_srcdir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/otflib_py
+abs_top_builddir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf
+abs_top_srcdir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -283,7 +283,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/install-sh
+install_sh = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/extlib/otf/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -465,12 +465,8 @@ install-nodist_pkgpythonPYTHON: $(nodist_pkgpython_PYTHON)
 	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgpythondir)" || exit $$?; \
 	done || exit $$?; \
 	if test -n "$$dlist"; then \
-	  if test -z "$(DESTDIR)"; then \
-	    $(am__py_compile) --basedir "$(pkgpythondir)" $$dlist; \
-	  else \
-	    $(am__py_compile) --destdir "$(DESTDIR)" \
-	                      --basedir "$(pkgpythondir)" $$dlist; \
-	  fi; \
+	  $(am__py_compile) --destdir "$(DESTDIR)" \
+	                    --basedir "$(pkgpythondir)" $$dlist; \
 	else :; fi
 
 uninstall-nodist_pkgpythonPYTHON:
@@ -507,12 +503,8 @@ install-pkgpythonPYTHON: $(pkgpython_PYTHON)
 	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgpythondir)" || exit $$?; \
 	done || exit $$?; \
 	if test -n "$$dlist"; then \
-	  if test -z "$(DESTDIR)"; then \
-	    $(am__py_compile) --basedir "$(pkgpythondir)" $$dlist; \
-	  else \
-	    $(am__py_compile) --destdir "$(DESTDIR)" \
-	                      --basedir "$(pkgpythondir)" $$dlist; \
-	  fi; \
+	  $(am__py_compile) --destdir "$(DESTDIR)" \
+	                    --basedir "$(pkgpythondir)" $$dlist; \
 	else :; fi
 
 uninstall-pkgpythonPYTHON:

@@ -465,12 +465,8 @@ install-nodist_pkgpythonPYTHON: $(nodist_pkgpython_PYTHON)
 	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgpythondir)" || exit $$?; \
 	done || exit $$?; \
 	if test -n "$$dlist"; then \
-	  if test -z "$(DESTDIR)"; then \
-	    $(am__py_compile) --basedir "$(pkgpythondir)" $$dlist; \
-	  else \
-	    $(am__py_compile) --destdir "$(DESTDIR)" \
-	                      --basedir "$(pkgpythondir)" $$dlist; \
-	  fi; \
+	  $(am__py_compile) --destdir "$(DESTDIR)" \
+	                    --basedir "$(pkgpythondir)" $$dlist; \
 	else :; fi
 
 uninstall-nodist_pkgpythonPYTHON:
@@ -507,12 +503,8 @@ install-pkgpythonPYTHON: $(pkgpython_PYTHON)
 	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgpythondir)" || exit $$?; \
 	done || exit $$?; \
 	if test -n "$$dlist"; then \
-	  if test -z "$(DESTDIR)"; then \
-	    $(am__py_compile) --basedir "$(pkgpythondir)" $$dlist; \
-	  else \
-	    $(am__py_compile) --destdir "$(DESTDIR)" \
-	                      --basedir "$(pkgpythondir)" $$dlist; \
-	  fi; \
+	  $(am__py_compile) --destdir "$(DESTDIR)" \
+	                    --basedir "$(pkgpythondir)" $$dlist; \
 	else :; fi
 
 uninstall-pkgpythonPYTHON:

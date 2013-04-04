@@ -17,12 +17,10 @@ libeztrace_convert_core_la-eztrace_array.lo: eztrace_array.c \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/sigset.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h eztrace_array.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h
+ eztrace_array.h /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdint.h \
+ /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/wchar.h
 
 /usr/include/assert.h:
 
@@ -68,15 +66,11 @@ libeztrace_convert_core_la-eztrace_array.lo: eztrace_array.c \
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 eztrace_array.h:
 

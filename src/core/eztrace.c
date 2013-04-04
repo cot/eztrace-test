@@ -46,8 +46,6 @@ int main(int argc, char **argv) {
   int i, j, k;
   int test=0;
 
-  printf("_UNUSED_MPI = %i\n",_UNUSED_MPI);
-
   // options
   int nb_opts=0;
   for (i=1; i<argc; i++) {
@@ -250,7 +248,7 @@ int main(int argc, char **argv) {
   char files[SIZE_STRING]="";
   if (test) {
 	  fprintf(stderr, "Eztrace test Mode\n");
-	  strcat(files, "/home/rue/Bureau/EZTRACE/eztrace/unused-git/src/core/.libs/libeztrace-autostart.so");
+	  strcat(files, "/home/rue/EZTRACE/eztrace/unused-git/src/core/.libs/libeztrace-autostart.so");
   }else{
 	  strcat(files, "/usr/local/lib/libeztrace-autostart.so");
   }

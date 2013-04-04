@@ -4,14 +4,14 @@ set -e
 opari_dir=`pwd`
 test_dir="../test/tmp"
 mkdir -p ${test_dir}
-test_data_dir=/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/data
+test_data_dir=/home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/data
 
 CC="gcc -std=c99"
 FC="gfortran"
 INCDIR=.
-OPARI2=/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/opari2 
-OPARI2_CONFIG="/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/opari2-config --config=/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/opari2_config.dat"
-LDFLAGS="-lm -L/home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/.libs -lpomp"
+OPARI2=/home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/opari2 
+OPARI2_CONFIG="/home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/opari2-config --config=/home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/opari2_config.dat"
+LDFLAGS="-lm -L/home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-frontend/../test/../build-frontend/.libs -lpomp"
 FCFLAGS="-g -O2"
 OPENMP="-fopenmp"
 

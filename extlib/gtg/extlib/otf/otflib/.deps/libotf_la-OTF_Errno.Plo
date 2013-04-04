@@ -12,8 +12,7 @@ libotf_la-OTF_Errno.lo: OTF_Errno.c ../config.h OTF_Definitions.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
 
 ../config.h:
 
@@ -56,5 +55,3 @@ OTF_Errno.h:
 /usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:

@@ -1800,15 +1800,9 @@ $as_echo "$as_me: WARNING: distribution does not match a single, unmodified revi
 
 
 
-    LIBRARY_CURRENT=1
-
-
-    LIBRARY_REVISION=0
-
-
-    LIBRARY_AGE=2
-
-
+    
+    
+    
 
 
 

@@ -66,7 +66,7 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	build-config/depcomp build-config/install-sh \
 	build-config/ltmain.sh build-config/missing
 #am__append_1 = doc/doxygen-project-number.cfg
-##am__append_2 = doc/doxygen-user.cfg doc/doxygen-user-at-make-time.cfg doxygen.err
+#am__append_2 = doc/doxygen-user.cfg doc/doxygen-user-at-make-time.cfg doxygen.err
 ##am__append_3 = beautify-recursive
 am__append_4 = $(srcdir)/build-frontend/configure.ac \
               $(srcdir)/build-frontend/aclocal.m4   \
@@ -164,12 +164,12 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AUTOCONF = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run automake-1.11
 AWK = gawk
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"opari2\" -DPACKAGE_TARNAME=\"opari2\" -DPACKAGE_VERSION=\"1.0.2\" -DPACKAGE_STRING=\"opari2\ 1.0.2\" -DPACKAGE_BUGREPORT=\"scorep-bugs@groups.tu-dresden.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"opari2\" -DVERSION=\"1.0.2\" -DSCOREP_IN_PRODUCTION=/\*\*/
@@ -182,12 +182,12 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LIBOBJS = 
-LIBRARY_AGE = 2
-LIBRARY_CURRENT = 1
-LIBRARY_REVISION = 0
+LIBRARY_AGE = 
+LIBRARY_CURRENT = 
+LIBRARY_REVISION = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 PACKAGE = opari2
 PACKAGE_BUGFIX = 2
@@ -205,10 +205,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 1.0.2
-abs_builddir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2
-abs_srcdir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2
-abs_top_builddir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2
-abs_top_srcdir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2
+abs_builddir = /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2
+abs_srcdir = /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2
+abs_top_builddir = /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2
+abs_top_srcdir = /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2
 ac_scorep_doxygen_distdir = 
 ac_scorep_have_uncrustify = no
 am__leading_dot = .
@@ -226,11 +226,11 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-have_dot = 
-have_doxygen = no
-have_doxygen_latex = no
-have_makeindex = 
-have_pdflatex = 
+have_dot = no
+have_doxygen = yes
+have_doxygen_latex = yes
+have_makeindex = yes
+have_pdflatex = yes
 host = x86_64-unknown-linux-gnu
 host_alias = 
 host_cpu = x86_64
@@ -239,7 +239,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/install-sh
+install_sh = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/opari2/build-config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -892,34 +892,34 @@ common-uninstall:
 #doxygen-user-clean:
 #	rm -rf $(USER_DOC_DIR)/*
 
-##doxygen-user: doxygen-project-number doc/doxygen-user/main.dox
-##	$(MKDIR_P) "$(USER_DOC_DIR)/tags"
-##	echo "OUTPUT_DIRECTORY = $(USER_DOC_DIR)" > doc/doxygen-user-at-make-time.cfg
-##	echo "GENERATE_TAGFILE = $(USER_DOC_DIR)/tags/opari2.tag" >> doc/doxygen-user-at-make-time.cfg
-##	cat doc/doxygen-project-number.cfg doc/doxygen-user-at-make-time.cfg doc/doxygen-user-common.cfg doc/doxygen-user-component.cfg > doc/doxygen-user.cfg
-##	$(MKDIR_P) "$(USER_DOC_DIR)/html"
-##	cp $(abs_srcdir)/doc/images/* $(USER_DOC_DIR)/html
-##	doxygen doc/doxygen-user.cfg
+#doxygen-user: doxygen-project-number doc/doxygen-user/main.dox
+#	$(MKDIR_P) "$(USER_DOC_DIR)/tags"
+#	echo "OUTPUT_DIRECTORY = $(USER_DOC_DIR)" > doc/doxygen-user-at-make-time.cfg
+#	echo "GENERATE_TAGFILE = $(USER_DOC_DIR)/tags/opari2.tag" >> doc/doxygen-user-at-make-time.cfg
+#	cat doc/doxygen-project-number.cfg doc/doxygen-user-at-make-time.cfg doc/doxygen-user-common.cfg doc/doxygen-user-component.cfg > doc/doxygen-user.cfg
+#	$(MKDIR_P) "$(USER_DOC_DIR)/html"
+#	cp $(abs_srcdir)/doc/images/* $(USER_DOC_DIR)/html
+#	doxygen doc/doxygen-user.cfg
 
-#doxygen-user:
-#	echo "WARNING: doxygen not available. Can not generate documentation." >&2
-
-##doxygen-user-pdf: doxygen-user
-##	cat doc/doxygen-user.cfg > doc/doxygen-user-pdf.cfg
-##	echo "ENABLED_SECTIONS = LATEX" >> doc/doxygen-user-pdf.cfg
-##	echo "GENERATE_LATEX   = YES"   >> doc/doxygen-user-pdf.cfg
-##	echo "GENERATE_HTML    = NO"    >> doc/doxygen-user-pdf.cfg
-##	cp $(abs_srcdir)/vendor/common/build_related/doxygen/scorep.sty $(USER_DOC_DIR)/pdf/
-##	doxygen doc/doxygen-user-pdf.cfg
-##	cd "$(USER_DOC_DIR)/pdf"; \
-##	make;                     \
-##	mv refman.pdf ../;        \
-##	rm -f *;                  \
-##	mv ../refman.pdf opari2.pdf
+##doxygen-user:
+##	echo "WARNING: doxygen not available. Can not generate documentation." >&2
 
 #doxygen-user-pdf: doxygen-user
-#	echo "WARNING: pdflatex not available. Can not generate doxygen pdf documentation." >&2
-#	if test -d "$(USER_DOC_DIR)/pdf"; then rm -rf "$(USER_DOC_DIR)/pdf"; fi
+#	cat doc/doxygen-user.cfg > doc/doxygen-user-pdf.cfg
+#	echo "ENABLED_SECTIONS = LATEX" >> doc/doxygen-user-pdf.cfg
+#	echo "GENERATE_LATEX   = YES"   >> doc/doxygen-user-pdf.cfg
+#	echo "GENERATE_HTML    = NO"    >> doc/doxygen-user-pdf.cfg
+#	cp $(abs_srcdir)/vendor/common/build_related/doxygen/scorep.sty $(USER_DOC_DIR)/pdf/
+#	doxygen doc/doxygen-user-pdf.cfg
+#	cd "$(USER_DOC_DIR)/pdf"; \
+#	make;                     \
+#	mv refman.pdf ../;        \
+#	rm -f *;                  \
+#	mv ../refman.pdf opari2.pdf
+
+##doxygen-user-pdf: doxygen-user
+##	echo "WARNING: pdflatex not available. Can not generate doxygen pdf documentation." >&2
+##	if test -d "$(USER_DOC_DIR)/pdf"; then rm -rf "$(USER_DOC_DIR)/pdf"; fi
 
 doxygen-user-clean:
 

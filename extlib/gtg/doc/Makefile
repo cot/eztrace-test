@@ -54,7 +54,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
-#am__append_1 = $(DOX_PDF)
+am__append_1 = $(DOX_PDF)
 subdir = doc
 DIST_COMMON = $(am__include_HEADERS_DIST) $(srcdir)/Doxyfile.in \
 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in
@@ -103,12 +103,12 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(includedir)"
 HEADERS = $(include_HEADERS)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AR = ar
-AUTOCONF = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run automake-1.11
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -130,7 +130,7 @@ F77 = gfortran
 FFLAGS = -g -O2
 FGREP = /bin/grep -F
 GREP = /bin/grep
-HAVE_DOXYGEN = no
+HAVE_DOXYGEN = yes
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -144,7 +144,7 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MPIDIR = /usr/lib/openmpi
@@ -173,10 +173,10 @@ SHELL = /bin/bash
 STRIP = strip
 USE_MPIDIR_FROM_USER = 
 VERSION = 0.2-dev
-abs_builddir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/doc
-abs_srcdir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/doc
-abs_top_builddir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg
-abs_top_srcdir = /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg
+abs_builddir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/doc
+abs_srcdir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/doc
+abs_top_builddir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg
+abs_top_srcdir = /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -206,7 +206,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/rue/Bureau/EZTRACE/eztrace/unused-git/extlib/gtg/install-sh
+install_sh = ${SHELL} /home/rue/EZTRACE/eztrace/unused-git/extlib/gtg/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -227,20 +227,20 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-#DOX_DIR = .
-#DOC_DIR = $(builddir)
-#DOX_CONFIG = $(DOX_DIR)/Doxyfile
-#DOX_MAN_DIR = $(DOC_DIR)/man
-#DOX_LATEX_DIR = $(DOC_DIR)/latex
-#DOX_PDF = $(DOC_DIR)/gtg_refmanual.pdf
-#DOX_HTML_DIR = $(DOC_DIR)/html/
-#DOX_TAG = $(DOC_DIR)/gtg.tag
+DOX_DIR = .
+DOC_DIR = $(builddir)
+DOX_CONFIG = $(DOX_DIR)/Doxyfile
+DOX_MAN_DIR = $(DOC_DIR)/man
+DOX_LATEX_DIR = $(DOC_DIR)/latex
+DOX_PDF = $(DOC_DIR)/gtg_refmanual.pdf
+DOX_HTML_DIR = $(DOC_DIR)/html/
+DOX_TAG = $(DOC_DIR)/gtg.tag
 
 # TODO: we should add source files so that the documentation is
 # regenerated when a file changes
-#docx_inputs = $(DOX_CONFIG)
-#EXTRA_DIST = $(DOX_HTML_DIR) $(am__append_1)
-#include_HEADERS = Doxyfile
+docx_inputs = $(DOX_CONFIG)
+EXTRA_DIST = $(DOX_HTML_DIR) $(am__append_1)
+include_HEADERS = Doxyfile
 all: all-am
 
 .SUFFIXES:
@@ -397,7 +397,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-includeHEADERS
+#install-data-am: install-includeHEADERS
 
 install-dvi: install-dvi-am
 
@@ -458,41 +458,41 @@ uninstall-am: uninstall-includeHEADERS
 	ps ps-am uninstall uninstall-am uninstall-includeHEADERS
 
 
-#$(DOX_TAG): $(docx_inputs)
-#	doxygen $(DOX_CONFIG)
-#	touch $(DOX_TAG)
+$(DOX_TAG): $(docx_inputs)
+	doxygen $(DOX_CONFIG)
+	touch $(DOX_TAG)
 
-#$(DOX_HTML_DIR): $(DOX_TAG)
+$(DOX_HTML_DIR): $(DOX_TAG)
 
-#$(DOX_PDF): $(DOX_TAG)
-#	cd $(DOX_LATEX_DIR) &&\
-#        rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
-#        $(PDFLATEX) refman.tex; \
-#        $(MAKEINDEX) refman.idx; \
-#        $(PDFLATEX) refman.tex; \
-#        done=0; repeat=5; \
-#        while test $$done = 0 -a $$repeat -gt 0; do \
-#           if $(EGREP) 'Rerun (LaTeX|to get cross-references right)' refman.log > /dev/null 2>&1; then \
-#               $(PDFLATEX) refman.tex; \
-#               repeat=`expr $$repeat - 1`; \
-#           else \
-#               done=1; \
-#           fi; \
-#        done; \
-#	cd -; \
-#        mv $(DOX_LATEX_DIR)/refman.pdf $(DOX_PDF)
+$(DOX_PDF): $(DOX_TAG)
+	cd $(DOX_LATEX_DIR) &&\
+        rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
+        $(PDFLATEX) refman.tex; \
+        $(MAKEINDEX) refman.idx; \
+        $(PDFLATEX) refman.tex; \
+        done=0; repeat=5; \
+        while test $$done = 0 -a $$repeat -gt 0; do \
+           if $(EGREP) 'Rerun (LaTeX|to get cross-references right)' refman.log > /dev/null 2>&1; then \
+               $(PDFLATEX) refman.tex; \
+               repeat=`expr $$repeat - 1`; \
+           else \
+               done=1; \
+           fi; \
+        done; \
+	cd -; \
+        mv $(DOX_LATEX_DIR)/refman.pdf $(DOX_PDF)
 
 # Crappy hack: automake cannot copy a directory, so we have to do it by hand.
-#install_html: $(DOX_TAG) $(DOX_HTML_DIR)/index.html
-#	mkdir -p $(DESTDIR)$(htmldir)
-#	cp -r $(DOX_HTML_DIR) $(DESTDIR)$(htmldir)
+install_html: $(DOX_TAG) $(DOX_HTML_DIR)/index.html
+	mkdir -p $(DESTDIR)$(htmldir)
+	cp -r $(DOX_HTML_DIR) $(DESTDIR)$(htmldir)
 
-#install_pdf: $(DOX_PDF)
-#	mkdir -p $(DESTDIR)$(pdfdir)
-#	cp -r $(DOX_PDF) $(DESTDIR)$(pdfdir)
+install_pdf: $(DOX_PDF)
+	mkdir -p $(DESTDIR)$(pdfdir)
+	cp -r $(DOX_PDF) $(DESTDIR)$(pdfdir)
 
-#install-data-am: install_pdf install_html
-##install-data-am: install_html
+install-data-am: install_pdf install_html
+#install-data-am: install_html
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

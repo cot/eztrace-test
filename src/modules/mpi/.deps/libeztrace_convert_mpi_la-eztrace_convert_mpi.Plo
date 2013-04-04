@@ -12,9 +12,7 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- ../../../extlib/gtg/inc/GTG.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h ../../../extlib/gtg/inc/GTG.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  ../../../extlib/gtg/inc/GTGTypes.h ../../../extlib/gtg/inc/GTGColor.h \
@@ -28,13 +26,10 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/sigset.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/string.h \
- /usr/include/x86_64-linux-gnu/bits/string2.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h /usr/include/assert.h \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/assert.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -49,7 +44,6 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
  /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/uio.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
  ../../core/eztrace_convert_types.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  ../../../extlib/fxt/tools/fxt-tools.h /usr/include/errno.h \
@@ -65,10 +59,8 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
  /usr/include/asm-generic/socket.h \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/socket2.h \
  /usr/include/x86_64-linux-gnu/bits/in.h ../../../extlib/fxt/tools/fut.h \
- ../../../extlib/fxt/tools/fxt.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h ../../core/eztrace_hook.h \
+ ../../../extlib/fxt/tools/fxt.h ../../core/eztrace_hook.h \
  ../../core/eztrace.h ../../core/config.h /usr/include/dlfcn.h \
  /usr/include/x86_64-linux-gnu/bits/dlfcn.h /usr/include/pthread.h \
  /usr/include/sched.h /usr/include/x86_64-linux-gnu/bits/sched.h \
@@ -114,8 +106,6 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
 ../../../extlib/gtg/inc/GTG.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdint.h:
@@ -156,23 +146,17 @@ libeztrace_convert_mpi_la-eztrace_convert_mpi.lo: eztrace_convert_mpi.c \
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
-
 /usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/string2.h:
-
-/usr/include/x86_64-linux-gnu/bits/string3.h:
 
 /usr/include/assert.h:
 
@@ -216,8 +200,6 @@ mpi_eztrace.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio.h:
 
-/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
-
 ../../core/eztrace_convert_types.h:
 
 /usr/include/semaphore.h:
@@ -258,15 +240,11 @@ mpi_eztrace.h:
 
 /usr/include/asm-generic/sockios.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket2.h:
-
 /usr/include/x86_64-linux-gnu/bits/in.h:
 
 ../../../extlib/fxt/tools/fut.h:
 
 ../../../extlib/fxt/tools/fxt.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
 
 ../../core/eztrace_hook.h:
 

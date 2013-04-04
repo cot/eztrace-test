@@ -13,9 +13,7 @@ libpomp_la-pomp2_fwrapper_base.lo: \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h /usr/include/stdlib.h \
  ../src/pomp-lib-dummy/pomp2_fwrapper_base.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include/omp.h pomp2_fwrapper_def.h \
  ../include/opari2/pomp2_lib.h \
@@ -62,11 +60,7 @@ libpomp_la-pomp2_fwrapper_base.lo: \
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
 /usr/include/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 ../src/pomp-lib-dummy/pomp2_fwrapper_base.h:
 

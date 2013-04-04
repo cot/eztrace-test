@@ -2533,7 +2533,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 
-LIBRARY_INTERFACE_VERSION=1.0.2
 
 
 ac_scorep_frontend="yes"
