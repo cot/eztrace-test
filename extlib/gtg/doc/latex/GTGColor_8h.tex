@@ -1,0 +1,172 @@
+\hypertarget{GTGColor_8h}{\section{G\-T\-G\-Color.\-h File Reference}
+\label{GTGColor_8h}\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}}
+}
+
+
+This file defines some useful colors to use in entity values for G\-T\-G.  
+
+
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgtg__color}{gtg\-\_\-color}
+\begin{DoxyCompactList}\small\item\em This structure defines a color that can be used by G\-T\-G. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GTGColor_8h_a3715b9f3d53d1b007ca3d5d54a633d94}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S}~0
+\item 
+\#define \hyperlink{GTGColor_8h_af6a468e04384d838ad12c6c370116289}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S}~8
+\item 
+\#define \hyperlink{GTGColor_8h_ad35ae9d4ff1aa5870328130b5483b599}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S}~16
+\item 
+\#define \hyperlink{GTGColor_8h_a5d84b5c74582785274cf76dff745a76b}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K}~(0x000000ff $<$$<$ G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S)
+\item 
+\#define \hyperlink{GTGColor_8h_a344b7a65f28e75c218e3ffa38ba142cf}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K}~(0x000000ff $<$$<$ G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S)
+\item 
+\#define \hyperlink{GTGColor_8h_aca9cbafaad4911f01c7d6e822e6da3a1}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K}~(0x000000ff $<$$<$ G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\-\_\-t \hyperlink{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}{gtg\-\_\-rgb\-\_\-color\-\_\-t}
+\item 
+typedef struct \hyperlink{structgtg__color}{gtg\-\_\-color} $\ast$ \hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\-\_\-t \hyperlink{group__GTGColor_ga9e4cec241556fba74d243092ecb65ff3}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-E\-T\-\_\-\-B\-L\-U\-E} (\hyperlink{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}{gtg\-\_\-rgb\-\_\-color\-\_\-t} rgb)
+\begin{DoxyCompactList}\small\item\em Return the 1-\/byte value of the blue component of a rgb color. \end{DoxyCompactList}\item 
+static uint8\-\_\-t \hyperlink{group__GTGColor_ga47cbb9a6cd672a1b0679a5472dacf0aa}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-E\-T\-\_\-\-G\-R\-E\-E\-N} (\hyperlink{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}{gtg\-\_\-rgb\-\_\-color\-\_\-t} rgb)
+\begin{DoxyCompactList}\small\item\em Return the 1-\/byte value of the green component of a rgb color. \end{DoxyCompactList}\item 
+static uint8\-\_\-t \hyperlink{group__GTGColor_ga223e9945beaf02128c62c359a13381ac}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-E\-T\-\_\-\-R\-E\-D} (\hyperlink{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}{gtg\-\_\-rgb\-\_\-color\-\_\-t} rgb)
+\begin{DoxyCompactList}\small\item\em Return the 1-\/byte value of the red component of a rgb color. \end{DoxyCompactList}\item 
+static \hyperlink{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}{gtg\-\_\-rgb\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga0e3d8e413dcbd8f23dfeb5b26bf02ea0}{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-O\-R} (uint8\-\_\-t r, uint8\-\_\-t g, uint8\-\_\-t b)
+\begin{DoxyCompactList}\small\item\em Return the 4-\/bytes R\-G\-B color from 3 1-\/byte components. \end{DoxyCompactList}\item 
+void \hyperlink{GTGColor_8h_adf9335edbd36dc5bc6413264ef2c40c8}{gtg\-\_\-color\-\_\-init} ()
+\item 
+void \hyperlink{GTGColor_8h_a3f0b10fa33d77d2c68b3e7b81ac4fd67}{gtg\-\_\-color\-\_\-exit} ()
+\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{GTGColor_8h_ab217caeb934798d280cb2077358986f9}{gtg\-\_\-color\-\_\-create} (const char $\ast$name, uint8\-\_\-t r, uint8\-\_\-t g, uint8\-\_\-t b)
+\item 
+void \hyperlink{GTGColor_8h_ad2b04b7eefd44537657daa8557c8d804}{gtg\-\_\-color\-\_\-free} (\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} color)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gaa923f594cd6bf3da6a99d672c4438238}{G\-T\-G\-\_\-\-B\-L\-A\-C\-K}
+\begin{DoxyCompactList}\small\item\em Default black color. (R,G,B) = (0, 0, 0) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga64afa654e5f2102b76dfea9948fcc176}{G\-T\-G\-\_\-\-R\-E\-D}
+\begin{DoxyCompactList}\small\item\em Default red color. (R,G,B) = (255, 0, 0) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gaac719b8d82b41edc0d2f29983222586a}{G\-T\-G\-\_\-\-G\-R\-E\-E\-N}
+\begin{DoxyCompactList}\small\item\em Default green color. (R,G,B) = (0, 255, 0) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga8ee0cf541a8cfe06ca0071bc12730514}{G\-T\-G\-\_\-\-B\-L\-U\-E}
+\begin{DoxyCompactList}\small\item\em Default blue color. (R,G,B) = (0, 0, 255) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga21ff1d892d73197f789eadfb5f53ae12}{G\-T\-G\-\_\-\-W\-H\-I\-T\-E}
+\begin{DoxyCompactList}\small\item\em Default white color. (R,G,B) = (255, 255, 255) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gae5b393a4e0d57100e0809e25ccde762c}{G\-T\-G\-\_\-\-T\-E\-A\-L}
+\begin{DoxyCompactList}\small\item\em Default teal color. (R,G,B) = (0, 255, 255) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga088b63848f60b294eb7717f9160ce76a}{G\-T\-G\-\_\-\-D\-A\-R\-K\-G\-R\-E\-Y}
+\begin{DoxyCompactList}\small\item\em Default dark grey color. (R,G,B) = (85, 85, 85) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga16c93cd2a5d433fcc87ef02a84799ba5}{G\-T\-G\-\_\-\-Y\-E\-L\-L\-O\-W}
+\begin{DoxyCompactList}\small\item\em Default yellow color. (R,G,B) = (255, 255, 0) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gac22398d68421bab69f56bad3aec370aa}{G\-T\-G\-\_\-\-P\-U\-R\-P\-L\-E}
+\begin{DoxyCompactList}\small\item\em Default purple color. (R,G,B) = (153, 25, 230) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gaf971085c762299a3ddc48983c5be7ba1}{G\-T\-G\-\_\-\-L\-I\-G\-H\-T\-B\-R\-O\-W\-N}
+\begin{DoxyCompactList}\small\item\em Default light brown color. (R,G,B) = (170, 130, 130) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gaa0b434824fb73ef2aca7b3ea80b1d5fc}{G\-T\-G\-\_\-\-L\-I\-G\-H\-T\-G\-R\-E\-Y}
+\begin{DoxyCompactList}\small\item\em Default light grey color. (R,G,B) = (200, 200, 200) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gafb573eac9a0e0e5b87f53381a52fb5a5}{G\-T\-G\-\_\-\-D\-A\-R\-K\-B\-L\-U\-E}
+\begin{DoxyCompactList}\small\item\em Default dark blue color. (R,G,B) = (0, 0, 80) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga190c0283ea923a8985673bf855acb0f1}{G\-T\-G\-\_\-\-P\-I\-N\-K}
+\begin{DoxyCompactList}\small\item\em Default pink color. (R,G,B) = (255, 0, 255) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gaa08fc4857b39b8de719eb2856b040ebe}{G\-T\-G\-\_\-\-D\-A\-R\-K\-P\-I\-N\-K}
+\begin{DoxyCompactList}\small\item\em Default dark pink color. (R,G,B) = (180, 80, 180) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga64753688aed5f6684f07f8e0878f312e}{G\-T\-G\-\_\-\-S\-E\-A\-B\-L\-U\-E}
+\begin{DoxyCompactList}\small\item\em Default sea blue color. (R,G,B) = (25, 128, 200) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga39b7ac86d036b3eeffb481bb8c7a0404}{G\-T\-G\-\_\-\-K\-A\-K\-I}
+\begin{DoxyCompactList}\small\item\em Default kaki color. (R,G,B) = (80, 100, 25) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gabbc9bfb94e29f9403a7e139e4f4bf87a}{G\-T\-G\-\_\-\-R\-E\-D\-B\-L\-O\-O\-D}
+\begin{DoxyCompactList}\small\item\em Default red blood color. (R,G,B) = (200, 25, 25) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_gadce47970948c2b8fed1561b4ad48a77d}{G\-T\-G\-\_\-\-B\-R\-O\-W\-N}
+\begin{DoxyCompactList}\small\item\em Default brown color. (R,G,B) = (100, 25, 25) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga522dceb98e51420b5145113ba0297eba}{G\-T\-G\-\_\-\-G\-R\-E\-N\-A\-T}
+\begin{DoxyCompactList}\small\item\em Default grenat color. (R,G,B) = (100, 0, 80) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga5ab65b258d884aee7f7510728c3a9c7d}{G\-T\-G\-\_\-\-O\-R\-A\-N\-G\-E}
+\begin{DoxyCompactList}\small\item\em Default orange color. (R,G,B) = (255, 160, 0) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga4de28f536dd910bf024fc2caa5234cb5}{G\-T\-G\-\_\-\-M\-A\-U\-V\-E}
+\begin{DoxyCompactList}\small\item\em Default mauve color. (R,G,B) = (128, 0, 255) \end{DoxyCompactList}\item 
+\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} \hyperlink{group__GTGColor_ga27a569b9d34652d78d38ce7f7cda6794}{G\-T\-G\-\_\-\-L\-I\-G\-H\-T\-P\-I\-N\-K}
+\begin{DoxyCompactList}\small\item\em Default light pink color. (R,G,B) = (255, 128, 255) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines some useful colors to use in entity values for G\-T\-G. \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{GTGColor_8h_a5d84b5c74582785274cf76dff745a76b}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K}}
+\index{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-M\-A\-S\-K~(0x000000ff $<$$<$ G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S)}}\label{GTGColor_8h_a5d84b5c74582785274cf76dff745a76b}
+\hypertarget{GTGColor_8h_a3715b9f3d53d1b007ca3d5d54a633d94}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S}}
+\index{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-U\-E\-\_\-\-P\-O\-S~0}}\label{GTGColor_8h_a3715b9f3d53d1b007ca3d5d54a633d94}
+\hypertarget{GTGColor_8h_a344b7a65f28e75c218e3ffa38ba142cf}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K}}
+\index{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-M\-A\-S\-K~(0x000000ff $<$$<$ G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S)}}\label{GTGColor_8h_a344b7a65f28e75c218e3ffa38ba142cf}
+\hypertarget{GTGColor_8h_af6a468e04384d838ad12c6c370116289}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S}}
+\index{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-G\-R\-E\-E\-N\-\_\-\-P\-O\-S~8}}\label{GTGColor_8h_af6a468e04384d838ad12c6c370116289}
+\hypertarget{GTGColor_8h_aca9cbafaad4911f01c7d6e822e6da3a1}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K}}
+\index{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-M\-A\-S\-K~(0x000000ff $<$$<$ G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S)}}\label{GTGColor_8h_aca9cbafaad4911f01c7d6e822e6da3a1}
+\hypertarget{GTGColor_8h_ad35ae9d4ff1aa5870328130b5483b599}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S}}
+\index{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S@{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-C\-O\-L\-O\-R\-\_\-\-R\-E\-D\-\_\-\-P\-O\-S~16}}\label{GTGColor_8h_ad35ae9d4ff1aa5870328130b5483b599}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!gtg\-\_\-color\-\_\-t@{gtg\-\_\-color\-\_\-t}}
+\index{gtg\-\_\-color\-\_\-t@{gtg\-\_\-color\-\_\-t}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{gtg\-\_\-color\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf gtg\-\_\-color}$\ast$ {\bf gtg\-\_\-color\-\_\-t}}}\label{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}
+\hypertarget{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!gtg\-\_\-rgb\-\_\-color\-\_\-t@{gtg\-\_\-rgb\-\_\-color\-\_\-t}}
+\index{gtg\-\_\-rgb\-\_\-color\-\_\-t@{gtg\-\_\-rgb\-\_\-color\-\_\-t}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{gtg\-\_\-rgb\-\_\-color\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\-\_\-t {\bf gtg\-\_\-rgb\-\_\-color\-\_\-t}}}\label{GTGColor_8h_a9fd3b22fc2eca7706659486c53aa1edd}
+
+
+\subsection{Function Documentation}
+\hypertarget{GTGColor_8h_ab217caeb934798d280cb2077358986f9}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!gtg\-\_\-color\-\_\-create@{gtg\-\_\-color\-\_\-create}}
+\index{gtg\-\_\-color\-\_\-create@{gtg\-\_\-color\-\_\-create}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{gtg\-\_\-color\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gtg\-\_\-color\-\_\-t} gtg\-\_\-color\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{uint8\-\_\-t}]{r, }
+\item[{uint8\-\_\-t}]{g, }
+\item[{uint8\-\_\-t}]{b}
+\end{DoxyParamCaption}
+)}}\label{GTGColor_8h_ab217caeb934798d280cb2077358986f9}
+\hypertarget{GTGColor_8h_a3f0b10fa33d77d2c68b3e7b81ac4fd67}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!gtg\-\_\-color\-\_\-exit@{gtg\-\_\-color\-\_\-exit}}
+\index{gtg\-\_\-color\-\_\-exit@{gtg\-\_\-color\-\_\-exit}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{gtg\-\_\-color\-\_\-exit}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-color\-\_\-exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GTGColor_8h_a3f0b10fa33d77d2c68b3e7b81ac4fd67}
+\hypertarget{GTGColor_8h_ad2b04b7eefd44537657daa8557c8d804}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!gtg\-\_\-color\-\_\-free@{gtg\-\_\-color\-\_\-free}}
+\index{gtg\-\_\-color\-\_\-free@{gtg\-\_\-color\-\_\-free}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{gtg\-\_\-color\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-color\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-color\-\_\-t}}]{color}
+\end{DoxyParamCaption}
+)}}\label{GTGColor_8h_ad2b04b7eefd44537657daa8557c8d804}
+\hypertarget{GTGColor_8h_adf9335edbd36dc5bc6413264ef2c40c8}{\index{G\-T\-G\-Color.\-h@{G\-T\-G\-Color.\-h}!gtg\-\_\-color\-\_\-init@{gtg\-\_\-color\-\_\-init}}
+\index{gtg\-\_\-color\-\_\-init@{gtg\-\_\-color\-\_\-init}!GTGColor.h@{G\-T\-G\-Color.\-h}}
+\subsubsection[{gtg\-\_\-color\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-color\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GTGColor_8h_adf9335edbd36dc5bc6413264ef2c40c8}

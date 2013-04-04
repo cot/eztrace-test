@@ -1,0 +1,117 @@
+\hypertarget{group__traceType}{\section{Trace type handler}
+\label{group__traceType}\index{Trace type handler@{Trace type handler}}
+}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311}{trace\-Type} \{ \hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311a464fcf408aa7f29de9e7828dfbc39147}{P\-A\-J\-E}, 
+\hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311aac864727fa7382dc8f3414f1667a78b5}{V\-I\-T\-E}, 
+\hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311a836fd85172c09b9aebf8e9712b9aae73}{O\-T\-F}, 
+\hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311a4b124dad7992814397ae48d321af66b5}{T\-A\-U}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of the output trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__traceType_gaa32bf7549cb819ce354ac583de6e6bbf}{set\-Trace\-Type} (\hyperlink{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}{trace\-Type\-\_\-t} type)
+\begin{DoxyCompactList}\small\item\em Set the type of output trace. \end{DoxyCompactList}\item 
+\hyperlink{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}{trace\-Type\-\_\-t} \hyperlink{group__traceType_gaf4e365b772f0244b5f40f7a8c21dbeda}{get\-Trace\-Type} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the output trace. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__traceType_gaffe242018ef0fb40a515c24a957f6ba9}{get\-Name} (int proc\-Rk)
+\begin{DoxyCompactList}\small\item\em To get the name of the file to give to the add\-Cont function for processors. \end{DoxyCompactList}\item 
+int \hyperlink{group__traceType_ga577af8ffa49fee14264099998e3d88e8}{buffered\-Mode\-Activated} ()
+\begin{DoxyCompactList}\small\item\em Check wether the buffered-\/mode is activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__traceType_gabfcf61a4d79aa427ef510070fce86311}{\index{Trace type handler@{Trace type handler}!trace\-Type@{trace\-Type}}
+\index{trace\-Type@{trace\-Type}!Trace type handler@{Trace type handler}}
+\subsubsection[{trace\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf trace\-Type}}}\label{group__traceType_gabfcf61a4d79aa427ef510070fce86311}
+
+
+The type of the output trace. 
+
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{P\-A\-J\-E@{P\-A\-J\-E}!Trace type handler@{Trace type handler}}\index{Trace type handler@{Trace type handler}!P\-A\-J\-E@{P\-A\-J\-E}}\item[{\em 
+\hypertarget{group__traceType_gabfcf61a4d79aa427ef510070fce86311a464fcf408aa7f29de9e7828dfbc39147}{P\-A\-J\-E}\label{group__traceType_gabfcf61a4d79aa427ef510070fce86311a464fcf408aa7f29de9e7828dfbc39147}
+}]Paje trace format. \index{V\-I\-T\-E@{V\-I\-T\-E}!Trace type handler@{Trace type handler}}\index{Trace type handler@{Trace type handler}!V\-I\-T\-E@{V\-I\-T\-E}}\item[{\em 
+\hypertarget{group__traceType_gabfcf61a4d79aa427ef510070fce86311aac864727fa7382dc8f3414f1667a78b5}{V\-I\-T\-E}\label{group__traceType_gabfcf61a4d79aa427ef510070fce86311aac864727fa7382dc8f3414f1667a78b5}
+}]Vi\-T\-E-\/specific trace format. \index{O\-T\-F@{O\-T\-F}!Trace type handler@{Trace type handler}}\index{Trace type handler@{Trace type handler}!O\-T\-F@{O\-T\-F}}\item[{\em 
+\hypertarget{group__traceType_gabfcf61a4d79aa427ef510070fce86311a836fd85172c09b9aebf8e9712b9aae73}{O\-T\-F}\label{group__traceType_gabfcf61a4d79aa427ef510070fce86311a836fd85172c09b9aebf8e9712b9aae73}
+}]O\-T\-F trace format. \index{T\-A\-U@{T\-A\-U}!Trace type handler@{Trace type handler}}\index{Trace type handler@{Trace type handler}!T\-A\-U@{T\-A\-U}}\item[{\em 
+\hypertarget{group__traceType_gabfcf61a4d79aa427ef510070fce86311a4b124dad7992814397ae48d321af66b5}{T\-A\-U}\label{group__traceType_gabfcf61a4d79aa427ef510070fce86311a4b124dad7992814397ae48d321af66b5}
+}]T\-A\-U Trace format. \end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{group__traceType_ga577af8ffa49fee14264099998e3d88e8}{\index{Trace type handler@{Trace type handler}!buffered\-Mode\-Activated@{buffered\-Mode\-Activated}}
+\index{buffered\-Mode\-Activated@{buffered\-Mode\-Activated}!Trace type handler@{Trace type handler}}
+\subsubsection[{buffered\-Mode\-Activated}]{\setlength{\rightskip}{0pt plus 5cm}int buffered\-Mode\-Activated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__traceType_ga577af8ffa49fee14264099998e3d88e8}
+
+
+Check wether the buffered-\/mode is activated. 
+
+\begin{DoxyReturn}{Returns}
+1 is the buffered-\/mode is activate.\par
+ 0 otherwise. 
+\end{DoxyReturn}
+\hypertarget{group__traceType_gaffe242018ef0fb40a515c24a957f6ba9}{\index{Trace type handler@{Trace type handler}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Trace type handler@{Trace type handler}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-Type\-\_\-t} get\-Name (
+\begin{DoxyParamCaption}
+\item[{int}]{proc\-Rk}
+\end{DoxyParamCaption}
+)}}\label{group__traceType_gaffe242018ef0fb40a515c24a957f6ba9}
+
+
+To get the name of the file to give to the add\-Cont function for processors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proc\-Rk} & Rank of the proc to get the file containing it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the file to give for a proc 
+\end{DoxyReturn}
+\hypertarget{group__traceType_gaf4e365b772f0244b5f40f7a8c21dbeda}{\index{Trace type handler@{Trace type handler}!get\-Trace\-Type@{get\-Trace\-Type}}
+\index{get\-Trace\-Type@{get\-Trace\-Type}!Trace type handler@{Trace type handler}}
+\subsubsection[{get\-Trace\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-Type\-\_\-t} get\-Trace\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__traceType_gaf4e365b772f0244b5f40f7a8c21dbeda}
+
+
+Get the type of the output trace. 
+
+\begin{DoxyReturn}{Returns}
+The type of the trace 
+\end{DoxyReturn}
+\hypertarget{group__traceType_gaa32bf7549cb819ce354ac583de6e6bbf}{\index{Trace type handler@{Trace type handler}!set\-Trace\-Type@{set\-Trace\-Type}}
+\index{set\-Trace\-Type@{set\-Trace\-Type}!Trace type handler@{Trace type handler}}
+\subsubsection[{set\-Trace\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Trace\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf trace\-Type\-\_\-t}}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__traceType_gaa32bf7549cb819ce354ac583de6e6bbf}
+
+
+Set the type of output trace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of trace to generate \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,40 @@
+\hypertarget{GTGMemory_8h}{\section{G\-T\-G\-Memory.\-h File Reference}
+\label{GTGMemory_8h}\index{G\-T\-G\-Memory.\-h@{G\-T\-G\-Memory.\-h}}
+}
+
+
+This file defines a fast allocator for fixed-\/size blocks.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgtg__memory}{gtg\-\_\-memory}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structgtg__memory}{gtg\-\_\-memory} $\ast$ \hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__GTGMemory_ga5cdc8881f51fa5a160b12cab91cd1a43}{gtg\-\_\-block\-\_\-memory\-\_\-init} (\hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t} $\ast$memory, size\-\_\-t block\-\_\-size, long initial\-\_\-block\-\_\-number)
+\begin{DoxyCompactList}\small\item\em Initialize the allocator. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__GTGMemory_ga1a62c5f680d0d46d7fcc82627830d33d}{gtg\-\_\-block\-\_\-malloc} (\hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t} memory)
+\begin{DoxyCompactList}\small\item\em Allocate a block of data. \end{DoxyCompactList}\item 
+void \hyperlink{group__GTGMemory_ga67019a4108ad51fec4870174c50aa857}{gtg\-\_\-block\-\_\-free} (\hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t} memory, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Free a block of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines a fast allocator for fixed-\/size blocks. \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{\index{G\-T\-G\-Memory.\-h@{G\-T\-G\-Memory.\-h}!gtg\-\_\-memory\-\_\-t@{gtg\-\_\-memory\-\_\-t}}
+\index{gtg\-\_\-memory\-\_\-t@{gtg\-\_\-memory\-\_\-t}!GTGMemory.h@{G\-T\-G\-Memory.\-h}}
+\subsubsection[{gtg\-\_\-memory\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf gtg\-\_\-memory}$\ast$ {\bf gtg\-\_\-memory\-\_\-t}}}\label{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}

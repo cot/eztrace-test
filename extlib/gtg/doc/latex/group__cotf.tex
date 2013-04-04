@@ -1,0 +1,648 @@
+\hypertarget{group__cotf}{\section{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}
+\label{group__cotf}\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{GTGOTF__Structs_8h_a5431afdab8fe4162268778e93f0950c9}{otf\-\_\-color\-\_\-t} \hyperlink{group__cotf_ga28de2748e0f27c11131e4bb097a25bf9}{O\-T\-F\-\_\-get\-\_\-color} (\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} color)
+\begin{DoxyCompactList}\small\item\em Converts a G\-T\-G color into a O\-T\-F color. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga87f8715c93843ed56a9f4d9ed2e7d6d8}{O\-T\-F\-Init\-Trace} (const char $\ast$filename, \hyperlink{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{gtg\-\_\-flag\-\_\-t} flags)
+\begin{DoxyCompactList}\small\item\em Initialize an O\-T\-F trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga5a2457a81c113ea6b241a68942a63371}{O\-T\-F\-Set\-Compress} (int val)
+\begin{DoxyCompactList}\small\item\em Enable trace compression. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga38f77fbd3406ac7528fa0d7f18328c55}{O\-T\-F\-Add\-Cont\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_gac740f7116291d76bb3afd2154a1e5962}{O\-T\-F\-Add\-State\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structState}{State} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga655059acd582bec8ce5b38199d8b5a1e}{O\-T\-F\-Add\-Event\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add an Event Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_gad4f12572f83d4d88c2a69807853ecf98}{O\-T\-F\-Add\-Link\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type, const char $\ast$src\-Cont\-Type, const char $\ast$dest\-Cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structLink}{Link} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga7eec321ccab983ece92ebca92887d1cf}{O\-T\-F\-Add\-Var\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structVariable}{Variable} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga14a33c2535d2b7da582bd331993999e9}{O\-T\-F\-Add\-Entity\-Value} (const char $\ast$alias, const char $\ast$ent\-Type, const char $\ast$name, const \hyperlink{GTGOTF__Structs_8h_a5431afdab8fe4162268778e93f0950c9}{otf\-\_\-color\-\_\-t} color)
+\begin{DoxyCompactList}\small\item\em Add an Entity Value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_gafd43ca39c5ad8a5d88325480ff9fca75}{O\-T\-F\-Start\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name, const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Start a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_gaa83d4e4210ed18a25f697fff36f43b84}{O\-T\-F\-Destroy\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$name, const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Destroy a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga8535ccc5a1ec7d512eef43a5588ec6db}{O\-T\-F\-Set\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_gafcaf513ad403f1073a60292ee797422c}{O\-T\-F\-Push\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga91c6066968d7c788dcd88c264a93636b}{O\-T\-F\-Pop\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont)
+\begin{DoxyCompactList}\small\item\em Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga7b5fa3f1a3f5615fe9316c692e9bce3c}{O\-T\-F\-Add\-Event} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Add an Event. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga0e6f15e063533999a4587f5aff536c4b}{O\-T\-F\-Start\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$src, const char $\ast$dest, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Start a \hyperlink{structLink}{Link}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga42c372c6ccb6362453c27f74df3a3dfc}{O\-T\-F\-End\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$src, const char $\ast$dest, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em End a \hyperlink{structLink}{Link}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga5b0831b85cc3e6ebd78224a4199b1cfd}{O\-T\-F\-Set\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Set a \hyperlink{structVariable}{Variable} value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_gac288ab52595162f8b855b95eb3a6511d}{O\-T\-F\-Add\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Add a value to a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga372542376c4963ad7c3223524a365805}{O\-T\-F\-Sub\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Substract a value from a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga647e099aae188f5b818fe4c32d1d515d}{O\-T\-F\-Add\-Comment} (const char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Add some Comment in Trace file. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cotf_ga702d5cd834f6a960a57f4575a0e1954d}{O\-T\-F\-End\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize an O\-T\-F trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__cotf_ga28de2748e0f27c11131e4bb097a25bf9}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-\_\-get\-\_\-color@{O\-T\-F\-\_\-get\-\_\-color}}
+\index{O\-T\-F\-\_\-get\-\_\-color@{O\-T\-F\-\_\-get\-\_\-color}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-\_\-get\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ O\-T\-F\-\_\-get\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-color\-\_\-t}}]{color}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga28de2748e0f27c11131e4bb097a25bf9}
+
+
+Converts a G\-T\-G color into a O\-T\-F color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & G\-T\-G color to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The O\-T\-F color 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga647e099aae188f5b818fe4c32d1d515d}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Comment@{O\-T\-F\-Add\-Comment}}
+\index{O\-T\-F\-Add\-Comment@{O\-T\-F\-Add\-Comment}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Comment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Comment (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{comment}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga647e099aae188f5b818fe4c32d1d515d}
+
+
+Add some Comment in Trace file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & Comment to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga38f77fbd3406ac7528fa0d7f18328c55}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Cont\-Type@{O\-T\-F\-Add\-Cont\-Type}}
+\index{O\-T\-F\-Add\-Cont\-Type@{O\-T\-F\-Add\-Cont\-Type}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Cont\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Cont\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga38f77fbd3406ac7528fa0d7f18328c55}
+
+
+Add a \hyperlink{structContainer}{Container} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the container \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the container type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga14a33c2535d2b7da582bd331993999e9}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Entity\-Value@{O\-T\-F\-Add\-Entity\-Value}}
+\index{O\-T\-F\-Add\-Entity\-Value@{O\-T\-F\-Add\-Entity\-Value}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Entity\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Entity\-Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{ent\-Type, }
+\item[{const char $\ast$}]{name, }
+\item[{const {\bf otf\-\_\-color\-\_\-t}}]{color}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga14a33c2535d2b7da582bd331993999e9}
+
+
+Add an Entity Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the entity value \\
+\hline
+{\em ent\-Type} & Type of the entity \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+{\em color} & Color of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga7b5fa3f1a3f5615fe9316c692e9bce3c}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Event@{O\-T\-F\-Add\-Event}}
+\index{O\-T\-F\-Add\-Event@{O\-T\-F\-Add\-Event}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga7b5fa3f1a3f5615fe9316c692e9bce3c}
+
+
+Add an Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the event happens \\
+\hline
+{\em type} & Type of the event \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this event \\
+\hline
+{\em val} & Entity value of the event of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga655059acd582bec8ce5b38199d8b5a1e}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Event\-Type@{O\-T\-F\-Add\-Event\-Type}}
+\index{O\-T\-F\-Add\-Event\-Type@{O\-T\-F\-Add\-Event\-Type}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Event\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Event\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga655059acd582bec8ce5b38199d8b5a1e}
+
+
+Add an Event Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the event type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the event type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_gad4f12572f83d4d88c2a69807853ecf98}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Link\-Type@{O\-T\-F\-Add\-Link\-Type}}
+\index{O\-T\-F\-Add\-Link\-Type@{O\-T\-F\-Add\-Link\-Type}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Link\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Link\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{src\-Cont\-Type, }
+\item[{const char $\ast$}]{dest\-Cont\-Type}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_gad4f12572f83d4d88c2a69807853ecf98}
+
+
+Add a \hyperlink{structLink}{Link} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the link type \\
+\hline
+{\em name} & Name of the link type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em src\-Cont\-Type} & Type of the source container \\
+\hline
+{\em dest\-Cont\-Type} & Type of the destination container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_gac740f7116291d76bb3afd2154a1e5962}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-State\-Type@{O\-T\-F\-Add\-State\-Type}}
+\index{O\-T\-F\-Add\-State\-Type@{O\-T\-F\-Add\-State\-Type}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-State\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-State\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_gac740f7116291d76bb3afd2154a1e5962}
+
+
+Add a \hyperlink{structState}{State} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the state type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the state type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_gac288ab52595162f8b855b95eb3a6511d}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Var@{O\-T\-F\-Add\-Var}}
+\index{O\-T\-F\-Add\-Var@{O\-T\-F\-Add\-Var}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_gac288ab52595162f8b855b95eb3a6511d}
+
+
+Add a value to a \hyperlink{structVariable}{Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the variable is incremented \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containning the variable \\
+\hline
+{\em val} & Value added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga7eec321ccab983ece92ebca92887d1cf}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Add\-Var\-Type@{O\-T\-F\-Add\-Var\-Type}}
+\index{O\-T\-F\-Add\-Var\-Type@{O\-T\-F\-Add\-Var\-Type}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Add\-Var\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Add\-Var\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga7eec321ccab983ece92ebca92887d1cf}
+
+
+Add a \hyperlink{structVariable}{Variable} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the variable type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_gaa83d4e4210ed18a25f697fff36f43b84}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Destroy\-Container@{O\-T\-F\-Destroy\-Container}}
+\index{O\-T\-F\-Destroy\-Container@{O\-T\-F\-Destroy\-Container}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Destroy\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Destroy\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_gaa83d4e4210ed18a25f697fff36f43b84}
+
+
+Destroy a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is destroyed \\
+\hline
+{\em name} & Name of the container \\
+\hline
+{\em type} & Type of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga42c372c6ccb6362453c27f74df3a3dfc}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-End\-Link@{O\-T\-F\-End\-Link}}
+\index{O\-T\-F\-End\-Link@{O\-T\-F\-End\-Link}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-End\-Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-End\-Link (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{dest, }
+\item[{const char $\ast$}]{val, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga42c372c6ccb6362453c27f74df3a3dfc}
+
+
+End a \hyperlink{structLink}{Link}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the link ends \\
+\hline
+{\em type} & Type of the link \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containning the link \\
+\hline
+{\em dest} & \hyperlink{structContainer}{Container} destination \\
+\hline
+{\em val} & Entity value of the link \\
+\hline
+{\em key} & Key to identify the link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga702d5cd834f6a960a57f4575a0e1954d}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-End\-Trace@{O\-T\-F\-End\-Trace}}
+\index{O\-T\-F\-End\-Trace@{O\-T\-F\-End\-Trace}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-End\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}O\-T\-F\-End\-Trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga702d5cd834f6a960a57f4575a0e1954d}
+
+
+Finalize an O\-T\-F trace. 
+
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga87f8715c93843ed56a9f4d9ed2e7d6d8}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Init\-Trace@{O\-T\-F\-Init\-Trace}}
+\index{O\-T\-F\-Init\-Trace@{O\-T\-F\-Init\-Trace}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Init\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Init\-Trace (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf gtg\-\_\-flag\-\_\-t}}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga87f8715c93843ed56a9f4d9ed2e7d6d8}
+
+
+Initialize an O\-T\-F trace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Root name of the file to create \\
+\hline
+{\em flags} & One of G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E, G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I, G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga91c6066968d7c788dcd88c264a93636b}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Pop\-State@{O\-T\-F\-Pop\-State}}
+\index{O\-T\-F\-Pop\-State@{O\-T\-F\-Pop\-State}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Pop\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Pop\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga91c6066968d7c788dcd88c264a93636b}
+
+
+Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the state is poped \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_gafcaf513ad403f1073a60292ee797422c}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Push\-State@{O\-T\-F\-Push\-State}}
+\index{O\-T\-F\-Push\-State@{O\-T\-F\-Push\-State}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Push\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Push\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_gafcaf513ad403f1073a60292ee797422c}
+
+
+Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the state is pushed \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this state \\
+\hline
+{\em val} & Entity value of the state of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga5a2457a81c113ea6b241a68942a63371}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Set\-Compress@{O\-T\-F\-Set\-Compress}}
+\index{O\-T\-F\-Set\-Compress@{O\-T\-F\-Set\-Compress}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Set\-Compress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Set\-Compress (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga5a2457a81c113ea6b241a68942a63371}
+
+
+Enable trace compression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & 0 means no compression, otherwize the output files will be compressed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga8535ccc5a1ec7d512eef43a5588ec6db}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Set\-State@{O\-T\-F\-Set\-State}}
+\index{O\-T\-F\-Set\-State@{O\-T\-F\-Set\-State}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Set\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Set\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga8535ccc5a1ec7d512eef43a5588ec6db}
+
+
+Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the state is set \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this state \\
+\hline
+{\em val} & Entity value of the state of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga5b0831b85cc3e6ebd78224a4199b1cfd}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Set\-Var@{O\-T\-F\-Set\-Var}}
+\index{O\-T\-F\-Set\-Var@{O\-T\-F\-Set\-Var}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Set\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Set\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga5b0831b85cc3e6ebd78224a4199b1cfd}
+
+
+Set a \hyperlink{structVariable}{Variable} value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the variable is set \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containning the variable \\
+\hline
+{\em val} & Value of the variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_gafd43ca39c5ad8a5d88325480ff9fca75}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Start\-Container@{O\-T\-F\-Start\-Container}}
+\index{O\-T\-F\-Start\-Container@{O\-T\-F\-Start\-Container}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Start\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Start\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{container, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_gafd43ca39c5ad8a5d88325480ff9fca75}
+
+
+Start a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is added \\
+\hline
+{\em alias} & Alias of the new container \\
+\hline
+{\em type} & Type of the container \\
+\hline
+{\em container} & \hyperlink{structContainer}{Container} parent \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+{\em file} & File containing the container trace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga0e6f15e063533999a4587f5aff536c4b}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Start\-Link@{O\-T\-F\-Start\-Link}}
+\index{O\-T\-F\-Start\-Link@{O\-T\-F\-Start\-Link}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Start\-Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Start\-Link (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{src, }
+\item[{const char $\ast$}]{val, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga0e6f15e063533999a4587f5aff536c4b}
+
+
+Start a \hyperlink{structLink}{Link}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the link starts \\
+\hline
+{\em type} & Type of the link \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containning the link \\
+\hline
+{\em src} & \hyperlink{structContainer}{Container} source \\
+\hline
+{\em val} & Entity value of the link \\
+\hline
+{\em key} & Key to identify the link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cotf_ga372542376c4963ad7c3223524a365805}{\index{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}!O\-T\-F\-Sub\-Var@{O\-T\-F\-Sub\-Var}}
+\index{O\-T\-F\-Sub\-Var@{O\-T\-F\-Sub\-Var}!OTF interface in C of the traceGeneratorBasic API@{O\-T\-F interface in C of the trace\-Generator\-Basic A\-P\-I}}
+\subsubsection[{O\-T\-F\-Sub\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} O\-T\-F\-Sub\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cotf_ga372542376c4963ad7c3223524a365805}
+
+
+Substract a value from a \hyperlink{structVariable}{Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the variable is incremented \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containning the variable \\
+\hline
+{\em val} & Value substracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}

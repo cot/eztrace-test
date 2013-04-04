@@ -1,0 +1,152 @@
+\hypertarget{GTGBasic_8h}{\section{G\-T\-G\-Basic.\-h File Reference}
+\label{GTGBasic_8h}\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}}
+}
+
+
+G\-T\-G\-Basic is a basic interface to generate trace in various formats.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}G\-T\-G\-Color.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G\-T\-G\-Types.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GTGBasic_8h_a11cc5cb8a0a6aa561574afb10860dfed}{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E}~0
+\begin{DoxyCompactList}\small\item\em No flag specified. \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGBasic_8h_a1369d4a2afed9e84bc1dbabb4a8d1ec9}{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I}~1
+\begin{DoxyCompactList}\small\item\em Several M\-P\-I processes are currently using G\-T\-G. \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGBasic_8h_a0e1d2e55af61e5807593219b85f90405}{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F}~2
+\begin{DoxyCompactList}\small\item\em For writing the traces in a non-\/buffered mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGBasic_8h_a4fc44f784cd14c145415352bba3486cf}{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R}~4
+\begin{DoxyCompactList}\small\item\em Allow the application to record events out of order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\-\_\-t \hyperlink{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{gtg\-\_\-flag\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Flags that can be specified to G\-T\-G. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311}{trace\-Type} \hyperlink{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}{trace\-Type\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311}{trace\-Type} \{ \hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311a464fcf408aa7f29de9e7828dfbc39147}{P\-A\-J\-E}, 
+\hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311aac864727fa7382dc8f3414f1667a78b5}{V\-I\-T\-E}, 
+\hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311a836fd85172c09b9aebf8e9712b9aae73}{O\-T\-F}, 
+\hyperlink{group__traceType_gabfcf61a4d79aa427ef510070fce86311a4b124dad7992814397ae48d321af66b5}{T\-A\-U}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of the output trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__traceType_gaa32bf7549cb819ce354ac583de6e6bbf}{set\-Trace\-Type} (\hyperlink{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}{trace\-Type\-\_\-t} type)
+\begin{DoxyCompactList}\small\item\em Set the type of output trace. \end{DoxyCompactList}\item 
+\hyperlink{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}{trace\-Type\-\_\-t} \hyperlink{group__traceType_gaf4e365b772f0244b5f40f7a8c21dbeda}{get\-Trace\-Type} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the output trace. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__traceType_gaffe242018ef0fb40a515c24a957f6ba9}{get\-Name} (int proc\-Rk)
+\begin{DoxyCompactList}\small\item\em To get the name of the file to give to the add\-Cont function for processors. \end{DoxyCompactList}\item 
+int \hyperlink{group__traceType_ga577af8ffa49fee14264099998e3d88e8}{buffered\-Mode\-Activated} ()
+\begin{DoxyCompactList}\small\item\em Check wether the buffered-\/mode is activated. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_ga6900cde464f9833ad682d680a2a78203}{init\-Trace} (const char $\ast$filename, int rank, \hyperlink{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{gtg\-\_\-flag\-\_\-t} flags)
+\begin{DoxyCompactList}\small\item\em Initialize a trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_gabe4753689dfd8508c336b3898b0df471}{end\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize a trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_ga9219b49891d7bfce610daf60c5a02cae}{set\-Compress} (int val)
+\begin{DoxyCompactList}\small\item\em Enable trace compression (only available for O\-T\-F traces). \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_gad5822f320aedc792dc9a4c3a7c1f8751}{add\-Cont\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_gad5c4b3bad6aa9c83a9e8562664fe626a}{add\-State\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structState}{State} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__eventf_gae35aeab2cfbacf978c03ea8f0811b82e}{add\-Event\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add an Event Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__linkf_gab4b69cdd6b0fc990a2d99835c4bd3c89}{add\-Link\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type, const char $\ast$src\-Cont\-Type, const char $\ast$dest\-Cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structLink}{Link} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_ga7c621d853b9d0058a065db58cdb94ec8}{add\-Var\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structVariable}{Variable} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_gaa732419a54e774f325188e1b1f8ac36d}{add\-Entity\-Value} (const char $\ast$alias, const char $\ast$ent\-Type, const char $\ast$name, \hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} p\-\_\-color)
+\begin{DoxyCompactList}\small\item\em Add an Entity Value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_gaef7a79f315b4e35480c27a1ae479827d}{add\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name, const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_gae4eb01314299c2dcf82fd1b3faaf8ffa}{destroy\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$name, const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Destroy a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_ga7d0ee8cd70600ebfe5173c6385f6f35f}{set\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_ga4ecba7c24b51e26839795ae837339af0}{push\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_ga303c63c84b39511c9cf9d27c2dbea79e}{pop\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont)
+\begin{DoxyCompactList}\small\item\em Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__eventf_gaecd7c28a19831d32ef05f5af0469b434}{add\-Event} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Add an Event. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__linkf_ga75cf70450e81381decb2e84c3e6e18bd}{start\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$src, const char $\ast$dest, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Start a \hyperlink{structLink}{Link}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__linkf_ga9e084fd160fd4f7357f6acf4eb541606}{end\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$src, const char $\ast$dest, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em End a \hyperlink{structLink}{Link}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_gac897f3ccddc88ce6bd46ca6594cc5605}{set\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Set a \hyperlink{structVariable}{Variable} value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_ga305787a5e14f17a2a0961be702c4ff25}{add\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Add a value to a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_ga573290384c5fe8b600fc999473117067}{sub\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Substract a value from a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_ga463f260c133bb2471aad369b8d1319cb}{Add\-Comment} (const char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Add some Comment in Trace file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+G\-T\-G\-Basic is a basic interface to generate trace in various formats. \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Developers are \-: \par
+ Francois Rue -\/ \href{mailto:francois.rue@labri.fr}{\tt francois.\-rue@labri.\-fr} \par
+ Francois Trahay -\/ \href{mailto:francois.trahay@labri.fr}{\tt francois.\-trahay@labri.\-fr} \par
+ Johnny Jazeix -\/ \href{mailto:jazeix@enseirb-matmeca.fr}{\tt jazeix@enseirb-\/matmeca.\-fr} \par
+ Kevin Coulomb -\/ \href{mailto:kevin.coulomb@gmail.com}{\tt kevin.\-coulomb@gmail.\-com} \par
+ Mathieu Faverge -\/ \href{mailto:faverge@labri.fr}{\tt faverge@labri.\-fr} \par
+ Olivier Lagrasse -\/ \href{mailto:lagrasse@enseirb-matmeca.fr}{\tt lagrasse@enseirb-\/matmeca.\-fr} \par
+
+\end{DoxyAuthor}
+It has been initiated in 2010 by {\itshape eztrace} and {\itshape Vi\-T\-E} projects that both needs a good library to generate traces. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{GTGBasic_8h_a11cc5cb8a0a6aa561574afb10860dfed}{\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}!G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E}}
+\index{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E}!GTGBasic.h@{G\-T\-G\-Basic.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E~0}}\label{GTGBasic_8h_a11cc5cb8a0a6aa561574afb10860dfed}
+
+
+No flag specified. 
+
+\hypertarget{GTGBasic_8h_a0e1d2e55af61e5807593219b85f90405}{\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}!G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F}}
+\index{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F}!GTGBasic.h@{G\-T\-G\-Basic.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F~2}}\label{GTGBasic_8h_a0e1d2e55af61e5807593219b85f90405}
+
+
+For writing the traces in a non-\/buffered mode. 
+
+\hypertarget{GTGBasic_8h_a4fc44f784cd14c145415352bba3486cf}{\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}!G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R}}
+\index{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R}!GTGBasic.h@{G\-T\-G\-Basic.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-O\-U\-T\-O\-F\-O\-R\-D\-E\-R~4}}\label{GTGBasic_8h_a4fc44f784cd14c145415352bba3486cf}
+
+
+Allow the application to record events out of order. 
+
+\hypertarget{GTGBasic_8h_a1369d4a2afed9e84bc1dbabb4a8d1ec9}{\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}!G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I}}
+\index{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I@{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I}!GTGBasic.h@{G\-T\-G\-Basic.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I~1}}\label{GTGBasic_8h_a1369d4a2afed9e84bc1dbabb4a8d1ec9}
+
+
+Several M\-P\-I processes are currently using G\-T\-G. 
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}!gtg\-\_\-flag\-\_\-t@{gtg\-\_\-flag\-\_\-t}}
+\index{gtg\-\_\-flag\-\_\-t@{gtg\-\_\-flag\-\_\-t}!GTGBasic.h@{G\-T\-G\-Basic.\-h}}
+\subsubsection[{gtg\-\_\-flag\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint8\-\_\-t {\bf gtg\-\_\-flag\-\_\-t}}}\label{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}
+
+
+Flags that can be specified to G\-T\-G. 
+
+\hypertarget{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}{\index{G\-T\-G\-Basic.\-h@{G\-T\-G\-Basic.\-h}!trace\-Type\-\_\-t@{trace\-Type\-\_\-t}}
+\index{trace\-Type\-\_\-t@{trace\-Type\-\_\-t}!GTGBasic.h@{G\-T\-G\-Basic.\-h}}
+\subsubsection[{trace\-Type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf trace\-Type} {\bf trace\-Type\-\_\-t}}}\label{GTGBasic_8h_a3380a5e49e7f7e2ff3ea18f893527811}

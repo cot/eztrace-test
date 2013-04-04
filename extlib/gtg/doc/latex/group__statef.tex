@@ -1,0 +1,130 @@
+\hypertarget{group__statef}{\section{Functions related to the states}
+\label{group__statef}\index{Functions related to the states@{Functions related to the states}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_gad5c4b3bad6aa9c83a9e8562664fe626a}{add\-State\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structState}{State} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_ga7d0ee8cd70600ebfe5173c6385f6f35f}{set\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_ga4ecba7c24b51e26839795ae837339af0}{push\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__statef_ga303c63c84b39511c9cf9d27c2dbea79e}{pop\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont)
+\begin{DoxyCompactList}\small\item\em Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__statef_gad5c4b3bad6aa9c83a9e8562664fe626a}{\index{Functions related to the states@{Functions related to the states}!add\-State\-Type@{add\-State\-Type}}
+\index{add\-State\-Type@{add\-State\-Type}!Functions related to the states@{Functions related to the states}}
+\subsubsection[{add\-State\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} add\-State\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__statef_gad5c4b3bad6aa9c83a9e8562664fe626a}
+
+
+Add a \hyperlink{structState}{State} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the state type added \\
+\hline
+{\em cont\-Type} & Type of container of these states \\
+\hline
+{\em name} & Alternative name of the state type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__statef_ga303c63c84b39511c9cf9d27c2dbea79e}{\index{Functions related to the states@{Functions related to the states}!pop\-State@{pop\-State}}
+\index{pop\-State@{pop\-State}!Functions related to the states@{Functions related to the states}}
+\subsubsection[{pop\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} pop\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__statef_ga303c63c84b39511c9cf9d27c2dbea79e}
+
+
+Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time the state changes \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} whose state changes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__statef_ga4ecba7c24b51e26839795ae837339af0}{\index{Functions related to the states@{Functions related to the states}!push\-State@{push\-State}}
+\index{push\-State@{push\-State}!Functions related to the states@{Functions related to the states}}
+\subsubsection[{push\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} push\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__statef_ga4ecba7c24b51e26839795ae837339af0}
+
+
+Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time the state changes \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} whose state changes \\
+\hline
+{\em val} & Value of state of container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__statef_ga7d0ee8cd70600ebfe5173c6385f6f35f}{\index{Functions related to the states@{Functions related to the states}!set\-State@{set\-State}}
+\index{set\-State@{set\-State}!Functions related to the states@{Functions related to the states}}
+\subsubsection[{set\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} set\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__statef_ga7d0ee8cd70600ebfe5173c6385f6f35f}
+
+
+Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time the state changes \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} whose state changes \\
+\hline
+{\em val} & Value of new state of container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}

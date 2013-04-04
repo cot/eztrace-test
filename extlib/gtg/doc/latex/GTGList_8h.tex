@@ -1,0 +1,300 @@
+\hypertarget{GTGList_8h}{\section{G\-T\-G\-List.\-h File Reference}
+\label{GTGList_8h}\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgtg__list}{gtg\-\_\-list}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GTGList_8h_a1338d800c732cb3a1c41d1c033bdd857}{G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T}(ptr)
+\begin{DoxyCompactList}\small\item\em initialize a list. \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGList_8h_ab02f7ebccd0b091b2001d8b381bf6fb5}{G\-T\-G\-\_\-\-L\-I\-S\-T}(name)
+\begin{DoxyCompactList}\small\item\em declare and initialize a list. \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\-\_\-list\-\_\-entry}(ptr, type, member)~((type $\ast$)((char $\ast$)(ptr) -\/ (char $\ast$)(\&((type $\ast$)0)-\/$>$member)))
+\begin{DoxyCompactList}\small\item\em get the structure corresponding to a list entry \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGList_8h_ad83bf2f20ed79cafbee61dab759b56c4}{gtg\-\_\-list\-\_\-for\-\_\-each}(pos, head)~for (pos = (head)-\/$>$next; pos != (head); pos = pos-\/$>$next)
+\item 
+\#define \hyperlink{GTGList_8h_a0fa3e1ddadec4f2c0a96efa9c725197d}{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse}(pos, head)~for (pos = (head)-\/$>$prev; pos != (head); pos = pos-\/$>$prev)
+\item 
+\#define \hyperlink{GTGList_8h_acb9ea4e91626e0b9df23d6aec078d672}{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe}(pos, n, head)
+\item 
+\#define \hyperlink{GTGList_8h_a4bdc5ebe7e05e5242409504d010389e5}{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry}(pos, head, member)
+\begin{DoxyCompactList}\small\item\em iterate over list of given type \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGList_8h_ace0f624d4dd80950511ce16622aad348}{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe}(pos, n, head, member)
+\begin{DoxyCompactList}\small\item\em iterate over list of given type safe against removal of list entry \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structgtg__list}{gtg\-\_\-list} $\ast$ \hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{GTGList_8h_ad586b4819242b49ab669fe12d9a5a7ce}{\-\_\-\-\_\-gtg\-\_\-list\-\_\-add} (\hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} lnew, \hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} prev, \hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} next)
+\item 
+static void \hyperlink{GTGList_8h_ad65f21dd678c94735c880f651d7c43b7}{gtg\-\_\-list\-\_\-add} (\hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} lnew, \hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} head)
+\begin{DoxyCompactList}\small\item\em Insert a new entry after the specified head. \end{DoxyCompactList}\item 
+static void \hyperlink{GTGList_8h_aa73c19151049791f4ca20a1ee18d95dc}{gtg\-\_\-list\-\_\-add\-\_\-tail} (\hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} lnew, \hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} head)
+\begin{DoxyCompactList}\small\item\em Insert a new entry before the specified head (ie. at the tail of the list). \end{DoxyCompactList}\item 
+static void \hyperlink{GTGList_8h_a8087627971e129ef2860c20a6ffab23b}{\-\_\-\-\_\-gtg\-\_\-list\-\_\-del} (\hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} prev, \hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} next)
+\item 
+static void \hyperlink{GTGList_8h_ae7a2202c2ab63857b2e10dbfd16d8b6e}{gtg\-\_\-list\-\_\-del} (\hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} entry)
+\begin{DoxyCompactList}\small\item\em delete an entry from its list and reinitialize it. \end{DoxyCompactList}\item 
+static int \hyperlink{GTGList_8h_aadb6697b96b30d91ecde2703d18bc1df}{gtg\-\_\-list\-\_\-size} (\hyperlink{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{gtg\-\_\-list\-\_\-t} l)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{GTGList_8h_ab02f7ebccd0b091b2001d8b381bf6fb5}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!G\-T\-G\-\_\-\-L\-I\-S\-T@{G\-T\-G\-\_\-\-L\-I\-S\-T}}
+\index{G\-T\-G\-\_\-\-L\-I\-S\-T@{G\-T\-G\-\_\-\-L\-I\-S\-T}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}G\-T\-G\-\_\-\-L\-I\-S\-T(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{GTGList_8h_ab02f7ebccd0b091b2001d8b381bf6fb5}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structgtg__list}{gtg\_list} name; \(\backslash\)
+  GTG\_LIST\_INIT(&name)
+\end{DoxyCode}
+
+
+declare and initialize a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the variable \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-entry@{gtg\-\_\-list\-\_\-entry}}
+\index{gtg\-\_\-list\-\_\-entry@{gtg\-\_\-list\-\_\-entry}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}gtg\-\_\-list\-\_\-entry(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{type, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)~((type $\ast$)((char $\ast$)(ptr) -\/ (char $\ast$)(\&((type $\ast$)0)-\/$>$member)))}}\label{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}
+
+
+get the structure corresponding to a list entry 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer to the list entry (gtg\-\_\-list\-\_\-t) \\
+\hline
+{\em type} & the type of the struct this is embedded in. \\
+\hline
+{\em member} & the name of the struct \hyperlink{structgtg__list}{gtg\-\_\-list} member within the struct. \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_ad83bf2f20ed79cafbee61dab759b56c4}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-for\-\_\-each@{gtg\-\_\-list\-\_\-for\-\_\-each}}
+\index{gtg\-\_\-list\-\_\-for\-\_\-each@{gtg\-\_\-list\-\_\-for\-\_\-each}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-for\-\_\-each}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtg\-\_\-list\-\_\-for\-\_\-each(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head}
+\end{DoxyParamCaption}
+)~for (pos = (head)-\/$>$next; pos != (head); pos = pos-\/$>$next)}}\label{GTGList_8h_ad83bf2f20ed79cafbee61dab759b56c4}
+\hypertarget{GTGList_8h_a4bdc5ebe7e05e5242409504d010389e5}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry}}
+\index{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{GTGList_8h_a4bdc5ebe7e05e5242409504d010389e5}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (pos = \hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\_list\_entry}((head)->\hyperlink{structgtg__list_a345eec26112d216eb50414c089292381}{next}, typeof(*pos), member)
+      ;        \(\backslash\)
+       &pos->member != (head);                                          \(\backslash\)
+       pos = \hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\_list\_entry}(pos->member.next, typeof(*pos), 
+      member))
+\end{DoxyCode}
+
+
+iterate over list of given type 
+
+\hyperlink{GTGList_8h_a4bdc5ebe7e05e5242409504d010389e5}{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry(pos, head, member)} 
+\begin{DoxyParams}{Parameters}
+{\em pos} & the type $\ast$ to use as a loop counter. \\
+\hline
+{\em head} & the head for the list. \\
+\hline
+{\em member} & the name of the struct \hyperlink{structgtg__list}{gtg\-\_\-list} member within the struct. \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_ace0f624d4dd80950511ce16622aad348}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe}}
+\index{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{n, }
+\item[{}]{head, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)}}\label{GTGList_8h_ace0f624d4dd80950511ce16622aad348}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (pos = \hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\_list\_entry}((head)->\hyperlink{structgtg__list_a345eec26112d216eb50414c089292381}{next}, typeof(*pos), member)
+      ,        \(\backslash\)
+         n = \hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\_list\_entry}(pos->member.next, typeof(*pos), 
+      member);      \(\backslash\)
+       &pos->member != (head);                                          \(\backslash\)
+       pos = n, n = \hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\_list\_entry}(n->member.next, typeof(*n), 
+      member))
+\end{DoxyCode}
+
+
+iterate over list of given type safe against removal of list entry 
+
+\hyperlink{GTGList_8h_ace0f624d4dd80950511ce16622aad348}{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-entry\-\_\-safe(pos, n, head, member)} 
+\begin{DoxyParams}{Parameters}
+{\em pos} & the type $\ast$ to use as a loop counter. \\
+\hline
+{\em n} & another type $\ast$ to use as temporary storage \\
+\hline
+{\em head} & the head for the list. \\
+\hline
+{\em member} & the name of the struct \hyperlink{structgtg__list}{gtg\-\_\-list} member within the struct. \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_a0fa3e1ddadec4f2c0a96efa9c725197d}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse}}
+\index{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-reverse(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{head}
+\end{DoxyParamCaption}
+)~for (pos = (head)-\/$>$prev; pos != (head); pos = pos-\/$>$prev)}}\label{GTGList_8h_a0fa3e1ddadec4f2c0a96efa9c725197d}
+\hypertarget{GTGList_8h_acb9ea4e91626e0b9df23d6aec078d672}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe}}
+\index{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe@{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtg\-\_\-list\-\_\-for\-\_\-each\-\_\-safe(
+\begin{DoxyParamCaption}
+\item[{}]{pos, }
+\item[{}]{n, }
+\item[{}]{head}
+\end{DoxyParamCaption}
+)}}\label{GTGList_8h_acb9ea4e91626e0b9df23d6aec078d672}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{for} (pos = (head)->\hyperlink{structgtg__list_a345eec26112d216eb50414c089292381}{next}, n = pos->\hyperlink{structgtg__list_a345eec26112d216eb50414c089292381}{next}; pos != (head);  \(\backslash\)
+       pos = n, n = pos->\hyperlink{structgtg__list_a345eec26112d216eb50414c089292381}{next})
+\end{DoxyCode}
+\hypertarget{GTGList_8h_a1338d800c732cb3a1c41d1c033bdd857}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T@{G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T}}
+\index{G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T@{G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{GTGList_8h_a1338d800c732cb3a1c41d1c033bdd857}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (ptr)->\hyperlink{structgtg__list_ab82d200f55762c3c8f45466d772ce18b}{prev} = (ptr);                    \(\backslash\)
+    (ptr)->\hyperlink{structgtg__list_a345eec26112d216eb50414c089292381}{next} = (ptr);                    \(\backslash\)
+  \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+initialize a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer to the list (gtg\-\_\-list\-\_\-t). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-t@{gtg\-\_\-list\-\_\-t}}
+\index{gtg\-\_\-list\-\_\-t@{gtg\-\_\-list\-\_\-t}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf gtg\-\_\-list}$\ast$ {\bf gtg\-\_\-list\-\_\-t}}}\label{GTGList_8h_a31e8e7dba68376aab7cb547980482f9b}
+
+
+\subsection{Function Documentation}
+\hypertarget{GTGList_8h_ad586b4819242b49ab669fe12d9a5a7ce}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!\-\_\-\-\_\-gtg\-\_\-list\-\_\-add@{\-\_\-\-\_\-gtg\-\_\-list\-\_\-add}}
+\index{\-\_\-\-\_\-gtg\-\_\-list\-\_\-add@{\-\_\-\-\_\-gtg\-\_\-list\-\_\-add}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{\-\_\-\-\_\-gtg\-\_\-list\-\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}static void \-\_\-\-\_\-gtg\-\_\-list\-\_\-add (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{lnew, }
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{prev, }
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{next}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGList_8h_ad586b4819242b49ab669fe12d9a5a7ce}
+\hypertarget{GTGList_8h_a8087627971e129ef2860c20a6ffab23b}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!\-\_\-\-\_\-gtg\-\_\-list\-\_\-del@{\-\_\-\-\_\-gtg\-\_\-list\-\_\-del}}
+\index{\-\_\-\-\_\-gtg\-\_\-list\-\_\-del@{\-\_\-\-\_\-gtg\-\_\-list\-\_\-del}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{\-\_\-\-\_\-gtg\-\_\-list\-\_\-del}]{\setlength{\rightskip}{0pt plus 5cm}static void \-\_\-\-\_\-gtg\-\_\-list\-\_\-del (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{prev, }
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{next}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGList_8h_a8087627971e129ef2860c20a6ffab23b}
+Delete a list entry by making the prev/next entries point to each other.
+
+This is only for internal list manipulation where we know the prev/next entries already! \hypertarget{GTGList_8h_ad65f21dd678c94735c880f651d7c43b7}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-add@{gtg\-\_\-list\-\_\-add}}
+\index{gtg\-\_\-list\-\_\-add@{gtg\-\_\-list\-\_\-add}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-list\-\_\-add (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{lnew, }
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{head}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGList_8h_ad65f21dd678c94735c880f651d7c43b7}
+
+
+Insert a new entry after the specified head. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lnew} & new entry to be added \\
+\hline
+{\em head} & list head to add it after \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_aa73c19151049791f4ca20a1ee18d95dc}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-add\-\_\-tail@{gtg\-\_\-list\-\_\-add\-\_\-tail}}
+\index{gtg\-\_\-list\-\_\-add\-\_\-tail@{gtg\-\_\-list\-\_\-add\-\_\-tail}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-add\-\_\-tail}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-list\-\_\-add\-\_\-tail (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{lnew, }
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{head}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGList_8h_aa73c19151049791f4ca20a1ee18d95dc}
+
+
+Insert a new entry before the specified head (ie. at the tail of the list). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lnew} & new entry to be added \\
+\hline
+{\em head} & list head to add it after \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_ae7a2202c2ab63857b2e10dbfd16d8b6e}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-del@{gtg\-\_\-list\-\_\-del}}
+\index{gtg\-\_\-list\-\_\-del@{gtg\-\_\-list\-\_\-del}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-del}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-list\-\_\-del (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGList_8h_ae7a2202c2ab63857b2e10dbfd16d8b6e}
+
+
+delete an entry from its list and reinitialize it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & the element to delete from the list. \\
+\hline
+\end{DoxyParams}
+\hypertarget{GTGList_8h_aadb6697b96b30d91ecde2703d18bc1df}{\index{G\-T\-G\-List.\-h@{G\-T\-G\-List.\-h}!gtg\-\_\-list\-\_\-size@{gtg\-\_\-list\-\_\-size}}
+\index{gtg\-\_\-list\-\_\-size@{gtg\-\_\-list\-\_\-size}!GTGList.h@{G\-T\-G\-List.\-h}}
+\subsubsection[{gtg\-\_\-list\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}static int gtg\-\_\-list\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-list\-\_\-t}}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGList_8h_aadb6697b96b30d91ecde2703d18bc1df}

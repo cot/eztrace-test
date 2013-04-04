@@ -1,0 +1,52 @@
+\hypertarget{group__GTGReplay}{\section{Functions for postponing event-\/processing function calls}
+\label{group__GTGReplay}\index{Functions for postponing event-\/processing function calls@{Functions for postponing event-\/processing function calls}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__GTGReplay_ga62705d596816b10e7d0c6ac91dcd15aa}{gtg\-\_\-record} (enum \hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009f}{event\-\_\-type\-\_\-t} type, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time,...)
+\begin{DoxyCompactList}\small\item\em postpone the recording of an event \end{DoxyCompactList}\item 
+void \hyperlink{group__GTGReplay_ga2e5e466f37281ba7e671c00010763c9e}{gtg\-\_\-write\-\_\-events} (long nb\-\_\-events\-\_\-to\-\_\-write)
+\begin{DoxyCompactList}\small\item\em run the first nb\-\_\-events\-\_\-to\-\_\-write events \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__GTGReplay_ga62705d596816b10e7d0c6ac91dcd15aa}{\index{Functions for postponing event-\/processing function calls@{Functions for postponing event-\/processing function calls}!gtg\-\_\-record@{gtg\-\_\-record}}
+\index{gtg\-\_\-record@{gtg\-\_\-record}!Functions for postponing event-processing function calls@{Functions for postponing event-\/processing function calls}}
+\subsubsection[{gtg\-\_\-record}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-record (
+\begin{DoxyParamCaption}
+\item[{enum {\bf event\-\_\-type\-\_\-t}}]{type, }
+\item[{{\bf var\-Prec}}]{time, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group__GTGReplay_ga62705d596816b10e7d0c6ac91dcd15aa}
+
+
+postpone the recording of an event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of function to postpone \\
+\hline
+{\em time} & The time at which the event happens \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__GTGReplay_ga2e5e466f37281ba7e671c00010763c9e}{\index{Functions for postponing event-\/processing function calls@{Functions for postponing event-\/processing function calls}!gtg\-\_\-write\-\_\-events@{gtg\-\_\-write\-\_\-events}}
+\index{gtg\-\_\-write\-\_\-events@{gtg\-\_\-write\-\_\-events}!Functions for postponing event-processing function calls@{Functions for postponing event-\/processing function calls}}
+\subsubsection[{gtg\-\_\-write\-\_\-events}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-write\-\_\-events (
+\begin{DoxyParamCaption}
+\item[{long}]{nb\-\_\-events\-\_\-to\-\_\-write}
+\end{DoxyParamCaption}
+)}}\label{group__GTGReplay_ga2e5e466f37281ba7e671c00010763c9e}
+
+
+run the first nb\-\_\-events\-\_\-to\-\_\-write events 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\-\_\-events\-\_\-to\-\_\-write} & The number of functions to process (-\/1 for all functions) \\
+\hline
+\end{DoxyParams}

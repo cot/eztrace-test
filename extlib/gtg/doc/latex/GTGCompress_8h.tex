@@ -1,0 +1,127 @@
+\hypertarget{GTGCompress_8h}{\section{G\-T\-G\-Compress.\-h File Reference}
+\label{GTGCompress_8h}\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$zlib.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{GTGCompress_8h_ad971832008148b9507e34aad293a5d69}{gtg\-\_\-compress\-\_\-m2m} (z\-\_\-stream $\ast$z, void $\ast$in\-\_\-buf, uint32\-\_\-t len, void $\ast$out\-\_\-buf, uint32\-\_\-t out\-\_\-max\-\_\-len)
+\item 
+int \hyperlink{GTGCompress_8h_a20b29310337c08faf98a57c25f7e45c1}{gtg\-\_\-compress\-\_\-m2f} (z\-\_\-stream $\ast$z, void $\ast$in\-\_\-buf, uint32\-\_\-t len, F\-I\-L\-E $\ast$file\-\_\-out)
+\item 
+int \hyperlink{GTGCompress_8h_a1a484fcd41732ae0c562df62c00c090c}{gtg\-\_\-compress\-\_\-f2m} (z\-\_\-stream $\ast$z, F\-I\-L\-E $\ast$file\-\_\-in, void $\ast$out\-\_\-buf, uint32\-\_\-t out\-\_\-max\-\_\-len)
+\item 
+int \hyperlink{GTGCompress_8h_ac1344155658614b28d00dde6cfc21227}{gtg\-\_\-compress\-\_\-f2f} (z\-\_\-stream $\ast$z, F\-I\-L\-E $\ast$file\-\_\-in, F\-I\-L\-E $\ast$file\-\_\-out)
+\item 
+int \hyperlink{GTGCompress_8h_ace4cb1d4d1f2e23251bd68a1abfbba5f}{gtg\-\_\-decompress\-\_\-m2m} (z\-\_\-stream $\ast$z, void $\ast$in\-\_\-buf, uint32\-\_\-t len, void $\ast$out\-\_\-buf, uint32\-\_\-t out\-\_\-max\-\_\-len)
+\item 
+int \hyperlink{GTGCompress_8h_ae4a80fc1d9defda19e67dcaccf9dc963}{gtg\-\_\-decompress\-\_\-m2f} (z\-\_\-stream $\ast$z, void $\ast$in\-\_\-buf, uint32\-\_\-t len, F\-I\-L\-E $\ast$file\-\_\-out)
+\item 
+int \hyperlink{GTGCompress_8h_a31626eb78f66fd32d48b565a968fe405}{gtg\-\_\-decompress\-\_\-f2m} (z\-\_\-stream $\ast$z, F\-I\-L\-E $\ast$file\-\_\-in, void $\ast$out\-\_\-buf, uint32\-\_\-t out\-\_\-max\-\_\-len)
+\item 
+int \hyperlink{GTGCompress_8h_affa95fc9078188415402e4ad714f0a07}{gtg\-\_\-decompress\-\_\-f2f} (z\-\_\-stream $\ast$z, F\-I\-L\-E $\ast$file\-\_\-in, F\-I\-L\-E $\ast$file\-\_\-out)
+\item 
+int \hyperlink{GTGCompress_8h_a743cbc48dbc83adcad70fa7a038211cc}{gtg\-\_\-compress\-\_\-init} (z\-\_\-stream $\ast$z, int compression\-\_\-ratio)
+\item 
+int \hyperlink{GTGCompress_8h_ab530d1815196b71ebd013660d1854081}{gtg\-\_\-decompress\-\_\-init} (z\-\_\-stream $\ast$z)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{GTGCompress_8h_ac1344155658614b28d00dde6cfc21227}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-compress\-\_\-f2f@{gtg\-\_\-compress\-\_\-f2f}}
+\index{gtg\-\_\-compress\-\_\-f2f@{gtg\-\_\-compress\-\_\-f2f}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-compress\-\_\-f2f}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-compress\-\_\-f2f (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_ac1344155658614b28d00dde6cfc21227}
+\hypertarget{GTGCompress_8h_a1a484fcd41732ae0c562df62c00c090c}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-compress\-\_\-f2m@{gtg\-\_\-compress\-\_\-f2m}}
+\index{gtg\-\_\-compress\-\_\-f2m@{gtg\-\_\-compress\-\_\-f2m}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-compress\-\_\-f2m}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-compress\-\_\-f2m (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in, }
+\item[{void $\ast$}]{out\-\_\-buf, }
+\item[{uint32\-\_\-t}]{out\-\_\-max\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_a1a484fcd41732ae0c562df62c00c090c}
+\hypertarget{GTGCompress_8h_a743cbc48dbc83adcad70fa7a038211cc}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-compress\-\_\-init@{gtg\-\_\-compress\-\_\-init}}
+\index{gtg\-\_\-compress\-\_\-init@{gtg\-\_\-compress\-\_\-init}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-compress\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-compress\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{int}]{compression\-\_\-ratio}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_a743cbc48dbc83adcad70fa7a038211cc}
+\hypertarget{GTGCompress_8h_a20b29310337c08faf98a57c25f7e45c1}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-compress\-\_\-m2f@{gtg\-\_\-compress\-\_\-m2f}}
+\index{gtg\-\_\-compress\-\_\-m2f@{gtg\-\_\-compress\-\_\-m2f}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-compress\-\_\-m2f}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-compress\-\_\-m2f (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{void $\ast$}]{in\-\_\-buf, }
+\item[{uint32\-\_\-t}]{len, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_a20b29310337c08faf98a57c25f7e45c1}
+\hypertarget{GTGCompress_8h_ad971832008148b9507e34aad293a5d69}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-compress\-\_\-m2m@{gtg\-\_\-compress\-\_\-m2m}}
+\index{gtg\-\_\-compress\-\_\-m2m@{gtg\-\_\-compress\-\_\-m2m}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-compress\-\_\-m2m}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-compress\-\_\-m2m (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{void $\ast$}]{in\-\_\-buf, }
+\item[{uint32\-\_\-t}]{len, }
+\item[{void $\ast$}]{out\-\_\-buf, }
+\item[{uint32\-\_\-t}]{out\-\_\-max\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_ad971832008148b9507e34aad293a5d69}
+\hypertarget{GTGCompress_8h_affa95fc9078188415402e4ad714f0a07}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-decompress\-\_\-f2f@{gtg\-\_\-decompress\-\_\-f2f}}
+\index{gtg\-\_\-decompress\-\_\-f2f@{gtg\-\_\-decompress\-\_\-f2f}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-decompress\-\_\-f2f}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-decompress\-\_\-f2f (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_affa95fc9078188415402e4ad714f0a07}
+\hypertarget{GTGCompress_8h_a31626eb78f66fd32d48b565a968fe405}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-decompress\-\_\-f2m@{gtg\-\_\-decompress\-\_\-f2m}}
+\index{gtg\-\_\-decompress\-\_\-f2m@{gtg\-\_\-decompress\-\_\-f2m}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-decompress\-\_\-f2m}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-decompress\-\_\-f2m (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in, }
+\item[{void $\ast$}]{out\-\_\-buf, }
+\item[{uint32\-\_\-t}]{out\-\_\-max\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_a31626eb78f66fd32d48b565a968fe405}
+\hypertarget{GTGCompress_8h_ab530d1815196b71ebd013660d1854081}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-decompress\-\_\-init@{gtg\-\_\-decompress\-\_\-init}}
+\index{gtg\-\_\-decompress\-\_\-init@{gtg\-\_\-decompress\-\_\-init}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-decompress\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-decompress\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_ab530d1815196b71ebd013660d1854081}
+\hypertarget{GTGCompress_8h_ae4a80fc1d9defda19e67dcaccf9dc963}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-decompress\-\_\-m2f@{gtg\-\_\-decompress\-\_\-m2f}}
+\index{gtg\-\_\-decompress\-\_\-m2f@{gtg\-\_\-decompress\-\_\-m2f}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-decompress\-\_\-m2f}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-decompress\-\_\-m2f (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{void $\ast$}]{in\-\_\-buf, }
+\item[{uint32\-\_\-t}]{len, }
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_ae4a80fc1d9defda19e67dcaccf9dc963}
+\hypertarget{GTGCompress_8h_ace4cb1d4d1f2e23251bd68a1abfbba5f}{\index{G\-T\-G\-Compress.\-h@{G\-T\-G\-Compress.\-h}!gtg\-\_\-decompress\-\_\-m2m@{gtg\-\_\-decompress\-\_\-m2m}}
+\index{gtg\-\_\-decompress\-\_\-m2m@{gtg\-\_\-decompress\-\_\-m2m}!GTGCompress.h@{G\-T\-G\-Compress.\-h}}
+\subsubsection[{gtg\-\_\-decompress\-\_\-m2m}]{\setlength{\rightskip}{0pt plus 5cm}int gtg\-\_\-decompress\-\_\-m2m (
+\begin{DoxyParamCaption}
+\item[{z\-\_\-stream $\ast$}]{z, }
+\item[{void $\ast$}]{in\-\_\-buf, }
+\item[{uint32\-\_\-t}]{len, }
+\item[{void $\ast$}]{out\-\_\-buf, }
+\item[{uint32\-\_\-t}]{out\-\_\-max\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{GTGCompress_8h_ace4cb1d4d1f2e23251bd68a1abfbba5f}

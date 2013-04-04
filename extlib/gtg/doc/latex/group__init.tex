@@ -1,0 +1,110 @@
+\hypertarget{group__init}{\section{To init the generated trace file(s)}
+\label{group__init}\index{To init the generated trace file(s)@{To init the generated trace file(s)}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_ga6900cde464f9833ad682d680a2a78203}{init\-Trace} (const char $\ast$filename, int rank, \hyperlink{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{gtg\-\_\-flag\-\_\-t} flags)
+\begin{DoxyCompactList}\small\item\em Initialize a trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_gabe4753689dfd8508c336b3898b0df471}{end\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize a trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_ga9219b49891d7bfce610daf60c5a02cae}{set\-Compress} (int val)
+\begin{DoxyCompactList}\small\item\em Enable trace compression (only available for O\-T\-F traces). \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__init_gaa732419a54e774f325188e1b1f8ac36d}{add\-Entity\-Value} (const char $\ast$alias, const char $\ast$ent\-Type, const char $\ast$name, \hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} p\-\_\-color)
+\begin{DoxyCompactList}\small\item\em Add an Entity Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__init_gaa732419a54e774f325188e1b1f8ac36d}{\index{To init the generated trace file(s)@{To init the generated trace file(s)}!add\-Entity\-Value@{add\-Entity\-Value}}
+\index{add\-Entity\-Value@{add\-Entity\-Value}!To init the generated trace file(s)@{To init the generated trace file(s)}}
+\subsubsection[{add\-Entity\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} add\-Entity\-Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{ent\-Type, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf gtg\-\_\-color\-\_\-t}}]{p\-\_\-color}
+\end{DoxyParamCaption}
+)}}\label{group__init_gaa732419a54e774f325188e1b1f8ac36d}
+
+
+Add an Entity Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the entity value \\
+\hline
+{\em ent\-Type} & Type of the entity that can have the value \\
+\hline
+{\em name} & Alternative name of the variable type \\
+\hline
+{\em p\-\_\-color} & Color of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__init_gabe4753689dfd8508c336b3898b0df471}{\index{To init the generated trace file(s)@{To init the generated trace file(s)}!end\-Trace@{end\-Trace}}
+\index{end\-Trace@{end\-Trace}!To init the generated trace file(s)@{To init the generated trace file(s)}}
+\subsubsection[{end\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} end\-Trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__init_gabe4753689dfd8508c336b3898b0df471}
+
+
+Finalize a trace. 
+
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__init_ga6900cde464f9833ad682d680a2a78203}{\index{To init the generated trace file(s)@{To init the generated trace file(s)}!init\-Trace@{init\-Trace}}
+\index{init\-Trace@{init\-Trace}!To init the generated trace file(s)@{To init the generated trace file(s)}}
+\subsubsection[{init\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}int init\-Trace (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{rank, }
+\item[{{\bf gtg\-\_\-flag\-\_\-t}}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__init_ga6900cde464f9833ad682d680a2a78203}
+
+
+Initialize a trace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Root name of the file to create \\
+\hline
+{\em rank} & Process number of the file to create \\
+\hline
+{\em flags} & One of G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E, G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I, G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__init_ga9219b49891d7bfce610daf60c5a02cae}{\index{To init the generated trace file(s)@{To init the generated trace file(s)}!set\-Compress@{set\-Compress}}
+\index{set\-Compress@{set\-Compress}!To init the generated trace file(s)@{To init the generated trace file(s)}}
+\subsubsection[{set\-Compress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} set\-Compress (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__init_ga9219b49891d7bfce610daf60c5a02cae}
+
+
+Enable trace compression (only available for O\-T\-F traces). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & 0 means no compression, otherwize the output files will be compressed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}

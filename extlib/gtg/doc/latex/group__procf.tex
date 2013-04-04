@@ -1,0 +1,127 @@
+\hypertarget{group__procf}{\section{Functions related to the containers}
+\label{group__procf}\index{Functions related to the containers@{Functions related to the containers}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_gad5822f320aedc792dc9a4c3a7c1f8751}{add\-Cont\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_gaef7a79f315b4e35480c27a1ae479827d}{add\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name, const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_gae4eb01314299c2dcf82fd1b3faaf8ffa}{destroy\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$name, const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Destroy a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__procf_ga463f260c133bb2471aad369b8d1319cb}{Add\-Comment} (const char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Add some Comment in Trace file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__procf_ga463f260c133bb2471aad369b8d1319cb}{\index{Functions related to the containers@{Functions related to the containers}!Add\-Comment@{Add\-Comment}}
+\index{Add\-Comment@{Add\-Comment}!Functions related to the containers@{Functions related to the containers}}
+\subsubsection[{Add\-Comment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} Add\-Comment (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{comment}
+\end{DoxyParamCaption}
+)}}\label{group__procf_ga463f260c133bb2471aad369b8d1319cb}
+
+
+Add some Comment in Trace file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & Comment to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__procf_gaef7a79f315b4e35480c27a1ae479827d}{\index{Functions related to the containers@{Functions related to the containers}!add\-Container@{add\-Container}}
+\index{add\-Container@{add\-Container}!Functions related to the containers@{Functions related to the containers}}
+\subsubsection[{add\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} add\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{container, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{group__procf_gaef7a79f315b4e35480c27a1ae479827d}
+
+
+Add a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is added \\
+\hline
+{\em alias} & Alias of the new container \\
+\hline
+{\em type} & Type of the new container \\
+\hline
+{\em container} & \hyperlink{structContainer}{Container} parent \\
+\hline
+{\em name} & Alternative name of the variable type \\
+\hline
+{\em file} & File containing the container for vite format. Use \char`\"{}0\char`\"{} or \char`\"{}\char`\"{} chains for other formats. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__procf_gad5822f320aedc792dc9a4c3a7c1f8751}{\index{Functions related to the containers@{Functions related to the containers}!add\-Cont\-Type@{add\-Cont\-Type}}
+\index{add\-Cont\-Type@{add\-Cont\-Type}!Functions related to the containers@{Functions related to the containers}}
+\subsubsection[{add\-Cont\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} add\-Cont\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__procf_gad5822f320aedc792dc9a4c3a7c1f8751}
+
+
+Add a \hyperlink{structContainer}{Container} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the container added \\
+\hline
+{\em cont\-Type} & Type of the parent container \\
+\hline
+{\em name} & Alternative name of the new container type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__procf_gae4eb01314299c2dcf82fd1b3faaf8ffa}{\index{Functions related to the containers@{Functions related to the containers}!destroy\-Container@{destroy\-Container}}
+\index{destroy\-Container@{destroy\-Container}!Functions related to the containers@{Functions related to the containers}}
+\subsubsection[{destroy\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} destroy\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__procf_gae4eb01314299c2dcf82fd1b3faaf8ffa}
+
+
+Destroy a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is destroyed \\
+\hline
+{\em name} & Name of the container \\
+\hline
+{\em type} & Type of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}

@@ -1,0 +1,98 @@
+\hypertarget{GTGStack_8h}{\section{G\-T\-G\-Stack.\-h File Reference}
+\label{GTGStack_8h}\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}}
+}
+{\ttfamily \#include \char`\"{}G\-T\-G\-List.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GTGStack_8h_ace6ddf07a20904ac560ed9b182041c44}{G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T}(ptr)~\hyperlink{GTGList_8h_a1338d800c732cb3a1c41d1c033bdd857}{G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T}(ptr)
+\item 
+\#define \hyperlink{GTGStack_8h_a2f2df1383f0b05ee52cc6e1a59ee769c}{G\-T\-G\-\_\-\-S\-T\-A\-C\-K}(ptr)~\hyperlink{GTGList_8h_ab02f7ebccd0b091b2001d8b381bf6fb5}{G\-T\-G\-\_\-\-L\-I\-S\-T}(ptr)
+\item 
+\#define \hyperlink{GTGStack_8h_a8530edb0637fac60a9e2cdaf0e41a9d4}{gtg\-\_\-stack\-\_\-entry}(ptr, type, member)~\hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\-\_\-list\-\_\-entry}(ptr, type, member)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structgtg__list}{gtg\-\_\-list} \hyperlink{GTGStack_8h_a4b7833a97e238a050cf5fd9731c74ab0}{gtg\-\_\-stack}
+\item 
+typedef \hyperlink{GTGStack_8h_a4b7833a97e238a050cf5fd9731c74ab0}{gtg\-\_\-stack} $\ast$ \hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{GTGStack_8h_a66d42f5df726393b5f0042cb5d8a5d78}{gtg\-\_\-stack\-\_\-push} (\hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t} lnew, \hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t} p\-\_\-stack)
+\item 
+static void \hyperlink{GTGStack_8h_a0e1fcd54c10dd940e16541bc86455e02}{gtg\-\_\-stack\-\_\-pop} (\hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t} p\-\_\-stack)
+\item 
+static \hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t} \hyperlink{GTGStack_8h_a6556b2736887f1b9764d11520e28c856}{gtg\-\_\-stack\-\_\-top} (\hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t} p\-\_\-stack)
+\item 
+static int \hyperlink{GTGStack_8h_af18fe4176f18a328dea523c5883b00b3}{gtg\-\_\-stack\-\_\-empty} (\hyperlink{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{gtg\-\_\-stack\-\_\-t} p\-\_\-stack)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{GTGStack_8h_a2f2df1383f0b05ee52cc6e1a59ee769c}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!G\-T\-G\-\_\-\-S\-T\-A\-C\-K@{G\-T\-G\-\_\-\-S\-T\-A\-C\-K}}
+\index{G\-T\-G\-\_\-\-S\-T\-A\-C\-K@{G\-T\-G\-\_\-\-S\-T\-A\-C\-K}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-S\-T\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-S\-T\-A\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~{\bf G\-T\-G\-\_\-\-L\-I\-S\-T}(ptr)}}\label{GTGStack_8h_a2f2df1383f0b05ee52cc6e1a59ee769c}
+\hypertarget{GTGStack_8h_a8530edb0637fac60a9e2cdaf0e41a9d4}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack\-\_\-entry@{gtg\-\_\-stack\-\_\-entry}}
+\index{gtg\-\_\-stack\-\_\-entry@{gtg\-\_\-stack\-\_\-entry}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}\#define gtg\-\_\-stack\-\_\-entry(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{type, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)~{\bf gtg\-\_\-list\-\_\-entry}(ptr, type, member)}}\label{GTGStack_8h_a8530edb0637fac60a9e2cdaf0e41a9d4}
+\hypertarget{GTGStack_8h_ace6ddf07a20904ac560ed9b182041c44}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T@{G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T}}
+\index{G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T@{G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-T\-G\-\_\-\-S\-T\-A\-C\-K\-\_\-\-I\-N\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~{\bf G\-T\-G\-\_\-\-L\-I\-S\-T\-\_\-\-I\-N\-I\-T}(ptr)}}\label{GTGStack_8h_ace6ddf07a20904ac560ed9b182041c44}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GTGStack_8h_a4b7833a97e238a050cf5fd9731c74ab0}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack@{gtg\-\_\-stack}}
+\index{gtg\-\_\-stack@{gtg\-\_\-stack}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf gtg\-\_\-list} {\bf gtg\-\_\-stack}}}\label{GTGStack_8h_a4b7833a97e238a050cf5fd9731c74ab0}
+\hypertarget{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack\-\_\-t@{gtg\-\_\-stack\-\_\-t}}
+\index{gtg\-\_\-stack\-\_\-t@{gtg\-\_\-stack\-\_\-t}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf gtg\-\_\-stack}$\ast$ {\bf gtg\-\_\-stack\-\_\-t}}}\label{GTGStack_8h_afb11b461a0ad113636b1dfcd10120c09}
+
+
+\subsection{Function Documentation}
+\hypertarget{GTGStack_8h_af18fe4176f18a328dea523c5883b00b3}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack\-\_\-empty@{gtg\-\_\-stack\-\_\-empty}}
+\index{gtg\-\_\-stack\-\_\-empty@{gtg\-\_\-stack\-\_\-empty}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack\-\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}static int gtg\-\_\-stack\-\_\-empty (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-stack\-\_\-t}}]{p\-\_\-stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGStack_8h_af18fe4176f18a328dea523c5883b00b3}
+\hypertarget{GTGStack_8h_a0e1fcd54c10dd940e16541bc86455e02}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack\-\_\-pop@{gtg\-\_\-stack\-\_\-pop}}
+\index{gtg\-\_\-stack\-\_\-pop@{gtg\-\_\-stack\-\_\-pop}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}static void gtg\-\_\-stack\-\_\-pop (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-stack\-\_\-t}}]{p\-\_\-stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGStack_8h_a0e1fcd54c10dd940e16541bc86455e02}
+\hypertarget{GTGStack_8h_a66d42f5df726393b5f0042cb5d8a5d78}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack\-\_\-push@{gtg\-\_\-stack\-\_\-push}}
+\index{gtg\-\_\-stack\-\_\-push@{gtg\-\_\-stack\-\_\-push}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack\-\_\-push}]{\setlength{\rightskip}{0pt plus 5cm}static void gtg\-\_\-stack\-\_\-push (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-stack\-\_\-t}}]{lnew, }
+\item[{{\bf gtg\-\_\-stack\-\_\-t}}]{p\-\_\-stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGStack_8h_a66d42f5df726393b5f0042cb5d8a5d78}
+\hypertarget{GTGStack_8h_a6556b2736887f1b9764d11520e28c856}{\index{G\-T\-G\-Stack.\-h@{G\-T\-G\-Stack.\-h}!gtg\-\_\-stack\-\_\-top@{gtg\-\_\-stack\-\_\-top}}
+\index{gtg\-\_\-stack\-\_\-top@{gtg\-\_\-stack\-\_\-top}!GTGStack.h@{G\-T\-G\-Stack.\-h}}
+\subsubsection[{gtg\-\_\-stack\-\_\-top}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf gtg\-\_\-stack\-\_\-t} gtg\-\_\-stack\-\_\-top (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-stack\-\_\-t}}]{p\-\_\-stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{GTGStack_8h_a6556b2736887f1b9764d11520e28c856}

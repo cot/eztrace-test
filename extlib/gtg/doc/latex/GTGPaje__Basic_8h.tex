@@ -1,0 +1,224 @@
+\hypertarget{GTGPaje__Basic_8h}{\section{G\-T\-G\-Paje\-\_\-\-Basic.\-h File Reference}
+\label{GTGPaje__Basic_8h}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}
+}
+
+
+paje\-\_\-\-G\-T\-G\-Basic1 is the Paje implementation of the basic interface to generate traces (G\-T\-G\-Basic1).  
+
+
+{\ttfamily \#include \char`\"{}G\-T\-G\-Basic.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GTGPaje__Basic_8h_ad15c72f9347b09aa33934730f91b31fd}{F\-M\-T\-\_\-\-P\-A\-J\-E}~0
+\begin{DoxyCompactList}\small\item\em Constant to create a paje trace. \end{DoxyCompactList}\item 
+\#define \hyperlink{GTGPaje__Basic_8h_a0d3ca2c1b9dc66d6593d72a4eae09e8d}{F\-M\-T\-\_\-\-V\-I\-T\-E}~1
+\begin{DoxyCompactList}\small\item\em Constant to create a vite trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200}{gtg\-\_\-paje\-\_\-evtdef\-\_\-e} \{ \\*
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200af2744ee2f0d975c7825162900ba53cbc}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Container\-Type}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ae277dd83764fadb84ebddd19ab0320d7}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-State\-Type}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ab6fb9729de93e970e4f0ddc32f8f89d5}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Event\-Type}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a03475a69dd43b645e8229a498016e2c3}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Entity\-Value}, 
+\\*
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a04161479ee542b397bceee14d63c61f8}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Create\-Container}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a8ee8f9b1b0a61a693635ac05c86f6ca5}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Destroy\-Container}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a7c389b553beff2a6d124776c476e6155}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-State}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a62ec0dd2bc7574ed8390c5c94c5dba40}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Push\-State}, 
+\\*
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200afb0b5633f5258204599e3d467d9fa700}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Pop\-State}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a81f42641a0b87b7b17de21744470c3d4}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-New\-Event}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a60149c4eb087cbe4984ede5bd6e2e751}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Link\-Type}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200afd95e9c8a6ab5dcc7626ffe3711fd446}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Start\-Link}, 
+\\*
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a0cbedb31b8305cc9dea6c31804c63563}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-End\-Link}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a001f28ce157124e7d22f3c84f6c51885}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Variable\-Type}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a4aecac30d78b05a2300eff056217e9ff}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-Variable}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a579025094db2e52bb60348c5b7039a27}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Add\-Variable}, 
+\\*
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ad8a3df0319d70b16d017ff7cfc283d03}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Sub\-Variable}, 
+\hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a64449d36615b85d889bc60b0fb06ba8f}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-N\-B\-R}
+ \}
+\item 
+enum \hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664}{gtg\-\_\-paje\-\_\-fieldtype\-\_\-e} \{ \\*
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664ab00a706a8871bbf4201028faa9fac954}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Int}, 
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a3fbb1c883879fe62c4216faad762ba66}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Hex}, 
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a194a1c026972ff8b22b5c08b3a046647}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Date}, 
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a65abf4c5b346462ddc6a78e79c09c37c}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Double}, 
+\\*
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664af11f307e17ef25186054902e489cdc3a}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-String}, 
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a2e77792aae4784049b2c95258c6f35ba}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Color}, 
+\hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664aa2e9e7f40b6f0de491436ae6405c246f}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-N\-B\-R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga32902ea7f94f1f890c016da04c2d06b6}{paje\-Init\-Trace} (const char $\ast$filename, int rank, \hyperlink{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{gtg\-\_\-flag\-\_\-t} flags, int fmt)
+\begin{DoxyCompactList}\small\item\em Initialize a V\-I\-T\-E trace ( $\ast$.ept) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__cpaje_ga7cd6968ffcd034c3dd67d48ef047934c}{paje\-Get\-Name} (int rk)
+\begin{DoxyCompactList}\small\item\em Function to get the name of the file containing all the data for the proc of rank rk. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga92b9b4f5b8cd6656e6fce9b18720931f}{paje\-Set\-Compress} (int val)
+\begin{DoxyCompactList}\small\item\em Enable trace compression. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga49ae68f2a567d8bbac4cb6f7b6726ae8}{paje\-Add\-Cont\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gab77a5b730b5b0e58777d75e1c1bfbdaf}{paje\-Add\-State\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structState}{State} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaebcc766a17f5ffc055432687e946a1ea}{paje\-Add\-Event\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add an Event Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga4b8a30594207e3bd62ad22500a363555}{paje\-Add\-Link\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type, const char $\ast$src\-Cont\-Type, const char $\ast$dest\-Cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structLink}{Link} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga0045c9aebf879d257d45ffca3a580dd2}{paje\-Add\-Var\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structVariable}{Variable} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga1a280796147680d73b4148de463200a6}{paje\-Add\-Entity\-Value} (const char $\ast$alias, const char $\ast$ent\-Type, const char $\ast$name, const char $\ast$color)
+\begin{DoxyCompactList}\small\item\em Add an Entity Value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga78d90b40b97cb072ab6634bbfd562dc6}{paje\-Add\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name, const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} (V\-I\-T\-E format). \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaccb7f379b053e7a5d6cc3f04b929e1d9}{paje\-Seq\-Add\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} (P\-A\-J\-E format). \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaa2404d741e681fa9a90309798ccdd005}{paje\-Destroy\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$name, const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Destroy a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga6f836611123e0a83ec764aefebf4ec33}{paje\-Set\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaf92058cdf7d12c550866c98bf59338b8}{paje\-Push\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga67bd495e65937ecdc1bfe450cb0f0018}{paje\-Pop\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont)
+\begin{DoxyCompactList}\small\item\em Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga303effbd4344a2f42872d4e70471250f}{paje\-Add\-Event} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Add an Event. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga6fa623c49bf3a2e9ebe7b138cc66e9a1}{paje\-Start\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$src, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Start a link. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga41f1c6499787f834904580c315032258}{paje\-End\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$dest, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Start a link. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga3729690fc4d61c7f74e780530113fd8a}{paje\-Set\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Set a \hyperlink{structVariable}{Variable} value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga6f1f9c069de829e3c2791415af7212d4}{paje\-Add\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Add a value to a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gacf05b63d86f1f7e36602347f56d1640d}{paje\-Sub\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Substract a value from a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaaf3eb514831a8ac2a301c43236b6dd04}{paje\-Add\-Comment} (const char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Add some Comment in Trace file. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaf69201358d05bd855572061dc96857c6}{paje\-End\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize a P\-A\-J\-E trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaf7a8df4ca3b40d0e4d42619e884dfe48}{vite\-End\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize a V\-I\-T\-E trace. \end{DoxyCompactList}\item 
+void \hyperlink{GTGPaje__Basic_8h_ab52701dc3df3c4c76be4d6c9b2d393a5}{paje\-Event\-Def\-Add\-Param} (enum \hyperlink{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200}{gtg\-\_\-paje\-\_\-evtdef\-\_\-e} event, const char $\ast$name, enum \hyperlink{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664}{gtg\-\_\-paje\-\_\-fieldtype\-\_\-e} type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+paje\-\_\-\-G\-T\-G\-Basic1 is the Paje implementation of the basic interface to generate traces (G\-T\-G\-Basic1). \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Developers are \-: \par
+ Francois Rue -\/ \href{mailto:francois.rue@labri.fr}{\tt francois.\-rue@labri.\-fr} \par
+ Francois Trahay -\/ \href{mailto:francois.trahay@labri.fr}{\tt francois.\-trahay@labri.\-fr} \par
+ Johnny Jazeix -\/ \href{mailto:jazeix@enseirb-matmeca.fr}{\tt jazeix@enseirb-\/matmeca.\-fr} \par
+ Kevin Coulomb -\/ \href{mailto:kevin.coulomb@gmail.com}{\tt kevin.\-coulomb@gmail.\-com} \par
+ Mathieu Faverge -\/ \href{mailto:faverge@labri.fr}{\tt faverge@labri.\-fr} \par
+ Olivier Lagrasse -\/ \href{mailto:lagrasse@enseirb-matmeca.fr}{\tt lagrasse@enseirb-\/matmeca.\-fr} \par
+ 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{GTGPaje__Basic_8h_ad15c72f9347b09aa33934730f91b31fd}{\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!F\-M\-T\-\_\-\-P\-A\-J\-E@{F\-M\-T\-\_\-\-P\-A\-J\-E}}
+\index{F\-M\-T\-\_\-\-P\-A\-J\-E@{F\-M\-T\-\_\-\-P\-A\-J\-E}!GTGPaje_Basic.h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}
+\subsubsection[{F\-M\-T\-\_\-\-P\-A\-J\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-M\-T\-\_\-\-P\-A\-J\-E~0}}\label{GTGPaje__Basic_8h_ad15c72f9347b09aa33934730f91b31fd}
+
+
+Constant to create a paje trace. 
+
+\hypertarget{GTGPaje__Basic_8h_a0d3ca2c1b9dc66d6593d72a4eae09e8d}{\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!F\-M\-T\-\_\-\-V\-I\-T\-E@{F\-M\-T\-\_\-\-V\-I\-T\-E}}
+\index{F\-M\-T\-\_\-\-V\-I\-T\-E@{F\-M\-T\-\_\-\-V\-I\-T\-E}!GTGPaje_Basic.h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}
+\subsubsection[{F\-M\-T\-\_\-\-V\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-M\-T\-\_\-\-V\-I\-T\-E~1}}\label{GTGPaje__Basic_8h_a0d3ca2c1b9dc66d6593d72a4eae09e8d}
+
+
+Constant to create a vite trace. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200}{\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!gtg\-\_\-paje\-\_\-evtdef\-\_\-e@{gtg\-\_\-paje\-\_\-evtdef\-\_\-e}}
+\index{gtg\-\_\-paje\-\_\-evtdef\-\_\-e@{gtg\-\_\-paje\-\_\-evtdef\-\_\-e}!GTGPaje_Basic.h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}
+\subsubsection[{gtg\-\_\-paje\-\_\-evtdef\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf gtg\-\_\-paje\-\_\-evtdef\-\_\-e}}}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Container\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Container\-Type}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Container\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Container\-Type}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200af2744ee2f0d975c7825162900ba53cbc}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Container\-Type}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200af2744ee2f0d975c7825162900ba53cbc}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-State\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-State\-Type}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-State\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-State\-Type}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ae277dd83764fadb84ebddd19ab0320d7}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-State\-Type}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ae277dd83764fadb84ebddd19ab0320d7}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Event\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Event\-Type}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Event\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Event\-Type}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ab6fb9729de93e970e4f0ddc32f8f89d5}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Event\-Type}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ab6fb9729de93e970e4f0ddc32f8f89d5}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Entity\-Value@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Entity\-Value}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Entity\-Value@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Entity\-Value}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a03475a69dd43b645e8229a498016e2c3}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Entity\-Value}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a03475a69dd43b645e8229a498016e2c3}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Create\-Container@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Create\-Container}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Create\-Container@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Create\-Container}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a04161479ee542b397bceee14d63c61f8}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Create\-Container}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a04161479ee542b397bceee14d63c61f8}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Destroy\-Container@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Destroy\-Container}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Destroy\-Container@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Destroy\-Container}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a8ee8f9b1b0a61a693635ac05c86f6ca5}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Destroy\-Container}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a8ee8f9b1b0a61a693635ac05c86f6ca5}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-State@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-State}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-State@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-State}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a7c389b553beff2a6d124776c476e6155}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-State}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a7c389b553beff2a6d124776c476e6155}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Push\-State@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Push\-State}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Push\-State@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Push\-State}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a62ec0dd2bc7574ed8390c5c94c5dba40}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Push\-State}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a62ec0dd2bc7574ed8390c5c94c5dba40}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Pop\-State@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Pop\-State}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Pop\-State@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Pop\-State}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200afb0b5633f5258204599e3d467d9fa700}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Pop\-State}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200afb0b5633f5258204599e3d467d9fa700}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-New\-Event@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-New\-Event}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-New\-Event@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-New\-Event}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a81f42641a0b87b7b17de21744470c3d4}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-New\-Event}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a81f42641a0b87b7b17de21744470c3d4}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Link\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Link\-Type}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Link\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Link\-Type}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a60149c4eb087cbe4984ede5bd6e2e751}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Link\-Type}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a60149c4eb087cbe4984ede5bd6e2e751}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Start\-Link@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Start\-Link}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Start\-Link@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Start\-Link}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200afd95e9c8a6ab5dcc7626ffe3711fd446}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Start\-Link}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200afd95e9c8a6ab5dcc7626ffe3711fd446}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-End\-Link@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-End\-Link}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-End\-Link@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-End\-Link}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a0cbedb31b8305cc9dea6c31804c63563}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-End\-Link}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a0cbedb31b8305cc9dea6c31804c63563}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Variable\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Variable\-Type}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Variable\-Type@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Variable\-Type}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a001f28ce157124e7d22f3c84f6c51885}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Define\-Variable\-Type}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a001f28ce157124e7d22f3c84f6c51885}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-Variable@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-Variable}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-Variable@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-Variable}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a4aecac30d78b05a2300eff056217e9ff}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Set\-Variable}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a4aecac30d78b05a2300eff056217e9ff}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Add\-Variable@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Add\-Variable}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Add\-Variable@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Add\-Variable}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a579025094db2e52bb60348c5b7039a27}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Add\-Variable}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a579025094db2e52bb60348c5b7039a27}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Sub\-Variable@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Sub\-Variable}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Sub\-Variable@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Sub\-Variable}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ad8a3df0319d70b16d017ff7cfc283d03}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-Sub\-Variable}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200ad8a3df0319d70b16d017ff7cfc283d03}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-N\-B\-R@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-N\-B\-R}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-N\-B\-R@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-N\-B\-R}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a64449d36615b85d889bc60b0fb06ba8f}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-E\-V\-T\-D\-E\-F\-\_\-\-N\-B\-R}\label{GTGPaje__Basic_8h_adbc8257b738b18b790aefd4a260ce200a64449d36615b85d889bc60b0fb06ba8f}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664}{\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!gtg\-\_\-paje\-\_\-fieldtype\-\_\-e@{gtg\-\_\-paje\-\_\-fieldtype\-\_\-e}}
+\index{gtg\-\_\-paje\-\_\-fieldtype\-\_\-e@{gtg\-\_\-paje\-\_\-fieldtype\-\_\-e}!GTGPaje_Basic.h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}
+\subsubsection[{gtg\-\_\-paje\-\_\-fieldtype\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf gtg\-\_\-paje\-\_\-fieldtype\-\_\-e}}}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Int@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Int}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Int@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Int}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664ab00a706a8871bbf4201028faa9fac954}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Int}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664ab00a706a8871bbf4201028faa9fac954}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Hex@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Hex}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Hex@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Hex}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a3fbb1c883879fe62c4216faad762ba66}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Hex}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a3fbb1c883879fe62c4216faad762ba66}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Date@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Date}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Date@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Date}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a194a1c026972ff8b22b5c08b3a046647}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Date}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a194a1c026972ff8b22b5c08b3a046647}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Double@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Double}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Double@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Double}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a65abf4c5b346462ddc6a78e79c09c37c}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Double}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a65abf4c5b346462ddc6a78e79c09c37c}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-String@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-String}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-String@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-String}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664af11f307e17ef25186054902e489cdc3a}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-String}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664af11f307e17ef25186054902e489cdc3a}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Color@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Color}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Color@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Color}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a2e77792aae4784049b2c95258c6f35ba}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-Color}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664a2e77792aae4784049b2c95258c6f35ba}
+}]\index{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-N\-B\-R@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-N\-B\-R}!G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-N\-B\-R@{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-N\-B\-R}}\item[{\em 
+\hypertarget{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664aa2e9e7f40b6f0de491436ae6405c246f}{G\-T\-G\-\_\-\-P\-A\-J\-E\-\_\-\-F\-I\-E\-L\-D\-T\-Y\-P\-E\-\_\-\-N\-B\-R}\label{GTGPaje__Basic_8h_aebe93cbc1dff207d61b2334e7275b664aa2e9e7f40b6f0de491436ae6405c246f}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{GTGPaje__Basic_8h_ab52701dc3df3c4c76be4d6c9b2d393a5}{\index{G\-T\-G\-Paje\-\_\-\-Basic.\-h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}!paje\-Event\-Def\-Add\-Param@{paje\-Event\-Def\-Add\-Param}}
+\index{paje\-Event\-Def\-Add\-Param@{paje\-Event\-Def\-Add\-Param}!GTGPaje_Basic.h@{G\-T\-G\-Paje\-\_\-\-Basic.\-h}}
+\subsubsection[{paje\-Event\-Def\-Add\-Param}]{\setlength{\rightskip}{0pt plus 5cm}void paje\-Event\-Def\-Add\-Param (
+\begin{DoxyParamCaption}
+\item[{enum {\bf gtg\-\_\-paje\-\_\-evtdef\-\_\-e}}]{event, }
+\item[{const char $\ast$}]{name, }
+\item[{enum {\bf gtg\-\_\-paje\-\_\-fieldtype\-\_\-e}}]{type}
+\end{DoxyParamCaption}
+)}}\label{GTGPaje__Basic_8h_ab52701dc3df3c4c76be4d6c9b2d393a5}

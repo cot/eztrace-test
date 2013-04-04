@@ -1,0 +1,457 @@
+\hypertarget{GTGOTF__Structs_8h}{\section{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h File Reference}
+\label{GTGOTF__Structs_8h}\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+}
+
+
+O\-T\-F\-\_\-\-Structs gives the global types and functions needed to have the O\-T\-F implementation.  
+
+
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}G\-T\-G\-List.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G\-T\-G\-Stack.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structStateType}{State\-Type}
+\item 
+struct \hyperlink{structState}{State}
+\item 
+struct \hyperlink{structContainerType}{Container\-Type}
+\item 
+struct \hyperlink{structContainer}{Container}
+\item 
+struct \hyperlink{structEntityValue}{Entity\-Value}
+\item 
+struct \hyperlink{structEventType}{Event\-Type}
+\item 
+struct \hyperlink{structLinkType}{Link\-Type}
+\item 
+struct \hyperlink{structLink}{Link}
+\item 
+struct \hyperlink{structVariableType}{Variable\-Type}
+\item 
+struct \hyperlink{structVariable}{Variable}
+\item 
+struct \hyperlink{structotf__color}{otf\-\_\-color}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_ad4c770f8a29f82d705f3d34839112bd1}{M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S}~64
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{Container\-Type\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a3c2af9e794d9818410c109edbff1b05a}{Container\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a1eeb6fb02ea08eb2a4d13aa85eb218e7}{State\-Type\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a99ee3204ed0c6983d4c3831c710512cd}{State\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_af9e408a636b2f8b2e25313840ecbbb97}{Entity\-Value\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_af3b9c07d3e9f14f1a5a2fd06608c98a3}{Event\-Type\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a79fb90b4058ba08f90c48345b160b0d2}{Link\-Type\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a056658e2ec1a1406523a8ed55c1b3eb3}{Variable\-Type\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_ab840a6d3509bd2b2020b8f3e9e867b4c}{Variable\-\_\-\-N\-I\-L}~0
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a4597283a35748da14c86a9627fbac1c0}{init\-\_\-\-Container\-Type}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_af08b9e0dac007575319427318031eed8}{init\-\_\-\-Container}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_aee931ce92cb0019ac6d888ddd7bb9c5e}{init\-\_\-\-State\-Type}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a211f313d3a452a7f158287adf1044020}{init\-\_\-\-Entity\-Value}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_acdd521c6645619bb9579712e4adc3fe4}{init\-\_\-\-Event\-Type}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a7c4f0baad6f3a854d830ba8c092f9b0b}{init\-\_\-\-Link\-Type}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a392bd438e06781c37c0dd2f44f0fc5b8}{init\-\_\-\-Variable\-Type}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a9fa155b76e1dd07fef16ce25a8ec2e4a}{init\-\_\-\-Variable}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a4a2b788c57024b0a86736bb95a38e055}{init\-\_\-\-State}(var)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a8521fe4f0f12ace659d2bac575e305d5}{alloc\-\_\-struct}(ptr, type, list\-\_\-head)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a782df7843e82f3ab907696cccd1c9287}{alloc\-\_\-init\-\_\-struct}(type, ptr, list\-\_\-head, \-\_\-name\-\_\-, \-\_\-alias\-\_\-)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a7b9bb9121b93802031aa77f68bd9862d}{alloc\-\_\-\-Variable}(\-\_\-ptr\-\_\-, \-\_\-id\-\_\-, \-\_\-parent\-\_\-, \-\_\-type\-\_\-, \-\_\-value\-\_\-)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a07c161fcfe11b3927463db144d313881}{alloc\-\_\-\-State}(\-\_\-ptr\-\_\-, \-\_\-value\-\_\-, \-\_\-cont\-\_\-, \-\_\-state\-Type\-\_\-)
+\item 
+\#define \hyperlink{GTGOTF__Structs_8h_a5a31709314736602238a55136842e0f7}{free\-\_\-struct}(\-\_\-type\-\_\-, \-\_\-list\-\_\-head\-\_\-)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structStateType}{State\-Type} \hyperlink{GTGOTF__Structs_8h_a8146ea0bffffa1dd7c878388fb16c435}{State\-Type\-\_\-t}
+\item 
+typedef struct \hyperlink{structState}{State} \hyperlink{GTGOTF__Structs_8h_a7c570e29d458693c8eac4d704a62f794}{State\-\_\-t}
+\item 
+typedef struct \hyperlink{structContainerType}{Container\-Type} \hyperlink{GTGOTF__Structs_8h_aee2e62a56f04c16f7bbed91105f258b6}{Container\-Type\-\_\-t}
+\item 
+typedef struct \hyperlink{structContainer}{Container} \hyperlink{GTGOTF__Structs_8h_a2c23cf45f3ed352984654e01ee720599}{Container\-\_\-t}
+\item 
+typedef struct \hyperlink{structEntityValue}{Entity\-Value} \hyperlink{GTGOTF__Structs_8h_a0d25c80b2aaaaa11755996ae3445f759}{Entity\-Value\-\_\-t}
+\item 
+typedef struct \hyperlink{structEventType}{Event\-Type} \hyperlink{GTGOTF__Structs_8h_a78956c7044fd5b8813db060804608ee2}{Event\-Type\-\_\-t}
+\item 
+typedef struct \hyperlink{structLinkType}{Link\-Type} \hyperlink{GTGOTF__Structs_8h_a5f242d9cb317b19fb3ecebf52f97aff5}{Link\-Type\-\_\-t}
+\item 
+typedef struct \hyperlink{structLink}{Link} \hyperlink{GTGOTF__Structs_8h_a243ec90a6574e38cbea762b94ebb508b}{Link\-\_\-t}
+\item 
+typedef struct \hyperlink{structVariableType}{Variable\-Type} \hyperlink{GTGOTF__Structs_8h_ad24d83b188ca9790a0e28807ac63b449}{Variable\-Type\-\_\-t}
+\item 
+typedef struct \hyperlink{structVariable}{Variable} \hyperlink{GTGOTF__Structs_8h_a906bcca1bb0f7ab59769e022a8c405f1}{Variable\-\_\-t}
+\item 
+typedef struct \hyperlink{structotf__color}{otf\-\_\-color} $\ast$ \hyperlink{GTGOTF__Structs_8h_a5431afdab8fe4162268778e93f0950c9}{otf\-\_\-color\-\_\-t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+O\-T\-F\-\_\-\-Structs gives the global types and functions needed to have the O\-T\-F implementation. \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Developers are \-: \par
+ Francois Rue -\/ \href{mailto:francois.rue@labri.fr}{\tt francois.\-rue@labri.\-fr} \par
+ Francois Trahay -\/ \href{mailto:francois.trahay@labri.fr}{\tt francois.\-trahay@labri.\-fr} \par
+ Johnny Jazeix -\/ \href{mailto:jazeix@enseirb-matmeca.fr}{\tt jazeix@enseirb-\/matmeca.\-fr} \par
+ Kevin Coulomb -\/ \href{mailto:kevin.coulomb@gmail.com}{\tt kevin.\-coulomb@gmail.\-com} \par
+ Mathieu Faverge -\/ \href{mailto:faverge@labri.fr}{\tt faverge@labri.\-fr} \par
+ Olivier Lagrasse -\/ \href{mailto:lagrasse@enseirb-matmeca.fr}{\tt lagrasse@enseirb-\/matmeca.\-fr} \par
+ 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{GTGOTF__Structs_8h_a782df7843e82f3ab907696cccd1c9287}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!alloc\-\_\-init\-\_\-struct@{alloc\-\_\-init\-\_\-struct}}
+\index{alloc\-\_\-init\-\_\-struct@{alloc\-\_\-init\-\_\-struct}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{alloc\-\_\-init\-\_\-struct}]{\setlength{\rightskip}{0pt plus 5cm}\#define alloc\-\_\-init\-\_\-struct(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{ptr, }
+\item[{}]{list\-\_\-head, }
+\item[{}]{\-\_\-name\-\_\-, }
+\item[{}]{\-\_\-alias\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a782df7843e82f3ab907696cccd1c9287}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                    \(\backslash\)
+  alloc\_struct(ptr, type, list\_head);                                   \(\backslash\)
+  (ptr)->name = (\textcolor{keywordtype}{char} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(strlen(\_name\_)+1));        \(\backslash\)
+  strcpy((ptr)->name, \_name\_);                                          \(\backslash\)
+  (ptr)->alias = (\textcolor{keywordtype}{char} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(strlen(\_alias\_)+1));      \(\backslash\)
+  strcpy((ptr)->alias, \_alias\_);                                        \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a07c161fcfe11b3927463db144d313881}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!alloc\-\_\-\-State@{alloc\-\_\-\-State}}
+\index{alloc\-\_\-\-State@{alloc\-\_\-\-State}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{alloc\-\_\-\-State}]{\setlength{\rightskip}{0pt plus 5cm}\#define alloc\-\_\-\-State(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-ptr\-\_\-, }
+\item[{}]{\-\_\-value\-\_\-, }
+\item[{}]{\-\_\-cont\-\_\-, }
+\item[{}]{\-\_\-state\-Type\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a07c161fcfe11b3927463db144d313881}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                            \(\backslash\)
+    \_ptr\_ = (\hyperlink{structState}{State\_t}*) malloc(\textcolor{keyword}{sizeof}(\hyperlink{structState}{State\_t}));                   
+      \(\backslash\)
+    init\_State(*(\_ptr\_));                                       \(\backslash\)
+    (\_ptr\_)->value = \_value\_;                                   \(\backslash\)
+    (\_ptr\_)->cont = \_cont\_;                                     \(\backslash\)
+    (\_ptr\_)->stateType = \_stateType\_;                           \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a8521fe4f0f12ace659d2bac575e305d5}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!alloc\-\_\-struct@{alloc\-\_\-struct}}
+\index{alloc\-\_\-struct@{alloc\-\_\-struct}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{alloc\-\_\-struct}]{\setlength{\rightskip}{0pt plus 5cm}\#define alloc\-\_\-struct(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{type, }
+\item[{}]{list\-\_\-head}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a8521fe4f0f12ace659d2bac575e305d5}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                    \(\backslash\)
+    ptr = (type*) malloc(\textcolor{keyword}{sizeof}(type));                         \(\backslash\)
+    GTG\_LIST\_INIT(&(ptr->token));                                       \(\backslash\)
+    ptr->id = (\hyperlink{GTGList_8h_a069ed881cfcf2495584ab2bd1b22c46e}{gtg\_list\_entry}((list\_head)->\hyperlink{structgtg__list_ab82d200f55762c3c8f45466d772ce18b}{prev}, type, token)
+      ->id) + 1;       \(\backslash\)
+    gtg\_list\_add\_tail(&(ptr->token), list\_head);                        \(\backslash\)
+  \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a7b9bb9121b93802031aa77f68bd9862d}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!alloc\-\_\-\-Variable@{alloc\-\_\-\-Variable}}
+\index{alloc\-\_\-\-Variable@{alloc\-\_\-\-Variable}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{alloc\-\_\-\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}\#define alloc\-\_\-\-Variable(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-ptr\-\_\-, }
+\item[{}]{\-\_\-id\-\_\-, }
+\item[{}]{\-\_\-parent\-\_\-, }
+\item[{}]{\-\_\-type\-\_\-, }
+\item[{}]{\-\_\-value\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a7b9bb9121b93802031aa77f68bd9862d}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                            \(\backslash\)
+    (\_ptr\_) = (\hyperlink{structVariable}{Variable\_t}*) malloc(\textcolor{keyword}{sizeof}(\hyperlink{structVariable}{Variable\_t}));             
+      \(\backslash\)
+    init\_Variable(*(\_ptr\_));                                    \(\backslash\)
+    (\_ptr\_)->\textcolor{keywordtype}{id} = \_id\_;                                         \(\backslash\)
+    (\_ptr\_)->parent = \_parent\_;                                 \(\backslash\)
+    (\_ptr\_)->type = \_type\_;                                     \(\backslash\)
+    (\_ptr\_)->value = \_value\_;                                   \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a3c2af9e794d9818410c109edbff1b05a}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Container\-\_\-\-N\-I\-L@{Container\-\_\-\-N\-I\-L}}
+\index{Container\-\_\-\-N\-I\-L@{Container\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Container\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Container\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_a3c2af9e794d9818410c109edbff1b05a}
+\hypertarget{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Container\-Type\-\_\-\-N\-I\-L@{Container\-Type\-\_\-\-N\-I\-L}}
+\index{Container\-Type\-\_\-\-N\-I\-L@{Container\-Type\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Container\-Type\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Container\-Type\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}
+\hypertarget{GTGOTF__Structs_8h_af9e408a636b2f8b2e25313840ecbbb97}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Entity\-Value\-\_\-\-N\-I\-L@{Entity\-Value\-\_\-\-N\-I\-L}}
+\index{Entity\-Value\-\_\-\-N\-I\-L@{Entity\-Value\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Entity\-Value\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Entity\-Value\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_af9e408a636b2f8b2e25313840ecbbb97}
+\hypertarget{GTGOTF__Structs_8h_af3b9c07d3e9f14f1a5a2fd06608c98a3}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Event\-Type\-\_\-\-N\-I\-L@{Event\-Type\-\_\-\-N\-I\-L}}
+\index{Event\-Type\-\_\-\-N\-I\-L@{Event\-Type\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Event\-Type\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Event\-Type\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_af3b9c07d3e9f14f1a5a2fd06608c98a3}
+\hypertarget{GTGOTF__Structs_8h_a5a31709314736602238a55136842e0f7}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!free\-\_\-struct@{free\-\_\-struct}}
+\index{free\-\_\-struct@{free\-\_\-struct}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{free\-\_\-struct}]{\setlength{\rightskip}{0pt plus 5cm}\#define free\-\_\-struct(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-type\-\_\-, }
+\item[{}]{\-\_\-list\-\_\-head\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a5a31709314736602238a55136842e0f7}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{\(\backslash\)
+    \_type\_ *ptr, *tmp;                                  \(\backslash\)
+    gtg\_list\_for\_each\_entry\_safe(ptr, tmp, &(\_list\_head\_).token, token) \{       
+      \(\backslash\)
+    gtg\_list\_del(&(ptr->token));\(\backslash\)
+    free(ptr->name);\(\backslash\)
+    free(ptr->alias);\(\backslash\)
+    free(ptr);\(\backslash\)
+  \}\(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_af08b9e0dac007575319427318031eed8}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Container@{init\-\_\-\-Container}}
+\index{init\-\_\-\-Container@{init\-\_\-\-Container}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Container}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Container(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_af08b9e0dac007575319427318031eed8}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).name   = NULL;                        \(\backslash\)
+    (var).alias  = NULL;                        \(\backslash\)
+    (var).ctType = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};          \(\backslash\)
+    (var).\textcolor{keywordtype}{id}     = \hyperlink{GTGOTF__Structs_8h_a3c2af9e794d9818410c109edbff1b05a}{Container\_NIL};          \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);                \(\backslash\)
+    GTG\_STACK\_INIT(&(var).state\_stack.token);   \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a4597283a35748da14c86a9627fbac1c0}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Container\-Type@{init\-\_\-\-Container\-Type}}
+\index{init\-\_\-\-Container\-Type@{init\-\_\-\-Container\-Type}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Container\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Container\-Type(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a4597283a35748da14c86a9627fbac1c0}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                              \(\backslash\)
+    (var).name  = NULL;           \(\backslash\)
+    (var).alias = NULL;           \(\backslash\)
+    (var).\textcolor{keywordtype}{id}    = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};             \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);  \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a211f313d3a452a7f158287adf1044020}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Entity\-Value@{init\-\_\-\-Entity\-Value}}
+\index{init\-\_\-\-Entity\-Value@{init\-\_\-\-Entity\-Value}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Entity\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Entity\-Value(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a211f313d3a452a7f158287adf1044020}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).name    = NULL;                       \(\backslash\)
+    (var).alias   = NULL;                       \(\backslash\)
+    (var).groupId = 0;                          \(\backslash\)
+    (var).\textcolor{keywordtype}{id}      = \hyperlink{GTGOTF__Structs_8h_af9e408a636b2f8b2e25313840ecbbb97}{EntityValue\_NIL};             \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);                \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_acdd521c6645619bb9579712e4adc3fe4}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Event\-Type@{init\-\_\-\-Event\-Type}}
+\index{init\-\_\-\-Event\-Type@{init\-\_\-\-Event\-Type}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Event\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Event\-Type(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_acdd521c6645619bb9579712e4adc3fe4}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).name     = NULL;                      \(\backslash\)
+    (var).alias   = NULL;                       \(\backslash\)
+    (var).contType = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};                \(\backslash\)
+    (var).\textcolor{keywordtype}{id}       = \hyperlink{GTGOTF__Structs_8h_af3b9c07d3e9f14f1a5a2fd06608c98a3}{EventType\_NIL};                \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);                \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a7c4f0baad6f3a854d830ba8c092f9b0b}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Link\-Type@{init\-\_\-\-Link\-Type}}
+\index{init\-\_\-\-Link\-Type@{init\-\_\-\-Link\-Type}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Link\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Link\-Type(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a7c4f0baad6f3a854d830ba8c092f9b0b}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).name     = NULL;                      \(\backslash\)
+    (var).alias   = NULL;                       \(\backslash\)
+    (var).contType = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};                \(\backslash\)
+    (var).srcType  = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};                \(\backslash\)
+    (var).destType = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};                \(\backslash\)
+    (var).\textcolor{keywordtype}{id}       = \hyperlink{GTGOTF__Structs_8h_a79fb90b4058ba08f90c48345b160b0d2}{LinkType\_NIL};          \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);                \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a4a2b788c57024b0a86736bb95a38e055}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-State@{init\-\_\-\-State}}
+\index{init\-\_\-\-State@{init\-\_\-\-State}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-State}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-State(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a4a2b788c57024b0a86736bb95a38e055}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).value   = \hyperlink{GTGOTF__Structs_8h_af9e408a636b2f8b2e25313840ecbbb97}{EntityValue\_NIL};             \(\backslash\)
+    (var).cont    = \hyperlink{GTGOTF__Structs_8h_a3c2af9e794d9818410c109edbff1b05a}{Container\_NIL};         \(\backslash\)
+    (var).stateType = \hyperlink{GTGOTF__Structs_8h_a1eeb6fb02ea08eb2a4d13aa85eb218e7}{StateType\_NIL};               \(\backslash\)
+    GTG\_STACK\_INIT(&(var).token);               \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_aee931ce92cb0019ac6d888ddd7bb9c5e}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-State\-Type@{init\-\_\-\-State\-Type}}
+\index{init\-\_\-\-State\-Type@{init\-\_\-\-State\-Type}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-State\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-State\-Type(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_aee931ce92cb0019ac6d888ddd7bb9c5e}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                      \(\backslash\)
+    (var).name    = NULL;                 \(\backslash\)
+    (var).alias   = NULL;                 \(\backslash\)
+    (var).groupId = 0;                    \(\backslash\)
+    (var).\textcolor{keywordtype}{id}      = \hyperlink{GTGOTF__Structs_8h_a1eeb6fb02ea08eb2a4d13aa85eb218e7}{StateType\_NIL};   \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);          \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a9fa155b76e1dd07fef16ce25a8ec2e4a}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Variable@{init\-\_\-\-Variable}}
+\index{init\-\_\-\-Variable@{init\-\_\-\-Variable}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Variable(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a9fa155b76e1dd07fef16ce25a8ec2e4a}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).parent = \hyperlink{GTGOTF__Structs_8h_a3c2af9e794d9818410c109edbff1b05a}{Container\_NIL};          \(\backslash\)
+    (var).parent = \hyperlink{GTGOTF__Structs_8h_a056658e2ec1a1406523a8ed55c1b3eb3}{VariableType\_NIL};            \(\backslash\)
+    (var).value  = 0;                           \(\backslash\)
+    (var).\textcolor{keywordtype}{id}     = \hyperlink{GTGOTF__Structs_8h_ab840a6d3509bd2b2020b8f3e9e867b4c}{Variable\_NIL};            \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);                \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a392bd438e06781c37c0dd2f44f0fc5b8}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!init\-\_\-\-Variable\-Type@{init\-\_\-\-Variable\-Type}}
+\index{init\-\_\-\-Variable\-Type@{init\-\_\-\-Variable\-Type}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{init\-\_\-\-Variable\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define init\-\_\-\-Variable\-Type(
+\begin{DoxyParamCaption}
+\item[{}]{var}
+\end{DoxyParamCaption}
+)}}\label{GTGOTF__Structs_8h_a392bd438e06781c37c0dd2f44f0fc5b8}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+    (var).name     = NULL;                      \(\backslash\)
+    (var).alias    = NULL;                      \(\backslash\)
+    (var).contType = \hyperlink{GTGOTF__Structs_8h_a130bd1fa89fcb7de0aa7f677367617db}{ContainerType\_NIL};                \(\backslash\)
+    (var).\textcolor{keywordtype}{id}       = \hyperlink{GTGOTF__Structs_8h_a056658e2ec1a1406523a8ed55c1b3eb3}{VariableType\_NIL};          \(\backslash\)
+    GTG\_LIST\_INIT(&(var).token);                \(\backslash\)
+  \}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\hypertarget{GTGOTF__Structs_8h_a79fb90b4058ba08f90c48345b160b0d2}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Link\-Type\-\_\-\-N\-I\-L@{Link\-Type\-\_\-\-N\-I\-L}}
+\index{Link\-Type\-\_\-\-N\-I\-L@{Link\-Type\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Link\-Type\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Link\-Type\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_a79fb90b4058ba08f90c48345b160b0d2}
+\hypertarget{GTGOTF__Structs_8h_ad4c770f8a29f82d705f3d34839112bd1}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S@{M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S}}
+\index{M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S@{M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-P\-R\-O\-C\-E\-S\-S~64}}\label{GTGOTF__Structs_8h_ad4c770f8a29f82d705f3d34839112bd1}
+\hypertarget{GTGOTF__Structs_8h_a99ee3204ed0c6983d4c3831c710512cd}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!State\-\_\-\-N\-I\-L@{State\-\_\-\-N\-I\-L}}
+\index{State\-\_\-\-N\-I\-L@{State\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{State\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define State\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_a99ee3204ed0c6983d4c3831c710512cd}
+\hypertarget{GTGOTF__Structs_8h_a1eeb6fb02ea08eb2a4d13aa85eb218e7}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!State\-Type\-\_\-\-N\-I\-L@{State\-Type\-\_\-\-N\-I\-L}}
+\index{State\-Type\-\_\-\-N\-I\-L@{State\-Type\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{State\-Type\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define State\-Type\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_a1eeb6fb02ea08eb2a4d13aa85eb218e7}
+\hypertarget{GTGOTF__Structs_8h_ab840a6d3509bd2b2020b8f3e9e867b4c}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Variable\-\_\-\-N\-I\-L@{Variable\-\_\-\-N\-I\-L}}
+\index{Variable\-\_\-\-N\-I\-L@{Variable\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Variable\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Variable\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_ab840a6d3509bd2b2020b8f3e9e867b4c}
+\hypertarget{GTGOTF__Structs_8h_a056658e2ec1a1406523a8ed55c1b3eb3}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Variable\-Type\-\_\-\-N\-I\-L@{Variable\-Type\-\_\-\-N\-I\-L}}
+\index{Variable\-Type\-\_\-\-N\-I\-L@{Variable\-Type\-\_\-\-N\-I\-L}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Variable\-Type\-\_\-\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define Variable\-Type\-\_\-\-N\-I\-L~0}}\label{GTGOTF__Structs_8h_a056658e2ec1a1406523a8ed55c1b3eb3}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GTGOTF__Structs_8h_a2c23cf45f3ed352984654e01ee720599}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Container\-\_\-t@{Container\-\_\-t}}
+\index{Container\-\_\-t@{Container\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Container\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Container}  {\bf Container\-\_\-t}}}\label{GTGOTF__Structs_8h_a2c23cf45f3ed352984654e01ee720599}
+Containers \hypertarget{GTGOTF__Structs_8h_aee2e62a56f04c16f7bbed91105f258b6}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Container\-Type\-\_\-t@{Container\-Type\-\_\-t}}
+\index{Container\-Type\-\_\-t@{Container\-Type\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Container\-Type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Container\-Type}  {\bf Container\-Type\-\_\-t}}}\label{GTGOTF__Structs_8h_aee2e62a56f04c16f7bbed91105f258b6}
+\hypertarget{GTGOTF__Structs_8h_a0d25c80b2aaaaa11755996ae3445f759}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Entity\-Value\-\_\-t@{Entity\-Value\-\_\-t}}
+\index{Entity\-Value\-\_\-t@{Entity\-Value\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Entity\-Value\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Entity\-Value}  {\bf Entity\-Value\-\_\-t}}}\label{GTGOTF__Structs_8h_a0d25c80b2aaaaa11755996ae3445f759}
+\hyperlink{structEntityValue}{Entity\-Value}, contains the name of the functions/states \hypertarget{GTGOTF__Structs_8h_a78956c7044fd5b8813db060804608ee2}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Event\-Type\-\_\-t@{Event\-Type\-\_\-t}}
+\index{Event\-Type\-\_\-t@{Event\-Type\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Event\-Type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Event\-Type}  {\bf Event\-Type\-\_\-t}}}\label{GTGOTF__Structs_8h_a78956c7044fd5b8813db060804608ee2}
+Events/\-Markers \hypertarget{GTGOTF__Structs_8h_a243ec90a6574e38cbea762b94ebb508b}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Link\-\_\-t@{Link\-\_\-t}}
+\index{Link\-\_\-t@{Link\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Link\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Link}  {\bf Link\-\_\-t}}}\label{GTGOTF__Structs_8h_a243ec90a6574e38cbea762b94ebb508b}
+\hypertarget{GTGOTF__Structs_8h_a5f242d9cb317b19fb3ecebf52f97aff5}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Link\-Type\-\_\-t@{Link\-Type\-\_\-t}}
+\index{Link\-Type\-\_\-t@{Link\-Type\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Link\-Type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Link\-Type}  {\bf Link\-Type\-\_\-t}}}\label{GTGOTF__Structs_8h_a5f242d9cb317b19fb3ecebf52f97aff5}
+Links/\-Messages \hypertarget{GTGOTF__Structs_8h_a5431afdab8fe4162268778e93f0950c9}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!otf\-\_\-color\-\_\-t@{otf\-\_\-color\-\_\-t}}
+\index{otf\-\_\-color\-\_\-t@{otf\-\_\-color\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{otf\-\_\-color\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf otf\-\_\-color}$\ast$ {\bf otf\-\_\-color\-\_\-t}}}\label{GTGOTF__Structs_8h_a5431afdab8fe4162268778e93f0950c9}
+\hypertarget{GTGOTF__Structs_8h_a7c570e29d458693c8eac4d704a62f794}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!State\-\_\-t@{State\-\_\-t}}
+\index{State\-\_\-t@{State\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{State\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf State}  {\bf State\-\_\-t}}}\label{GTGOTF__Structs_8h_a7c570e29d458693c8eac4d704a62f794}
+States \hypertarget{GTGOTF__Structs_8h_a8146ea0bffffa1dd7c878388fb16c435}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!State\-Type\-\_\-t@{State\-Type\-\_\-t}}
+\index{State\-Type\-\_\-t@{State\-Type\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{State\-Type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf State\-Type}  {\bf State\-Type\-\_\-t}}}\label{GTGOTF__Structs_8h_a8146ea0bffffa1dd7c878388fb16c435}
+State\-Types \hypertarget{GTGOTF__Structs_8h_a906bcca1bb0f7ab59769e022a8c405f1}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Variable\-\_\-t@{Variable\-\_\-t}}
+\index{Variable\-\_\-t@{Variable\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Variable\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Variable}  {\bf Variable\-\_\-t}}}\label{GTGOTF__Structs_8h_a906bcca1bb0f7ab59769e022a8c405f1}
+\hypertarget{GTGOTF__Structs_8h_ad24d83b188ca9790a0e28807ac63b449}{\index{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}!Variable\-Type\-\_\-t@{Variable\-Type\-\_\-t}}
+\index{Variable\-Type\-\_\-t@{Variable\-Type\-\_\-t}!GTGOTF_Structs.h@{G\-T\-G\-O\-T\-F\-\_\-\-Structs.\-h}}
+\subsubsection[{Variable\-Type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Variable\-Type}  {\bf Variable\-Type\-\_\-t}}}\label{GTGOTF__Structs_8h_ad24d83b188ca9790a0e28807ac63b449}
+Variables/\-Counters 

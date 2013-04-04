@@ -1,0 +1,74 @@
+\hypertarget{GTGReplay_8h}{\section{G\-T\-G\-Replay.\-h File Reference}
+\label{GTGReplay_8h}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}
+}
+
+
+This file defines functions for postponing event-\/processing function calls.  
+
+
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009f}{event\-\_\-type\-\_\-t} \{ \\*
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa283c84a2d7c9e8d64bb2837e038b5658}{event\-\_\-add\-Container}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa6b806b6a37bd56b2ff5d9c49fae14568}{event\-\_\-destroy\-Container}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009faa1dba78ec3bc9c2d600e826059fa41a6}{event\-\_\-set\-State}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009facf01d27fbbf451c8d71510524bb53dca}{event\-\_\-push\-State}, 
+\\*
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fab3a70a47da2a91753e2f0d5069630954}{event\-\_\-pop\-State}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa808ea439b4e928e78cf4ccb80343098e}{event\-\_\-add\-Event}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa58f8778ee7adecc9b7fb184c22a4080b}{event\-\_\-start\-Link}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa6c09a5a26e2838616e96437b83273f1a}{event\-\_\-end\-Link}, 
+\\*
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa03c82bd81a897f8a3f5529d862668453}{event\-\_\-set\-Var}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fafd9a34d39a4c383420d3ae4222cb2d86}{event\-\_\-add\-Var}, 
+\hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa7c81b73e8f427eebb591400172a4a281}{event\-\_\-sub\-Var}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__GTGReplay_ga62705d596816b10e7d0c6ac91dcd15aa}{gtg\-\_\-record} (enum \hyperlink{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009f}{event\-\_\-type\-\_\-t} type, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time,...)
+\begin{DoxyCompactList}\small\item\em postpone the recording of an event \end{DoxyCompactList}\item 
+void \hyperlink{group__GTGReplay_ga2e5e466f37281ba7e671c00010763c9e}{gtg\-\_\-write\-\_\-events} (long nb\-\_\-events\-\_\-to\-\_\-write)
+\begin{DoxyCompactList}\small\item\em run the first nb\-\_\-events\-\_\-to\-\_\-write events \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines functions for postponing event-\/processing function calls. \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009f}{\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-type\-\_\-t@{event\-\_\-type\-\_\-t}}
+\index{event\-\_\-type\-\_\-t@{event\-\_\-type\-\_\-t}!GTGReplay.h@{G\-T\-G\-Replay.\-h}}
+\subsubsection[{event\-\_\-type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf event\-\_\-type\-\_\-t}}}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009f}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{event\-\_\-add\-Container@{event\-\_\-add\-Container}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-add\-Container@{event\-\_\-add\-Container}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa283c84a2d7c9e8d64bb2837e038b5658}{event\-\_\-add\-Container}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa283c84a2d7c9e8d64bb2837e038b5658}
+}]\index{event\-\_\-destroy\-Container@{event\-\_\-destroy\-Container}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-destroy\-Container@{event\-\_\-destroy\-Container}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa6b806b6a37bd56b2ff5d9c49fae14568}{event\-\_\-destroy\-Container}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa6b806b6a37bd56b2ff5d9c49fae14568}
+}]\index{event\-\_\-set\-State@{event\-\_\-set\-State}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-set\-State@{event\-\_\-set\-State}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009faa1dba78ec3bc9c2d600e826059fa41a6}{event\-\_\-set\-State}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009faa1dba78ec3bc9c2d600e826059fa41a6}
+}]\index{event\-\_\-push\-State@{event\-\_\-push\-State}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-push\-State@{event\-\_\-push\-State}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009facf01d27fbbf451c8d71510524bb53dca}{event\-\_\-push\-State}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009facf01d27fbbf451c8d71510524bb53dca}
+}]\index{event\-\_\-pop\-State@{event\-\_\-pop\-State}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-pop\-State@{event\-\_\-pop\-State}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fab3a70a47da2a91753e2f0d5069630954}{event\-\_\-pop\-State}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fab3a70a47da2a91753e2f0d5069630954}
+}]\index{event\-\_\-add\-Event@{event\-\_\-add\-Event}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-add\-Event@{event\-\_\-add\-Event}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa808ea439b4e928e78cf4ccb80343098e}{event\-\_\-add\-Event}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa808ea439b4e928e78cf4ccb80343098e}
+}]\index{event\-\_\-start\-Link@{event\-\_\-start\-Link}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-start\-Link@{event\-\_\-start\-Link}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa58f8778ee7adecc9b7fb184c22a4080b}{event\-\_\-start\-Link}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa58f8778ee7adecc9b7fb184c22a4080b}
+}]\index{event\-\_\-end\-Link@{event\-\_\-end\-Link}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-end\-Link@{event\-\_\-end\-Link}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa6c09a5a26e2838616e96437b83273f1a}{event\-\_\-end\-Link}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa6c09a5a26e2838616e96437b83273f1a}
+}]\index{event\-\_\-set\-Var@{event\-\_\-set\-Var}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-set\-Var@{event\-\_\-set\-Var}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa03c82bd81a897f8a3f5529d862668453}{event\-\_\-set\-Var}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa03c82bd81a897f8a3f5529d862668453}
+}]\index{event\-\_\-add\-Var@{event\-\_\-add\-Var}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-add\-Var@{event\-\_\-add\-Var}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fafd9a34d39a4c383420d3ae4222cb2d86}{event\-\_\-add\-Var}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fafd9a34d39a4c383420d3ae4222cb2d86}
+}]\index{event\-\_\-sub\-Var@{event\-\_\-sub\-Var}!G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}}\index{G\-T\-G\-Replay.\-h@{G\-T\-G\-Replay.\-h}!event\-\_\-sub\-Var@{event\-\_\-sub\-Var}}\item[{\em 
+\hypertarget{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa7c81b73e8f427eebb591400172a4a281}{event\-\_\-sub\-Var}\label{GTGReplay_8h_a3dc8b7ddb0947608b8d860bc469f009fa7c81b73e8f427eebb591400172a4a281}
+}]\end{description}
+\end{Desc}
+

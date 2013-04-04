@@ -1,0 +1,78 @@
+\hypertarget{group__GTGMemory}{\section{Memory management}
+\label{group__GTGMemory}\index{Memory management@{Memory management}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__GTGMemory_ga5cdc8881f51fa5a160b12cab91cd1a43}{gtg\-\_\-block\-\_\-memory\-\_\-init} (\hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t} $\ast$memory, size\-\_\-t block\-\_\-size, long initial\-\_\-block\-\_\-number)
+\begin{DoxyCompactList}\small\item\em Initialize the allocator. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__GTGMemory_ga1a62c5f680d0d46d7fcc82627830d33d}{gtg\-\_\-block\-\_\-malloc} (\hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t} memory)
+\begin{DoxyCompactList}\small\item\em Allocate a block of data. \end{DoxyCompactList}\item 
+void \hyperlink{group__GTGMemory_ga67019a4108ad51fec4870174c50aa857}{gtg\-\_\-block\-\_\-free} (\hyperlink{GTGMemory_8h_ac92a27f812adb022f63f0d6754ec3991}{gtg\-\_\-memory\-\_\-t} memory, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Free a block of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__GTGMemory_ga67019a4108ad51fec4870174c50aa857}{\index{Memory management@{Memory management}!gtg\-\_\-block\-\_\-free@{gtg\-\_\-block\-\_\-free}}
+\index{gtg\-\_\-block\-\_\-free@{gtg\-\_\-block\-\_\-free}!Memory management@{Memory management}}
+\subsubsection[{gtg\-\_\-block\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-block\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-memory\-\_\-t}}]{memory, }
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{group__GTGMemory_ga67019a4108ad51fec4870174c50aa857}
+
+
+Free a block of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory} & The memory describer \\
+\hline
+{\em ptr} & The block of data to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__GTGMemory_ga1a62c5f680d0d46d7fcc82627830d33d}{\index{Memory management@{Memory management}!gtg\-\_\-block\-\_\-malloc@{gtg\-\_\-block\-\_\-malloc}}
+\index{gtg\-\_\-block\-\_\-malloc@{gtg\-\_\-block\-\_\-malloc}!Memory management@{Memory management}}
+\subsubsection[{gtg\-\_\-block\-\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ gtg\-\_\-block\-\_\-malloc (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-memory\-\_\-t}}]{memory}
+\end{DoxyParamCaption}
+)}}\label{group__GTGMemory_ga1a62c5f680d0d46d7fcc82627830d33d}
+
+
+Allocate a block of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory} & The memory describer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a block or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group__GTGMemory_ga5cdc8881f51fa5a160b12cab91cd1a43}{\index{Memory management@{Memory management}!gtg\-\_\-block\-\_\-memory\-\_\-init@{gtg\-\_\-block\-\_\-memory\-\_\-init}}
+\index{gtg\-\_\-block\-\_\-memory\-\_\-init@{gtg\-\_\-block\-\_\-memory\-\_\-init}!Memory management@{Memory management}}
+\subsubsection[{gtg\-\_\-block\-\_\-memory\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void gtg\-\_\-block\-\_\-memory\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-memory\-\_\-t} $\ast$}]{memory, }
+\item[{size\-\_\-t}]{block\-\_\-size, }
+\item[{long}]{initial\-\_\-block\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{group__GTGMemory_ga5cdc8881f51fa5a160b12cab91cd1a43}
+
+
+Initialize the allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory} & A memory describer \\
+\hline
+{\em block\-\_\-size} & The block size to be allocated when malloc is called \\
+\hline
+{\em initial\-\_\-block\-\_\-number} & The number of blocks to allocate initialy \\
+\hline
+\end{DoxyParams}

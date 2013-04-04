@@ -1,0 +1,133 @@
+\hypertarget{group__varf}{\section{Functions related to variables}
+\label{group__varf}\index{Functions related to variables@{Functions related to variables}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_ga7c621d853b9d0058a065db58cdb94ec8}{add\-Var\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structVariable}{Variable} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_gac897f3ccddc88ce6bd46ca6594cc5605}{set\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Set a \hyperlink{structVariable}{Variable} value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_ga305787a5e14f17a2a0961be702c4ff25}{add\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Add a value to a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__varf_ga573290384c5fe8b600fc999473117067}{sub\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Substract a value from a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__varf_ga305787a5e14f17a2a0961be702c4ff25}{\index{Functions related to variables@{Functions related to variables}!add\-Var@{add\-Var}}
+\index{add\-Var@{add\-Var}!Functions related to variables@{Functions related to variables}}
+\subsubsection[{add\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} add\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__varf_ga305787a5e14f17a2a0961be702c4ff25}
+
+
+Add a value to a \hyperlink{structVariable}{Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time the variable is incremented \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containing the variable \\
+\hline
+{\em val} & Value added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__varf_ga7c621d853b9d0058a065db58cdb94ec8}{\index{Functions related to variables@{Functions related to variables}!add\-Var\-Type@{add\-Var\-Type}}
+\index{add\-Var\-Type@{add\-Var\-Type}!Functions related to variables@{Functions related to variables}}
+\subsubsection[{add\-Var\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} add\-Var\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{cont\-Type}
+\end{DoxyParamCaption}
+)}}\label{group__varf_ga7c621d853b9d0058a065db58cdb94ec8}
+
+
+Add a \hyperlink{structVariable}{Variable} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the variable type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Alternative name of the variable type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__varf_gac897f3ccddc88ce6bd46ca6594cc5605}{\index{Functions related to variables@{Functions related to variables}!set\-Var@{set\-Var}}
+\index{set\-Var@{set\-Var}!Functions related to variables@{Functions related to variables}}
+\subsubsection[{set\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} set\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__varf_gac897f3ccddc88ce6bd46ca6594cc5605}
+
+
+Set a \hyperlink{structVariable}{Variable} value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time the variable changes \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containing the variable \\
+\hline
+{\em val} & New value of the variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__varf_ga573290384c5fe8b600fc999473117067}{\index{Functions related to variables@{Functions related to variables}!sub\-Var@{sub\-Var}}
+\index{sub\-Var@{sub\-Var}!Functions related to variables@{Functions related to variables}}
+\subsubsection[{sub\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} sub\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__varf_ga573290384c5fe8b600fc999473117067}
+
+
+Substract a value from a \hyperlink{structVariable}{Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time the variable is incremented \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containing the variable \\
+\hline
+{\em val} & Value substracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}

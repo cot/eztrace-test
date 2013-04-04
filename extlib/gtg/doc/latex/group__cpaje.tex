@@ -1,0 +1,726 @@
+\hypertarget{group__cpaje}{\section{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}
+\label{group__cpaje}\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{GTGPaje_8h_a5aab6af34e98e257ef546c8fdc17ab94}{paje\-\_\-color\-\_\-t} \hyperlink{group__cpaje_ga91d2beb5b926254b7922f7c5fc6e2c1b}{Paje\-\_\-get\-\_\-color} (\hyperlink{GTGColor_8h_a7d118edf2d6e2588a0323079259fb0d6}{gtg\-\_\-color\-\_\-t} p\-\_\-color)
+\begin{DoxyCompactList}\small\item\em Converts a G\-T\-G color into a P\-A\-J\-E color. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga32902ea7f94f1f890c016da04c2d06b6}{paje\-Init\-Trace} (const char $\ast$filename, int rank, \hyperlink{GTGBasic_8h_a7a5d407dd23dfced8b5937332ff80972}{gtg\-\_\-flag\-\_\-t} flags, int fmt)
+\begin{DoxyCompactList}\small\item\em Initialize a V\-I\-T\-E trace ( $\ast$.ept) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__cpaje_ga7cd6968ffcd034c3dd67d48ef047934c}{paje\-Get\-Name} (int rk)
+\begin{DoxyCompactList}\small\item\em Function to get the name of the file containing all the data for the proc of rank rk. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga92b9b4f5b8cd6656e6fce9b18720931f}{paje\-Set\-Compress} (int val)
+\begin{DoxyCompactList}\small\item\em Enable trace compression. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga49ae68f2a567d8bbac4cb6f7b6726ae8}{paje\-Add\-Cont\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gab77a5b730b5b0e58777d75e1c1bfbdaf}{paje\-Add\-State\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structState}{State} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaebcc766a17f5ffc055432687e946a1ea}{paje\-Add\-Event\-Type} (const char $\ast$alias, const char $\ast$cont\-Type, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add an Event Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga4b8a30594207e3bd62ad22500a363555}{paje\-Add\-Link\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type, const char $\ast$src\-Cont\-Type, const char $\ast$dest\-Cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structLink}{Link} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga0045c9aebf879d257d45ffca3a580dd2}{paje\-Add\-Var\-Type} (const char $\ast$alias, const char $\ast$name, const char $\ast$cont\-Type)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structVariable}{Variable} Type. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga1a280796147680d73b4148de463200a6}{paje\-Add\-Entity\-Value} (const char $\ast$alias, const char $\ast$ent\-Type, const char $\ast$name, const char $\ast$color)
+\begin{DoxyCompactList}\small\item\em Add an Entity Value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga78d90b40b97cb072ab6634bbfd562dc6}{paje\-Add\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name, const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} (V\-I\-T\-E format). \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaccb7f379b053e7a5d6cc3f04b929e1d9}{paje\-Seq\-Add\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$alias, const char $\ast$type, const char $\ast$container, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{structContainer}{Container} (P\-A\-J\-E format). \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaa2404d741e681fa9a90309798ccdd005}{paje\-Destroy\-Container} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$name, const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Destroy a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga6f836611123e0a83ec764aefebf4ec33}{paje\-Set\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaf92058cdf7d12c550866c98bf59338b8}{paje\-Push\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga67bd495e65937ecdc1bfe450cb0f0018}{paje\-Pop\-State} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont)
+\begin{DoxyCompactList}\small\item\em Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga303effbd4344a2f42872d4e70471250f}{paje\-Add\-Event} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Add an Event. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga6fa623c49bf3a2e9ebe7b138cc66e9a1}{paje\-Start\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$src, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Start a link. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga41f1c6499787f834904580c315032258}{paje\-End\-Link} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, const char $\ast$dest, const char $\ast$val, const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Start a link. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga3729690fc4d61c7f74e780530113fd8a}{paje\-Set\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Set a \hyperlink{structVariable}{Variable} value. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_ga6f1f9c069de829e3c2791415af7212d4}{paje\-Add\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Add a value to a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gacf05b63d86f1f7e36602347f56d1640d}{paje\-Sub\-Var} (\hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} time, const char $\ast$type, const char $\ast$cont, \hyperlink{group__type_gabda13d5bcd0cbdb094d655181a857e25}{var\-Prec} val)
+\begin{DoxyCompactList}\small\item\em Substract a value from a \hyperlink{structVariable}{Variable}. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaaf3eb514831a8ac2a301c43236b6dd04}{paje\-Add\-Comment} (const char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Add some Comment in Trace file. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaf69201358d05bd855572061dc96857c6}{paje\-End\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize a P\-A\-J\-E trace. \end{DoxyCompactList}\item 
+\hyperlink{group__type_ga1f1b68fb37d7331f03a48ef0993a0788}{trace\-\_\-return\-\_\-t} \hyperlink{group__cpaje_gaf7a8df4ca3b40d0e4d42619e884dfe48}{vite\-End\-Trace} ()
+\begin{DoxyCompactList}\small\item\em Finalize a V\-I\-T\-E trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__cpaje_ga91d2beb5b926254b7922f7c5fc6e2c1b}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!Paje\-\_\-get\-\_\-color@{Paje\-\_\-get\-\_\-color}}
+\index{Paje\-\_\-get\-\_\-color@{Paje\-\_\-get\-\_\-color}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{Paje\-\_\-get\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf paje\-\_\-color\-\_\-t} Paje\-\_\-get\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{{\bf gtg\-\_\-color\-\_\-t}}]{color}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga91d2beb5b926254b7922f7c5fc6e2c1b}
+
+
+Converts a G\-T\-G color into a P\-A\-J\-E color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & G\-T\-G color to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The P\-A\-J\-E color 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaaf3eb514831a8ac2a301c43236b6dd04}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Comment@{paje\-Add\-Comment}}
+\index{paje\-Add\-Comment@{paje\-Add\-Comment}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Comment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Comment (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{comment}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaaf3eb514831a8ac2a301c43236b6dd04}
+
+
+Add some Comment in Trace file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & Comment to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-A\-C\-E\-\_\-\-S\-U\-C\-C\-E\-S\-S on success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga78d90b40b97cb072ab6634bbfd562dc6}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Container@{paje\-Add\-Container}}
+\index{paje\-Add\-Container@{paje\-Add\-Container}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{container, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga78d90b40b97cb072ab6634bbfd562dc6}
+
+
+Add a \hyperlink{structContainer}{Container} (V\-I\-T\-E format). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is added \\
+\hline
+{\em alias} & Alias on the new container \\
+\hline
+{\em type} & Type of the container \\
+\hline
+{\em container} & \hyperlink{structContainer}{Container} parent \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+{\em file} & File containing the container trace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga49ae68f2a567d8bbac4cb6f7b6726ae8}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Cont\-Type@{paje\-Add\-Cont\-Type}}
+\index{paje\-Add\-Cont\-Type@{paje\-Add\-Cont\-Type}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Cont\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Cont\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga49ae68f2a567d8bbac4cb6f7b6726ae8}
+
+
+Add a \hyperlink{structContainer}{Container} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the container \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the container type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga1a280796147680d73b4148de463200a6}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Entity\-Value@{paje\-Add\-Entity\-Value}}
+\index{paje\-Add\-Entity\-Value@{paje\-Add\-Entity\-Value}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Entity\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Entity\-Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{ent\-Type, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{color}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga1a280796147680d73b4148de463200a6}
+
+
+Add an Entity Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the entity value \\
+\hline
+{\em ent\-Type} & Type of the entity \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+{\em color} & Color of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga303effbd4344a2f42872d4e70471250f}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Event@{paje\-Add\-Event}}
+\index{paje\-Add\-Event@{paje\-Add\-Event}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga303effbd4344a2f42872d4e70471250f}
+
+
+Add an Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the event happens \\
+\hline
+{\em type} & Type of the event \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this event \\
+\hline
+{\em val} & Entity value of the event of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaebcc766a17f5ffc055432687e946a1ea}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Event\-Type@{paje\-Add\-Event\-Type}}
+\index{paje\-Add\-Event\-Type@{paje\-Add\-Event\-Type}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Event\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Event\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaebcc766a17f5ffc055432687e946a1ea}
+
+
+Add an Event Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the event type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the event type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga4b8a30594207e3bd62ad22500a363555}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Link\-Type@{paje\-Add\-Link\-Type}}
+\index{paje\-Add\-Link\-Type@{paje\-Add\-Link\-Type}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Link\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Link\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{src\-Cont\-Type, }
+\item[{const char $\ast$}]{dest\-Cont\-Type}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga4b8a30594207e3bd62ad22500a363555}
+
+
+Add a \hyperlink{structLink}{Link} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the link type \\
+\hline
+{\em name} & Name of the link type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em src\-Cont\-Type} & Type of the source container \\
+\hline
+{\em dest\-Cont\-Type} & Type of the destination container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gab77a5b730b5b0e58777d75e1c1bfbdaf}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-State\-Type@{paje\-Add\-State\-Type}}
+\index{paje\-Add\-State\-Type@{paje\-Add\-State\-Type}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-State\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-State\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gab77a5b730b5b0e58777d75e1c1bfbdaf}
+
+
+Add a \hyperlink{structState}{State} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the state type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the state type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga6f1f9c069de829e3c2791415af7212d4}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Var@{paje\-Add\-Var}}
+\index{paje\-Add\-Var@{paje\-Add\-Var}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga6f1f9c069de829e3c2791415af7212d4}
+
+
+Add a value to a \hyperlink{structVariable}{Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the variable is incremented \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containing the variable \\
+\hline
+{\em val} & Value added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga0045c9aebf879d257d45ffca3a580dd2}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Add\-Var\-Type@{paje\-Add\-Var\-Type}}
+\index{paje\-Add\-Var\-Type@{paje\-Add\-Var\-Type}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Add\-Var\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Add\-Var\-Type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{cont\-Type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga0045c9aebf879d257d45ffca3a580dd2}
+
+
+Add a \hyperlink{structVariable}{Variable} Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alias} & Alias on the variable type \\
+\hline
+{\em cont\-Type} & Type of container \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaa2404d741e681fa9a90309798ccdd005}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Destroy\-Container@{paje\-Destroy\-Container}}
+\index{paje\-Destroy\-Container@{paje\-Destroy\-Container}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Destroy\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Destroy\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaa2404d741e681fa9a90309798ccdd005}
+
+
+Destroy a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is destroyed \\
+\hline
+{\em name} & Name on the container to destroy \\
+\hline
+{\em type} & Type of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga41f1c6499787f834904580c315032258}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-End\-Link@{paje\-End\-Link}}
+\index{paje\-End\-Link@{paje\-End\-Link}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-End\-Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-End\-Link (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{dest, }
+\item[{const char $\ast$}]{val, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga41f1c6499787f834904580c315032258}
+
+
+Start a link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the link starts \\
+\hline
+{\em type} & Type of the link \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} parent of the source and destination containers containing the link \\
+\hline
+{\em dest} & Source container \\
+\hline
+{\em val} & Value of the link \\
+\hline
+{\em key} & Key used to match start link with end link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaf69201358d05bd855572061dc96857c6}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-End\-Trace@{paje\-End\-Trace}}
+\index{paje\-End\-Trace@{paje\-End\-Trace}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-End\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}paje\-End\-Trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaf69201358d05bd855572061dc96857c6}
+
+
+Finalize a P\-A\-J\-E trace. 
+
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga7cd6968ffcd034c3dd67d48ef047934c}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Get\-Name@{paje\-Get\-Name}}
+\index{paje\-Get\-Name@{paje\-Get\-Name}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ paje\-Get\-Name (
+\begin{DoxyParamCaption}
+\item[{int}]{rk}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga7cd6968ffcd034c3dd67d48ef047934c}
+
+
+Function to get the name of the file containing all the data for the proc of rank rk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rk} & Rank of the proc you want the filename containing it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of the file. 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga32902ea7f94f1f890c016da04c2d06b6}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Init\-Trace@{paje\-Init\-Trace}}
+\index{paje\-Init\-Trace@{paje\-Init\-Trace}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Init\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Init\-Trace (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{rank, }
+\item[{{\bf gtg\-\_\-flag\-\_\-t}}]{flags, }
+\item[{int}]{fmt}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga32902ea7f94f1f890c016da04c2d06b6}
+
+
+Initialize a V\-I\-T\-E trace ( $\ast$.ept) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Root name of the file to create \\
+\hline
+{\em rank} & Rank of the processor \\
+\hline
+{\em flags} & One of G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-N\-E, G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-U\-S\-E\-\_\-\-M\-P\-I, G\-T\-G\-\_\-\-F\-L\-A\-G\-\_\-\-N\-O\-T\-B\-U\-F. \\
+\hline
+{\em fmt} & Format, paje or vite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga67bd495e65937ecdc1bfe450cb0f0018}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Pop\-State@{paje\-Pop\-State}}
+\index{paje\-Pop\-State@{paje\-Pop\-State}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Pop\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Pop\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga67bd495e65937ecdc1bfe450cb0f0018}
+
+
+Revert the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container} to its previous value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the state is poped \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaf92058cdf7d12c550866c98bf59338b8}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Push\-State@{paje\-Push\-State}}
+\index{paje\-Push\-State@{paje\-Push\-State}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Push\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Push\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaf92058cdf7d12c550866c98bf59338b8}
+
+
+Save the current \hyperlink{structState}{State} on a stack and change the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the state is pushed \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this state \\
+\hline
+{\em val} & Entity value of the state of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaccb7f379b053e7a5d6cc3f04b929e1d9}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Seq\-Add\-Container@{paje\-Seq\-Add\-Container}}
+\index{paje\-Seq\-Add\-Container@{paje\-Seq\-Add\-Container}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Seq\-Add\-Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Seq\-Add\-Container (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{alias, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{container, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaccb7f379b053e7a5d6cc3f04b929e1d9}
+
+
+Add a \hyperlink{structContainer}{Container} (P\-A\-J\-E format). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the container is added \\
+\hline
+{\em alias} & Alias on the new container \\
+\hline
+{\em type} & Type of the container \\
+\hline
+{\em container} & \hyperlink{structContainer}{Container} parent \\
+\hline
+{\em name} & Name of the variable type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga92b9b4f5b8cd6656e6fce9b18720931f}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Set\-Compress@{paje\-Set\-Compress}}
+\index{paje\-Set\-Compress@{paje\-Set\-Compress}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Set\-Compress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Set\-Compress (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga92b9b4f5b8cd6656e6fce9b18720931f}
+
+
+Enable trace compression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & 0 means no compression, otherwize the output files will be compressed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga6f836611123e0a83ec764aefebf4ec33}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Set\-State@{paje\-Set\-State}}
+\index{paje\-Set\-State@{paje\-Set\-State}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Set\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Set\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga6f836611123e0a83ec764aefebf4ec33}
+
+
+Set the \hyperlink{structState}{State} of a \hyperlink{structContainer}{Container}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the state is set \\
+\hline
+{\em type} & Type of the state \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} in this state \\
+\hline
+{\em val} & Entity value of the state of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga3729690fc4d61c7f74e780530113fd8a}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Set\-Var@{paje\-Set\-Var}}
+\index{paje\-Set\-Var@{paje\-Set\-Var}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Set\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Set\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga3729690fc4d61c7f74e780530113fd8a}
+
+
+Set a \hyperlink{structVariable}{Variable} value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the variable is set \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containing the variable \\
+\hline
+{\em val} & Value of the variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_ga6fa623c49bf3a2e9ebe7b138cc66e9a1}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Start\-Link@{paje\-Start\-Link}}
+\index{paje\-Start\-Link@{paje\-Start\-Link}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Start\-Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Start\-Link (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{const char $\ast$}]{src, }
+\item[{const char $\ast$}]{val, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_ga6fa623c49bf3a2e9ebe7b138cc66e9a1}
+
+
+Start a link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the link starts \\
+\hline
+{\em type} & Type of the link \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} parent of the source and destination containers containing the link \\
+\hline
+{\em src} & Source container \\
+\hline
+{\em val} & Value of the link \\
+\hline
+{\em key} & Key used to match start link with end link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gacf05b63d86f1f7e36602347f56d1640d}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!paje\-Sub\-Var@{paje\-Sub\-Var}}
+\index{paje\-Sub\-Var@{paje\-Sub\-Var}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{paje\-Sub\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf trace\-\_\-return\-\_\-t} paje\-Sub\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf var\-Prec}}]{time, }
+\item[{const char $\ast$}]{type, }
+\item[{const char $\ast$}]{cont, }
+\item[{{\bf var\-Prec}}]{val}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gacf05b63d86f1f7e36602347f56d1640d}
+
+
+Substract a value from a \hyperlink{structVariable}{Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time at which the variable is incremented \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+{\em cont} & \hyperlink{structContainer}{Container} containing the variable \\
+\hline
+{\em val} & Value substracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
+\hypertarget{group__cpaje_gaf7a8df4ca3b40d0e4d42619e884dfe48}{\index{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}!vite\-End\-Trace@{vite\-End\-Trace}}
+\index{vite\-End\-Trace@{vite\-End\-Trace}!Paje interface in C of the GTGBasic1 API@{Paje interface in C of the G\-T\-G\-Basic1 A\-P\-I}}
+\subsubsection[{vite\-End\-Trace}]{\setlength{\rightskip}{0pt plus 5cm}vite\-End\-Trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__cpaje_gaf7a8df4ca3b40d0e4d42619e884dfe48}
+
+
+Finalize a V\-I\-T\-E trace. 
+
+\begin{DoxyReturn}{Returns}
+0 if success \par
+ An error code otherwise 
+\end{DoxyReturn}
