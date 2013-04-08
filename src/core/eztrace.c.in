@@ -209,7 +209,6 @@ int main(int argc, char **argv) {
   int nb_dirs = 0;
   char *dir = NULL;
 
-  // strcat(tmp, "@prefix@/lib");
   if (strcmp(ezt_all_path, "")) {
 	  dir = strtok(ezt_all_path, ":");
 	  while(dir != NULL) {
